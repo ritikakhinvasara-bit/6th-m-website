@@ -1,0 +1,284 @@
+drop all the files inside your landing-page folder (the index.html, style.css, the assets folder, etc.) directly into that GitHub window. Commit the changes.<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6TH~M - Your Design Department</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Literata:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=52">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <a href="index.html" class="header-logo-link">
+                <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
+            </a>
+            <div class="nav-container">
+                <nav class="nav">
+                    <a href="#services">Services</a>
+                    <a href="work.html">WORK</a>
+                    <a href="#about">About</a>
+                </nav>
+                <a href="#contact" class="btn btn-primary">BOOK A CALL</a>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="fade-section hero">
+            <h1 class="blue">Your Design Department.<br>One Flat Monthly Fee.</h1>
+            <p>Get reliable, on-brand design support every month.<br><span class="fw-semibold">For founders, marketers, and creative teams who
+                need<br>high-quality visuals fast.</span></p>
+        </section>
+
+        <!-- GALLERY & SLIDESHOW -->
+        <a href="work.html" style="text-decoration: none; display: block;" class="hover-effect">
+            <section class="fade-section gallery-section">
+                <div class="view-more-label">VIEW MORE WORK</div>
+                
+                <div class="landing-slideshow">
+                    <div class="landing-slideshow-track">
+                        <img src="assets/slide1.png?v=2" alt="Slide 1">
+                        <img src="assets/slide2.png" alt="Slide 2">
+                        <img src="assets/slide3.png" alt="Slide 3">
+                        <img src="assets/slide4.png" alt="Slide 4">
+                    </div>
+                </div>
+            </section>
+        </a>
+
+        <!-- SERVICES -->
+        <section class="fade-section services" id="services">
+            <div class="section-badge ml-50">
+                <span class="badge-square"></span> WHAT CAN BE REQUESTED
+            </div>
+            <div class="svg-divider ml-50 mt-12"></div>
+
+            <h2 class="section-title">If it can be designed<br>digitally, it can usually<br>be requested.</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-num">01</div>
+                    <h3>One-pagers</h3>
+                    <p>Sales one-pagers, brochures, and marketing collateral</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-num">02</div>
+                    <h3>Social Media Posts</h3>
+                    <p>Instagram and LinkedIn posts, Stories, Reels</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-num">03</div>
+                    <h3>YouTube Assets</h3>
+                    <p>Thumbnails and channel banners</p>
+                </div>
+                <div class="service-card mt-card-row">
+                    <div class="card-num">04</div>
+                    <h3>Email Graphics</h3>
+                    <p>Email headers and banners</p>
+                </div>
+                <div class="service-card mt-card-row">
+                    <div class="card-num">05</div>
+                    <h3>Pitch Decks</h3>
+                    <p>Polished presentation decks</p>
+                </div>
+                <div class="service-card mt-card-row">
+                    <div class="card-num">06</div>
+                    <h3>Ad Creatives</h3>
+                    <p>Meta and Google ad creatives</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="fade-section pricing-header">
+            <div class="section-badge ml-49">
+                <span class="badge-square"></span> WHAT WE OFFER
+            </div>
+            <div class="svg-divider ml-49 mt-12"></div>
+        </section>
+
+        <section class="fade-section pricing" id="pricing">
+            <div class="pricing-card">
+                <div class="pricing-num">01</div>
+                <div class="pricing-content">
+                    <h2>MONTHLY GRAPHIC<br>DESIGN SUBSCRIPTION</h2>
+                    <p>Ongoing design support for marketing and brand needs.</p>
+                    <div class="price">$1299/MONTH</div>
+                </div>
+                <div class="pricing-includes">
+                    <p class="includes-title">INCLUDES:</p>
+                    <ul>
+                        <li><span class="bullet">•</span> Unlimited design requests</li>
+                        <li><span class="bullet">•</span> One active task at a time</li>
+                        <li><span class="bullet">•</span> Fast turnaround</li>
+                        <li><span class="bullet">•</span> Upto 2-3 revisions</li>
+                        <li><span class="bullet">•</span> Source files included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-num">02</div>
+                <div class="pricing-content">
+                    <h2>MONTHLY SOCIAL<br>MEDIA DESIGN</h2>
+                    <p>Consistent visual content for social platforms</p>
+                    <div class="price">$599/MONTH</div>
+                </div>
+                <div class="pricing-includes pl-example">
+                    <p class="includes-title">EXAMPLE PACKAGE</p>
+                    <ul>
+                        <li><span class="bullet">•</span> 4 Static Posts</li>
+                        <li><span class="bullet">•</span> 6 Stories</li>
+                        <li><span class="bullet">•</span> 2 Reels</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="fade-section benefits" id="benefits">
+            <div class="section-badge ml-49">
+                <span class="badge-square"></span> WHY TEAMS LIKE THIS MODEL
+            </div>
+            <div class="svg-divider ml-49 mt-12"></div>
+
+            <div class="benefits-grid">
+                <ul class="benefits-list left-col">
+                    <li><span class="bullet">•</span> Flat Monthly Cost</li>
+                    <li><span class="bullet">•</span> No per-project pricing surprises</li>
+                    <li><span class="bullet">•</span> Consistent Design Support</li>
+                    <li><span class="bullet">•</span> Get ongoing help without hiring</li>
+                </ul>
+                <ul class="benefits-list right-col">
+                    <li><span class="bullet">•</span> Fast Turnarounds</li>
+                    <li><span class="bullet">•</span> Most requests delivered within 24-72 hours</li>
+                    <li><span class="bullet">•</span> Flexible</li>
+                    <li><span class="bullet">•</span> Pause or restart the subscription anytime</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="fade-section process" id="process">
+            <div class="section-badge badge-light ml-50">
+                <span class="badge-square square-light"></span> HOW IT WORKS
+            </div>
+            <div class="svg-divider ml-50 mt-12"></div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-num">1.</div>
+                    <div class="step-title">SUBSCRIBE</div>
+                    <div class="step-desc">Choose the monthly design plan.</div>
+                </div>
+                <div class="process-divider line-faint"></div>
+
+                <div class="process-step">
+                    <div class="step-num">2.</div>
+                    <div class="step-title">SUBMIT REQUESTS</div>
+                    <div class="step-desc">
+                        Send design requests through a shared workspace.
+                    </div>
+                </div>
+                <div class="process-divider line-faint"></div>
+
+                <div class="process-step">
+                    <div class="step-num">3.</div>
+                    <div class="step-title">DESIGN & DELIVERY</div>
+                    <div class="step-desc">
+                        Most requests are completed within 1–3 business days<br>depending on complexity.
+                    </div>
+                </div>
+                <div class="process-divider line-faint"></div>
+
+                <div class="process-step">
+                    <div class="step-num">4.</div>
+                    <div class="step-title">REVISE OR APPROVE</div>
+                    <div class="step-desc">
+                        Unlimited revisions until you’re happy with the result.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="fade-section about" id="about">
+            <div class="gradient-overlay"></div>
+
+            <div class="about-content-wrapper">
+                <div class="section-badge ml-50">
+                    <span class="badge-square"></span> ABOUT
+                </div>
+                <div class="svg-divider ml-50 mt-12"></div>
+
+                <div class="about-content">
+                    <p>6th~M is a design practice focused on making brands<br>feel consistent as they scale.</p>
+                    <p class="mt-gap">​</p>
+                    <p>Led by a designer with experience across graphic and product design, the work goes beyond one-off
+                        assets, building visual systems that carry across social, decks, marketing, and web.</p>
+                    <p class="mt-gap">​</p>
+                    <p>Over the years, 6th M has worked with early-stage startups, nonprofits, and e-commerce brands,
+                        as<br>well as global organisations like UNICEF and World Bank. </p>
+                    <p class="mt-gap">​</p>
+                    <p>That range brings a balance of speed, adaptability, and an understanding of how design needs
+                        shift across different&nbsp;contexts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="fade-section footer">
+            <div class="footer-left">
+                <img src="assets/footer-logo.png" alt="6TH~M Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-right">
+                <p class="cta-title">Ready to Elevate Your Brand?</p>
+                <a href="#contact" class="btn-outline-white">BOOK A CALL</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Slideshow Logic (Fade)
+        const track = document.querySelector('.landing-slideshow-track');
+        if(track) {
+            const slides = track.querySelectorAll('img');
+            let slideIndex = 0;
+            if(slides.length > 0) slides[0].classList.add('active');
+            setInterval(() => {
+                slides[slideIndex].classList.remove('active');
+                slideIndex = (slideIndex + 1) % slides.length;
+                slides[slideIndex].classList.add('active');
+            }, 3000);
+        }
+        // Fade-on-scroll Logic
+        const faders = document.querySelectorAll('.fade-section');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('fade-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>

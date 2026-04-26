@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6TH~M - Work</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Literata:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=56">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <a href="index.html" class="header-logo-link">
+                <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
+            </a>
+            <div class="nav-container">
+                <nav class="nav">
+                    <a href="index.html#services">Services</a>
+                    <a href="work.html">WORK</a>
+                    <a href="index.html#about">About</a>
+                </nav>
+                <a href="#contact" class="btn btn-primary">BOOK A CALL</a>
+            </div>
+        </header>
+
+        <!-- WORK PAGE CONTENT -->
+        <main class="work-main">
+            <!-- TITLE SECTION -->
+            <section class="fade-section work-header">
+                <div class="section-badge ml-50">
+                    <span class="badge-square"></span> WORK
+                </div>
+                <div class="svg-divider ml-50 mt-12"></div>
+            </section>
+
+            <!-- GALLERY GRID -->
+            <section class="fade-section work-gallery">
+                <div class="work-grid">
+                    <!-- Provided Portfolio Strips (High Res) -->
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 219.jpg" alt="Portfolio Image 1">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 220.jpg" alt="Portfolio Image 2">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 221.jpg" alt="Portfolio Image 3">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 227.jpg" alt="Portfolio Image 4">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 226.jpg" alt="Portfolio Image 5">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 222.jpg" alt="Portfolio Image 6">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 223.jpg" alt="Portfolio Image 7">
+                    </div>
+                    <div class="work-item fade-section">
+                        <img src="assets/Group 224.jpg" alt="Portfolio Image 8">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="fade-section footer">
+            <div class="footer-left">
+                <img src="assets/footer-logo.png" alt="6TH~M Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-right">
+                <h2 class="cta-title">Ready to Elevate Your Brand?</h2>
+                <a href="#contact" class="btn btn-outline-white">BOOK A CALL</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Fade-on-scroll Logic
+        const faders = document.querySelectorAll('.fade-section');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('fade-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
