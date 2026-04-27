@@ -170,7 +170,7 @@ body {
 }
 .view-more-label {
     position: absolute;
-    top: -38px;
+    top: -30px;
     right: 50px;
     font-size: 18.38px;
     font-weight: 600;
@@ -186,13 +186,12 @@ a.hover-effect:hover .view-more-label {
 .gallery-img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
 }
 
 .landing-slideshow {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 0px;
     background-color: transparent;
 }
@@ -201,15 +200,17 @@ a.hover-effect:hover .view-more-label {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    align-items: start;
 }
 
 .landing-slideshow-track img {
     grid-column: 1;
     grid-row: 1;
     width: 100%;
-    height: auto;
+    height: 100%;
     aspect-ratio: 2.3 / 1;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: var(--bg-sand);
     opacity: 0;
     visibility: hidden;
     will-change: opacity;
@@ -570,8 +571,6 @@ a.hover-effect:hover .view-more-label {
 .work-item img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
     display: block;
 }
 .col-span-1 {
