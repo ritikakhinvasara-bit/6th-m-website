@@ -603,3 +603,203 @@ a.hover-effect:hover .view-more-label {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    /* Global Spacing Utilities */
+    .ml-41, .ml-49, .ml-50, .ml-55, .ml-63, .ml-115 {
+        margin-left: 20px;
+    }
+    .svg-divider {
+        margin-right: 20px;
+    }
+    
+    /* Header */
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .header-logo-img {
+        width: 140px;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Hero */
+    .hero {
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    
+    /* Gallery Section */
+    .gallery-section {
+        margin-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .view-more-label {
+        right: 20px;
+        top: -30px;
+        font-size: 14px;
+    }
+    
+    /* Services Section */
+    .services {
+        margin-top: 80px;
+    }
+    .section-title {
+        font-size: 32px;
+        line-height: 40px;
+        padding-left: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .services-grid {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .service-card {
+        flex: 1 1 100%;
+        padding: 25px 20px;
+    }
+    
+    /* Pricing Section */
+    .pricing-header {
+        margin-top: 80px;
+    }
+    .pricing-card {
+        flex-direction: column;
+        padding: 40px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 100%;
+    }
+    .pricing-num {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 15px;
+    }
+    .pricing-content {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .pricing-content h2 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+    .pricing-content p {
+        font-size: 18px;
+    }
+    .pricing-includes {
+        margin-left: 0;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+    .pl-example {
+        margin-left: 0;
+    }
+    
+    /* Benefits Section */
+    .benefits {
+        margin-top: 80px;
+    }
+    .benefits-grid {
+        flex-direction: column;
+    }
+    .benefits-list.left-col,
+    .benefits-list.right-col {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .benefits-list li {
+        font-size: 18px;
+    }
+    .benefits-list .bullet {
+        font-size: 18px;
+    }
+    
+    /* Process Section */
+    .process {
+        margin-top: 80px;
+        padding-top: 40px;
+    }
+    .process-divider {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+    .process-step {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+        padding: 30px 20px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .step-num {
+        width: 100%;
+        padding-left: 0;
+        font-size: 20px;
+    }
+    .step-title {
+        width: 100%;
+        padding-left: 0;
+        font-size: 20px;
+    }
+    .step-desc {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 18px;
+    }
+    
+    /* About Section */
+    .about {
+        margin-top: 80px;
+        padding-bottom: 60px;
+    }
+    .about-content {
+        margin-left: 0;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 18px;
+    }
+    
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+    .footer-left {
+        width: 100%;
+        padding: 60px 20px 40px;
+    }
+    .footer-right {
+        width: 100%;
+        padding: 0 20px 60px;
+        align-items: center;
+    }
+    .footer-right .cta-title {
+        font-size: 36px;
+        text-align: center;
+    }
+}
