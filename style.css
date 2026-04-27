@@ -208,6 +208,7 @@ a.hover-effect:hover .view-more-label {
     grid-row: 1;
     width: 100%;
     height: auto;
+    aspect-ratio: 2.3 / 1;
     object-fit: cover;
     opacity: 0;
     visibility: hidden;
@@ -425,7 +426,7 @@ a.hover-effect:hover .view-more-label {
 }
 .process-divider {
     display: block;
-    width: 100vw;
+    width: calc(100% - 50px);
     height: 2px;
     background-color: #ffffff;
     margin: 0 0 0 50px;
@@ -569,6 +570,7 @@ a.hover-effect:hover .view-more-label {
 .work-item img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
 }
