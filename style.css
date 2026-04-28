@@ -627,7 +627,7 @@ a.hover-effect:hover .view-more-label {
         margin-left: -5px; /* Offset to align visually with SERVICES text */
     }
     .header-logo-img {
-        width: 154px; /* 10% bigger than 140px */
+        width: 185px; /* 20% bigger than 154px */
         mix-blend-mode: multiply;
     }
     .nav-container {
