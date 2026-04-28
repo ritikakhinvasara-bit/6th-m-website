@@ -627,15 +627,15 @@ a.hover-effect:hover .view-more-label {
         order: 1;
     }
     .header-logo-img {
-        width: 168px; /* 140px * 1.2 */
+        width: 210px;
     }
     .nav-container {
         display: contents;
     }
     .header .btn {
         order: 2;
-        padding: 14px 24px; /* 12px 20px * 1.2 */
-        font-size: 19px; /* 16px * 1.2 */
+        padding: 16px 28px;
+        font-size: 24px;
         white-space: nowrap;
     }
     .nav {
@@ -646,7 +646,7 @@ a.hover-effect:hover .view-more-label {
         gap: 10px;
     }
     .nav a {
-        font-size: 21.5px; /* 18px * 1.2 */
+        font-size: 26px;
     }
     
     /* Hero */
