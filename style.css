@@ -616,20 +616,37 @@ a.hover-effect:hover .view-more-label {
     
     /* Header */
     .header {
-        padding: 20px;
-        flex-direction: column;
-        gap: 30px;
+        padding: 20px 20px 30px 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px 0;
+    }
+    .header-logo-link {
+        order: 1;
     }
     .header-logo-img {
         width: 140px;
     }
     .nav-container {
-        flex-direction: column;
-        gap: 25px;
+        display: contents;
+    }
+    .header .btn {
+        order: 2;
+        padding: 12px 20px;
+        font-size: 16px;
+        white-space: nowrap;
     }
     .nav {
-        flex-direction: column;
-        gap: 20px;
+        order: 3;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .nav a {
+        font-size: 18px;
     }
     
     /* Hero */
@@ -685,7 +702,7 @@ a.hover-effect:hover .view-more-label {
     }
     .pricing-card {
         flex-direction: column;
-        padding: 40px 20px;
+        padding: 40px 30px;
         margin-left: 20px;
         margin-right: 20px;
         max-width: 100%;
@@ -693,7 +710,7 @@ a.hover-effect:hover .view-more-label {
     .pricing-num {
         width: 100%;
         padding-left: 0;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
     .pricing-content {
         max-width: 100%;
@@ -706,10 +723,15 @@ a.hover-effect:hover .view-more-label {
     .pricing-content p {
         font-size: 18px;
     }
+    .price {
+        font-size: 26px;
+        margin-top: 15px;
+    }
     .pricing-includes {
         margin-left: 0;
         margin-top: 30px;
         max-width: 100%;
+        font-size: 16px;
     }
     .pl-example {
         margin-left: 0;
@@ -745,29 +767,37 @@ a.hover-effect:hover .view-more-label {
         width: calc(100% - 40px);
     }
     .process-step {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 15px;
+        row-gap: 10px;
         height: auto;
         padding: 30px 20px;
-        align-items: flex-start;
-        gap: 10px;
+        align-items: start;
     }
     .step-num {
-        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        width: auto;
         padding-left: 0;
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 2px;
     }
     .step-title {
-        width: 100%;
+        grid-column: 2;
+        grid-row: 1;
+        width: auto;
         padding-left: 0;
-        font-size: 20px;
+        font-size: 18px;
     }
     .step-desc {
-        width: 100%;
+        grid-column: 2;
+        grid-row: 2;
+        width: auto;
         padding-left: 0;
         padding-right: 0;
-        font-size: 18px;
+        font-size: 16px;
     }
     
     /* About Section */
