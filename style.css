@@ -22,6 +22,7 @@
 html {
     font-size: 10px;
     width: 100%;
+    overscroll-behavior-y: auto;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* Utilities (Pixel Perfect Matches) */
@@ -94,6 +95,7 @@ body {
     height: auto;
     display: block;
     object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 .nav-container {
@@ -624,6 +626,7 @@ a.hover-effect:hover .view-more-label {
     }
     .header-logo-img {
         width: 140px;
+        mix-blend-mode: multiply;
     }
     .nav-container {
         width: 100%;
