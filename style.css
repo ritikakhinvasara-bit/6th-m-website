@@ -20,10 +20,8 @@
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 10px;
     width: 100%;
-    overflow-x: hidden !important;
 }
 
 body {
@@ -33,7 +31,6 @@ body {
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     width: 100%;
-    overflow-x: hidden !important;
 }
 
 .page-wrapper {
@@ -46,6 +43,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
+    overflow-x: hidden;
 }
 
 /* Utilities (Pixel Perfect Matches) */
