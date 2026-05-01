@@ -192,6 +192,23 @@
             </div>
         </section>
 
+        <!-- GALLERY & SLIDESHOW -->
+        <a href="work.html" style="text-decoration: none; display: block;" class="hover-effect">
+            <section class="fade-section gallery-section">
+                <div class="view-more-label">VIEW MORE WORK</div>
+                
+                <div class="landing-slideshow">
+                    <div class="landing-slideshow-track">
+                        <img src="assets/slide1.png?v=2" alt="Slide 1">
+                        <img src="assets/slide2.png" alt="Slide 2">
+                        <img src="assets/slide3.png" alt="Slide 3">
+                        <img src="assets/slide4.png" alt="Slide 4">
+                    </div>
+                </div>
+            </section>
+        </a>
+
+
         <!-- SERVICES -->
         <section class="fade-section services" id="services">
             <div class="section-badge ml-50">
@@ -362,6 +379,19 @@
         </footer>
     </div>
     <script>
+        // Slideshow Logic (Fade)
+        const track = document.querySelector('.landing-slideshow-track');
+        if(track) {
+            const slides = track.querySelectorAll('img');
+            let slideIndex = 0;
+            if(slides.length > 0) slides[0].classList.add('active');
+            setInterval(() => {
+                slides[slideIndex].classList.remove('active');
+                slideIndex = (slideIndex + 1) % slides.length;
+                slides[slideIndex].classList.add('active');
+            }, 3000);
+        }
+
         // Fade-on-scroll Logic
         const faders = document.querySelectorAll('.fade-section');
         const appearOptions = {
