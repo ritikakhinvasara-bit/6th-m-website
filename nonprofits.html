@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6TH~M - For Non-Profit Organizations</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Literata:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=80">
+    <style>
+        .hero-label {
+            font-family: var(--font-mono);
+            font-size: 18.38px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--text-brown);
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-social-proof {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-brown);
+            margin-top: 50px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            letter-spacing: 0.5px;
+        }
+        .problem-section {
+            margin-top: 130px;
+            padding: 0 50px;
+            max-width: 1055px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .problem-title {
+            font-size: 43.96px;
+            line-height: 54.4px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--text-blue);
+        }
+        .problem-text {
+            font-size: 26.39px;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-buttons {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            .hero-social-proof {
+                margin-top: 40px;
+                padding: 0 20px;
+            }
+            .problem-section {
+                padding: 0 20px;
+                margin-top: 80px;
+            }
+            .problem-title {
+                font-size: 32px;
+                line-height: 40px;
+            }
+            .problem-text {
+                font-size: 20px;
+            }
+        }
+        
+        :root {
+            --text-blue: #3D4128;
+        }
+        
+        .page-wrapper {
+            background-image: none !important;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .about .gradient-overlay {
+            display: none !important;
+        }
+        
+        .hero {
+            min-height: calc(100vh - 120px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto !important;
+            padding-bottom: 15vh;
+        }
+        
+        .hero p {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 1025px) {
+            .pricing-card {
+                padding-right: 0 !important;
+            }
+            .pricing-includes {
+                width: calc((100% - 40px) / 3) !important;
+                max-width: none !important;
+                margin-left: 20px !important;
+                margin-right: 0 !important;
+                padding-left: 29px !important;
+                box-sizing: border-box;
+                flex-shrink: 0 !important;
+            }
+            .pl-example {
+                margin-left: 20px !important;
+            }
+            .pricing-content {
+                max-width: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <a href="index.html" class="header-logo-link">
+                <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
+            </a>
+            <div class="nav-container">
+                <nav class="nav">
+                    <a href="#services">Services</a>
+                    <a href="work.html">WORK</a>
+                    <a href="#about">About</a>
+                </nav>
+                <a href="#contact" class="btn btn-primary">BOOK A CALL</a>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="fade-section hero">
+            <div class="hero-label">FOR NON-PROFIT ORGANIZATIONS</div>
+            <h1 class="blue">Your mission moves fast,<br>your design should too.</h1>
+            <p>We provide the steady, high-quality design support required to tell your story clearly and professionally, month after month.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">BOOK A FREE CALL</a>
+                <a href="work.html" class="btn btn-outline" style="border: 1px solid var(--text-blue); color: var(--text-blue); padding: 14px 30px; font-family: var(--font-sans); font-weight: 600; font-size: 20.33px; text-decoration: none; text-transform: uppercase;">VIEW OUR WORK &rarr;</a>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="fade-section services" id="services">
+            <div class="section-badge ml-50">
+                <span class="badge-square"></span> WHAT CAN BE REQUESTED
+            </div>
+            <div class="svg-divider ml-50 mt-12"></div>
+
+            <h2 class="section-title">Everything your<br>organization needs.</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-num">01</div>
+                    <h3>Donor & Impact Reports</h3>
+                    <p>Clear, credible donor-facing documents.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-num">02</div>
+                    <h3>Fundraising Decks</h3>
+                    <p>Polished pitch and grant presentations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-num">03</div>
+                    <h3>Social Media Content</h3>
+                    <p>Consistent identity across all platforms.</p>
+                </div>
+                <div class="service-card mt-card-row">
+                    <div class="card-num">04</div>
+                    <h3>Campaign Collateral</h3>
+                    <p>One-pagers, flyers, and marketing materials.</p>
+                </div>
+                <div class="service-card mt-card-row">
+                    <div class="card-num">05</div>
+                    <h3>Ad Creatives</h3>
+                    <p>Optimized Meta and Google campaigns.</p>
+                </div>
+                <div class="service-card mt-card-row">
+                    <div class="card-num">06</div>
+                    <h3>Brand Consistency</h3>
+                    <p>Unified visual systems at scale.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="fade-section pricing-header">
+            <div class="section-badge ml-49">
+                <span class="badge-square"></span> WHAT WE OFFER
+            </div>
+            <div class="svg-divider ml-49 mt-12"></div>
+        </section>
+
+        <section class="fade-section pricing" id="pricing">
+            <div class="pricing-card">
+                <div class="pricing-num">01</div>
+                <div class="pricing-content">
+                    <h2>MONTHLY GRAPHIC<br>DESIGN SUBSCRIPTION</h2>
+                    <p>Ongoing design support for marketing and brand needs.</p>
+                    <div class="price">$1299/MONTH</div>
+                </div>
+                <div class="pricing-includes">
+                    <ul>
+                        <li><span class="bullet">•</span> Unlimited design requests</li>
+                        <li><span class="bullet">•</span> One active task at a time</li>
+                        <li><span class="bullet">•</span> Fast turnaround (1–3 business days)</li>
+                        <li><span class="bullet">•</span> Upto 2–3 revisions per request</li>
+                        <li><span class="bullet">•</span> Source files included</li>
+                        <li><span class="bullet">•</span> Pause or cancel anytime</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-num">02</div>
+                <div class="pricing-content">
+                    <h2>MONTHLY SOCIAL<br>MEDIA DESIGN</h2>
+                    <p>Consistent visual content for social platforms</p>
+                    <div class="price">$599/MONTH</div>
+                </div>
+                <div class="pricing-includes pl-example">
+                    <ul>
+                        <li><span class="bullet">•</span> 4 Static posts</li>
+                        <li><span class="bullet">•</span> 6 Stories</li>
+                        <li><span class="bullet">•</span> 2 Reels per month</li>
+                        <li><span class="bullet">•</span> On-brand assets</li>
+                        <li><span class="bullet">•</span> Pause or cancel anytime</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="fade-section process" id="process">
+            <div class="section-badge badge-light ml-50">
+                <span class="badge-square square-light"></span> HOW IT WORKS
+            </div>
+            <div class="svg-divider ml-50 mt-12"></div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-num">1.</div>
+                    <div class="step-title">SUBSCRIBE</div>
+                    <div class="step-desc">Choose the monthly plan that fits your organization's needs.</div>
+                </div>
+                <div class="process-divider line-faint"></div>
+
+                <div class="process-step">
+                    <div class="step-num">2.</div>
+                    <div class="step-title">SUBMIT REQUESTS</div>
+                    <div class="step-desc">
+                        Send design requests through a shared workspace — no complex briefing process required.
+                    </div>
+                </div>
+                <div class="process-divider line-faint"></div>
+
+                <div class="process-step">
+                    <div class="step-num">3.</div>
+                    <div class="step-title">DESIGN & DELIVERY</div>
+                    <div class="step-desc">
+                        Most requests are completed within 1–3 business days depending on complexity.
+                    </div>
+                </div>
+                <div class="process-divider line-faint"></div>
+
+                <div class="process-step">
+                    <div class="step-num">4.</div>
+                    <div class="step-title">REVISE OR APPROVE</div>
+                    <div class="step-desc">
+                        Unlimited revisions until you're completely happy with the result.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="fade-section about" id="about">
+            <div class="gradient-overlay"></div>
+
+            <div class="about-content-wrapper">
+                <div class="section-badge ml-50">
+                    <span class="badge-square"></span> ABOUT
+                </div>
+                <div class="svg-divider ml-50 mt-12"></div>
+
+                <div class="about-content">
+                    6th~M is a design practice focused on making brands feel consistent as they scale.
+                    <br><br>
+                    Led by <a href="https://www.ritikakhinvasara.com/" target="_blank" style="text-decoration: underline; text-underline-offset: 4px; color: inherit;">Ritika Khinvasara</a>, a designer with experience across graphic and product design, the work goes beyond one-off assets, building visual systems that carry across social, decks, marketing, and web.
+                    <br><br>
+                    Over the years, 6th M has worked with early-stage startups, nonprofits, and e-commerce brands, as well as global organisations like UNICEF and World Bank.
+                    <br><br>
+                    That range brings a balance of speed, adaptability, and an understanding of how design needs shift across different contexts.
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="fade-section footer">
+            <div class="footer-left">
+                <img src="assets/footer-logo.png" alt="6TH~M Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-right">
+                <p class="cta-title" style="line-height: 1.2;">Ready to elevate your brand?<br>Let's talk design.</p>
+                <p style="color: white; font-size: 20px; margin-bottom: 40px; font-weight: 400;">Book a free 30-minute call to find the right plan together.</p>
+                <a href="#contact" class="btn-outline-white">BOOK A CALL</a>
+                <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 80px; font-family: var(--font-mono);">© 2025 6TH~M — DESIGN FOR ORGANIZATIONS THAT MATTER</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Fade-on-scroll Logic
+        const faders = document.querySelectorAll('.fade-section');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px 0px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('fade-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>
