@@ -11,19 +11,28 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Literata:wght@400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=56">
+    <style>
+        /* Artisan Color Scheme Overrides */
+        :root {
+            --text-blue: #bd4a28; /* Terracotta / Rust */
+        }
+    </style>
 </head>
 <body>
     <div class="page-wrapper">
         <!-- HEADER -->
         <header class="header">
-            <a href="index.html" class="header-logo-link">
-                <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
-            </a>
+            <div class="logo-group" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: -5px;">
+                <a href="microproducers.html" class="header-logo-link" style="margin-left: 0;">
+                    <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
+                </a>
+                <div class="logo-subtext" style="font-family: var(--font-mono); font-size: 15.6px; text-transform: uppercase; margin-top: -30px; letter-spacing: 0.5px; margin-left: 18px;">Design for small-batch makers</div>
+            </div>
             <div class="nav-container">
                 <nav class="nav">
-                    <a href="index.html#services">Services</a>
+                    <a href="microproducers.html#services">Services</a>
                     <a href="work.html">WORK</a>
-                    <a href="index.html#about">About</a>
+                    <a href="microproducers.html#about">About</a>
                 </nav>
                 <a href="#contact" class="btn btn-primary">BOOK A CALL</a>
             </div>
