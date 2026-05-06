@@ -44,6 +44,33 @@
             max-width: 90%;
             line-height: 1.4;
         }
+
+        /* Pricing Card & Bullet Alignment Fixes */
+        .pricing-includes ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .pricing-includes li {
+            display: flex;
+            align-items: flex-start;
+            margin-left: -4px; /* Visually align bullet dot with the left edge */
+        }
+        .pricing-includes .bullet {
+            margin-right: 6px;
+        }
+        @media (max-width: 1024px) {
+            .pricing-card {
+                padding-left: 20px !important; /* Aligns text perfectly with the white service cards */
+            }
+        }
+
+        /* Benefits Gap Reduction */
+        .benefits .section-title {
+            margin-bottom: 10px;
+        }
+        .benefits .benefits-grid {
+            padding-top: 10px;
+        }
     </style>
 </head>
 
@@ -51,9 +78,12 @@
     <div class="page-wrapper">
         <!-- HEADER -->
         <header class="header">
-            <a href="index.html" class="header-logo-link">
-                <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
-            </a>
+            <div class="logo-group" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: -5px;">
+                <a href="index.html" class="header-logo-link" style="margin-left: 0;">
+                    <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
+                </a>
+                <div class="logo-subtext" style="font-family: var(--font-mono); font-size: 15.6px; text-transform: uppercase; margin-top: -30px; letter-spacing: 0.5px; margin-left: 18px;">Design for small-batch makers</div>
+            </div>
             <div class="nav-container">
                 <nav class="nav">
                     <a href="#services">Services</a>
@@ -66,8 +96,7 @@
 
         <!-- HERO -->
         <section class="fade-section hero">
-            <h1 class="blue" style="font-size: 58px; margin-bottom: 15px;">Design for small-batch makers.</h1>
-            <h1 style="font-size: 48px;">Your product is handcrafted.<br>Your brand should look like it.</h1>
+            <h1 style="font-size: 64px; line-height: 1.25; color: var(--text-blue);">Your product is handcrafted.<br>Your brand should look like it.</h1>
             <p>Monthly design support built for micro-producers.<br><span class="fw-semibold">Labels, packaging, markets, and beyond. One flat fee, no agency overhead.</span></p>
         </section>
 
@@ -101,32 +130,32 @@
                 <div class="service-card">
                     <div class="card-num">01</div>
                     <h3>Label design</h3>
-                    <p>Bottles, jars, pouches, and tins. print-ready files your printer can use directly.</p>
+                    <p>Bottles, jars, pouches, and tins. Print-ready files for your printer.</p>
                 </div>
                 <div class="service-card">
                     <div class="card-num">02</div>
                     <h3>Packaging graphics</h3>
-                    <p>Boxes, sleeves, tissue, and wrapping that elevates unboxing and gifting.</p>
+                    <p>Boxes, sleeves, and wrapping that elevate unboxing and gifting.</p>
                 </div>
                 <div class="service-card">
                     <div class="card-num">03</div>
                     <h3>Market collateral</h3>
-                    <p>Table banners, tent cards, tasting menus, and price cards for markets and pop-ups.</p>
+                    <p>Banners, tent cards, menus, and price cards for pop-ups.</p>
                 </div>
                 <div class="service-card mt-card-row">
                     <div class="card-num">04</div>
                     <h3>Social content</h3>
-                    <p>Instagram and LinkedIn posts, harvest announcements, seasonal drops, and story formats.</p>
+                    <p>Social posts, harvest announcements, and seasonal story formats.</p>
                 </div>
                 <div class="service-card mt-card-row">
                     <div class="card-num">05</div>
                     <h3>Wholesale assets</h3>
-                    <p>Line sheets, sell sheets, and one-pagers for pitching to retailers and distributors.</p>
+                    <p>Line sheets, sell sheets, and one-pagers for pitching to retailers.</p>
                 </div>
                 <div class="service-card mt-card-row">
                     <div class="card-num">06</div>
                     <h3>Brand identity</h3>
-                    <p>Logo refinement, color palette, and typography systems that grow with your range.</p>
+                    <p>Logo refinement, color palettes, and scalable typography systems.</p>
                 </div>
             </div>
         </section>
