@@ -894,9 +894,13 @@ a.hover-effect:hover .view-more-label {
     }
 }
 /* Global Rounded Corners */
-.btn,
-.btn-outline-white,
 .service-card,
 .pricing-card {
     border-radius: 12px !important;
+}
+
+/* Pill Shaped Buttons */
+.btn,
+.btn-outline-white {
+    border-radius: 100px !important;
 }
