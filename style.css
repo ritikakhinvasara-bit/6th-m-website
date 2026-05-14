@@ -841,4 +841,10 @@ a.hover-effect:hover .view-more-label {
         text-align: center;
     }
 }
-/* Trigger Vercel deploy */
+/* Global Rounded Corners */
+.btn,
+.btn-outline-white,
+.service-card,
+.pricing-card {
+    border-radius: 12px !important;
+}
