@@ -9,7 +9,7 @@
 
     --font-sans: 'Manrope', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
-    --font-serif: 'Literata', serif;
+    --font-serif: 'Newsreader', serif;
     --font-logo: 'Bebas Neue', sans-serif;
 }
 
@@ -32,6 +32,10 @@ body {
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
+    font-family: var(--font-serif);
 }
 
 .page-wrapper {
