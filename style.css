@@ -187,8 +187,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 
 /* Hero */
 .hero-new {
-    margin: 140px auto 0;
-    max-width: 1200px;
+    margin-top: 140px;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
@@ -272,23 +271,17 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     color: var(--text-brown);
     margin-bottom: 20px;
 }
-.hero-link-pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
+.hero-text-link {
+    display: inline-block;
     color: var(--text-blue);
     font-family: var(--font-body);
     font-size: 25.27px;
     text-decoration: none;
-    padding: 18px 36px;
-    border-radius: 34.5px;
-    border: 2px solid var(--text-blue);
-    transition: all 0.2s;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
 }
-.hero-link-pill:hover {
-    background-color: var(--text-blue);
-    color: white;
+.hero-text-link:hover {
+    opacity: 0.8;
 }
 .fw-semibold {
     font-weight: 600;
