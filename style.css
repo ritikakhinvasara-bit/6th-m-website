@@ -194,9 +194,9 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 }
 .hero-visuals {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 .hero-visual-left img, .hero-visual-right img {
     max-width: 100%;
@@ -205,28 +205,18 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 }
 .hero-visual-left {
     position: relative;
-    width: 40%;
+    width: 28%;
     display: flex;
     justify-content: flex-end;
 }
 .hero-visual-left img {
-    width: 95%;
+    width: 100%;
     border-radius: 8px;
     object-fit: cover;
 }
 .hero-visual-right {
     position: relative;
-    width: 45%;
-}
-.mobile-images-container {
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.mobile-images-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 31.5%;
 }
 .pill-label {
     position: absolute;
@@ -314,7 +304,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 100%;
 }
 .clients-logos-strip img {
-    max-width: 780px;
+    max-width: 1014px;
     width: 100%;
     height: auto;
     object-fit: contain;
