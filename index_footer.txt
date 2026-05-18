@@ -1,0 +1,28 @@
+        <!-- FOOTER -->
+        <footer class="fade-section footer">
+            <div class="footer-bottom-left">
+                <img src="assets/footer_logo.png" alt="6TH~M" class="footer-huge-logo">
+            </div>
+            <div class="footer-right-content">
+                <h2 class="cta-title">Ready to Elevate Your Brand?</h2>
+                <div class="footer-buttons">
+                    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank" class="btn-pill">BOOK A CALL</a>
+                    <a href="mailto:hello@6thm.com" class="btn-pill">WRITE TO US</a>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <a href="#services" class="footer-link-header">SERVICES</a>
+                        <div class="footer-sublinks">
+                            <a href="nonprofits.html">Non-Profit</a>
+                            <a href="healthcare.html">Healthcare</a>
+                            <a href="microproducers.html">Micro-Producers</a>
+                        </div>
+                    </div>
+                    <div class="footer-col spaced-col">
+                        <a href="work.html" class="footer-link-header">WORK</a>
+                        <a href="#about" class="footer-link-header">ABOUT</a>
+                        <a href="#how-it-works" class="footer-link-header">HOW IT WORKS</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
