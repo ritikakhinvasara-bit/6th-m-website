@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1560px;
 }
 
 .hero-slideshow {
@@ -233,6 +233,8 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 }
 .pill-top {
@@ -250,7 +252,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     align-items: flex-start;
     margin-top: 30px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1560px;
 }
 .hero-text-left {
     width: 60%;
