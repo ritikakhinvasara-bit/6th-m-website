@@ -471,13 +471,22 @@ a.hover-effect:hover .view-more-label {
 .pricing-card {
     display: flex;
     align-items: flex-start;
-    padding: 70px;
+    padding: 70px 50px;
     background-color: white;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 0px;
     max-width: calc(100% - 100px);
-    border-radius: 12px;
+    /* border-radius is handled by pseudo-classes below */
+}
+.pricing-card:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.pricing-card:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .pricing-num {
     font-size: 20px;
@@ -517,8 +526,10 @@ a.hover-effect:hover .view-more-label {
     margin-top: 30px;
 }
 .pricing-includes {
-    padding-left: 50px;
-    width: 35%;
+    padding-left: 0px;
+    width: calc((100% - 60px) / 3);
+    flex-shrink: 0;
+    margin-left: auto;
 }
 .includes-title {
     font-size: 16px;
