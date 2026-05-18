@@ -37,7 +37,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-body);
 }
 
 .page-wrapper {
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 20px 50px;
     margin: 0;
     width: 100%;
 }
@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 
 /* Hero */
 .hero-new {
-    margin: 60px 0 0 0;
+    margin: 30px 0 0 0;
     width: 100%;
     padding: 0 50px;
     display: flex;
@@ -258,7 +258,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .hero-text-left {
     width: 60%;
@@ -267,7 +267,6 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 35%;
 }
 .hero-new h1 {
-    font-family: var(--font-serif);
     font-size: 66.27px;
     font-weight: 400;
     line-height: 1.05;
@@ -310,7 +309,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 .clients-logos-strip {
     display: flex;
@@ -318,7 +317,8 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 100%;
 }
 .clients-logos-strip img {
-    max-width: 100%;
+    max-width: 600px;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -392,15 +392,18 @@ a.hover-effect:hover .view-more-label {
     align-items: center;
     gap: 8px;
     font-family: var(--font-body);
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     text-transform: uppercase;
     color: var(--text-brown);
 }
 .badge-arrow {
-    display: inline-block;
-    font-size: 20px;
-    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    line-height: 0;
+    margin-top: -4px;
     color: var(--text-brown);
 }
 .badge-light {
@@ -412,31 +415,31 @@ a.hover-effect:hover .view-more-label {
 
 /* Services */
 .services {
-    margin: 60px 50px 0 50px;
+    margin: 40px 50px 0 50px;
     background-color: var(--bg-green);
-    padding: 60px 70px;
+    padding: 40px 50px;
     border-radius: 30px;
 }
 .section-title {
     font-family: var(--font-body);
-    font-size: 43.96px;
-    line-height: 1.2;
+    font-size: 44px;
+    line-height: 1.15;
     font-weight: 500;
     padding-left: 0;
-    margin-top: 35px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 .services-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0px;
 }
 .service-card {
     background: white;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     flex: 1 1 30%;
@@ -447,30 +450,30 @@ a.hover-effect:hover .view-more-label {
 .card-num {
     color: #1383ff;
     font-family: var(--font-body);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .service-card h3 {
     font-family: var(--font-body);
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 10px;
+    line-height: 1.2;
+    margin-bottom: 5px;
 }
 .service-card p {
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-brown);
     line-height: 1.4;
     margin-top: 0;
-    max-width: 371px;
+    max-width: 100%;
 }
 
 /* Pricing Area */
 .pricing-header {
-    margin-top: 60px;
+    margin: 40px 50px 20px 50px;
 }
 /* Pricing */
 .pricing {
@@ -480,69 +483,79 @@ a.hover-effect:hover .view-more-label {
 .pricing-card {
     display: flex;
     align-items: flex-start;
-    padding: 50px 60px;
+    padding: 50px;
     background-color: white;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     max-width: calc(100% - 100px);
-    border-radius: 12px;
+    border-radius: 20px;
 }
 .pricing-num {
-    font-size: 18.5px;
-    margin-top: 7px;
+    font-size: 16px;
+    margin-top: 10px;
     color: var(--text-brown);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     flex-shrink: 0;
-    width: calc(15% - 35px);
-    padding-left: 30px;
-    box-sizing: border-box;
+    width: 10%;
+    padding-left: 0;
 }
 .pricing-content {
     flex-grow: 1;
-    max-width: 800px;
+    max-width: 50%;
 }
 .pricing-content h2 {
-    font-size: 46.2px;
-    line-height: 1.05;
-    font-weight: 600;
-    margin-bottom: 22px;
+    font-family: var(--font-serif);
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-brown);
 }
 .pricing-content p {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 22px;
-    max-width: 600px; /* Keeps text from getting too long */
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 450px;
+    line-height: 1.4;
+    color: var(--text-brown);
 }
 .price {
-    font-size: 37px;
+    font-family: var(--font-body);
+    font-size: 28px;
     font-weight: 600;
     color: var(--text-brown);
     margin-top: 30px;
 }
 .pricing-includes {
-    width: 100%;
-    max-width: 320px;
-    font-size: 20.4px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 8px;
-    margin-left: 40px;
-    flex-shrink: 0;
-}
-.pl-example {
-    width: 100%;
-    max-width: 314px;
-    margin-left: 40px;
+    padding-left: 50px;
+    width: 35%;
 }
 .includes-title {
-    margin-bottom: 0px;
+    font-size: 14px;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-brown);
+    margin-bottom: 10px;
 }
 .pricing-includes ul {
     list-style: none;
+    padding-left: 0;
 }
 .pricing-includes li {
+    font-size: 16px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-brown);
+    margin-bottom: 8px;
+    line-height: 1.4;
     display: flex;
+}
+.bullet {
+    margin-right: 8px;
+    font-weight: bold;
 }
 
 /* Benefits */
