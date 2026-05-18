@@ -401,6 +401,7 @@ a.hover-effect:hover .view-more-label {
     color: white;
 }
 
+/* CSS Variables - Updated for Vercel trigger */
 /* Services */
 .services {
     margin: 40px 50px 0 50px;
