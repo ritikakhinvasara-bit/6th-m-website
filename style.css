@@ -475,18 +475,12 @@ a.hover-effect:hover .view-more-label {
     background-color: white;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     max-width: calc(100% - 100px);
-    /* border-radius is handled by pseudo-classes below */
-}
-.pricing-card:first-child {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
 }
 .pricing-card:last-child {
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    margin-bottom: 0px;
 }
 .pricing-num {
     font-size: 20px;
