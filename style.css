@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 750px;
+    min-height: 1050px;
     position: relative;
     width: 100%;
 }
@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 .hero-slideshow {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1680px;
     height: 100%;
 }
 
