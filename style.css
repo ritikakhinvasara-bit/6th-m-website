@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 }
 .hero-visual-left img, .hero-visual-right img {
     max-width: 100%;
-    border-radius: 30px;
+    border-radius: 12px;
     object-fit: cover;
 }
 .hero-visual-left {
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 }
 .hero-visual-left img {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 12px;
     object-fit: cover;
 }
 .hero-visual-right {
@@ -404,8 +404,8 @@ a.hover-effect:hover .view-more-label {
 .services {
     margin: 40px 50px 0 50px;
     background-color: var(--bg-green);
-    padding: 40px 50px;
-    border-radius: 30px;
+    padding: 40px 50px 80px 50px;
+    border-radius: 12px;
 }
 .section-title {
     font-family: var(--font-body);
@@ -432,7 +432,7 @@ a.hover-effect:hover .view-more-label {
     flex: 1 1 30%;
     min-width: 200px;
     max-width: 100%;
-    border-radius: 30px;
+    border-radius: 12px;
 }
 .card-num {
     color: #1383ff;
@@ -477,7 +477,7 @@ a.hover-effect:hover .view-more-label {
     margin-right: 50px;
     margin-bottom: 0px;
     max-width: calc(100% - 100px);
-    border-radius: 30px;
+    border-radius: 12px;
 }
 .pricing-num {
     font-size: 20px;
@@ -551,7 +551,7 @@ a.hover-effect:hover .view-more-label {
     margin: 40px 50px 0 50px;
     background-color: var(--bg-green);
     padding: 40px 50px;
-    border-radius: 30px;
+    border-radius: 12px;
 }
 .benefits-grid {
     display: flex;
@@ -594,7 +594,7 @@ a.hover-effect:hover .view-more-label {
     color: white;
     margin: 40px 50px 0 50px;
     padding: 50px;
-    border-radius: 30px;
+    border-radius: 12px;
 }
 .process-timeline {
     display: flex;
@@ -1085,12 +1085,6 @@ a.hover-effect:hover .view-more-label {
         margin-top: 20px;
     }
 }
-/* Global Rounded Corners */
-.service-card,
-.pricing-card {
-    border-radius: 12px !important;
-}
-
 /* Pill Shaped Buttons */
 .btn,
 .btn-outline-white {
