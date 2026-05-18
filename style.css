@@ -580,7 +580,7 @@ a.hover-effect:hover .view-more-label {
     padding-left: 0;
 }
 .benefits-list li {
-    font-size: 20px;
+    font-size: 22px;
     font-family: var(--font-body);
     font-weight: 400;
     color: var(--text-brown);
