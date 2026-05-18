@@ -197,27 +197,49 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-}
-.hero-visual-left img, .hero-visual-right img {
-    max-width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-}
-.hero-visual-left {
+    min-height: 500px;
     position: relative;
-    width: 28%;
-    display: flex;
-    justify-content: flex-end;
-}
-.hero-visual-left img {
     width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
 }
-.hero-visual-right {
+
+.hero-slideshow {
     position: relative;
-    width: 31.5%;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+}
+
+.hero-gallery-left, .hero-gallery-right {
+    position: relative;
+    width: 45%;
+}
+
+.hero-staggered-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
 }
 .pill-label {
     position: absolute;

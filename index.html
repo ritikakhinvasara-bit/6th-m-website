@@ -41,11 +41,27 @@
         <!-- HERO -->
         <section class="fade-section hero-new">
             <div class="hero-visuals">
-                <div class="hero-visual-left">
-                    <img src="assets/hero1_new.png" alt="Editorial Reports">
-                </div>
-                <div class="hero-visual-right">
-                    <img src="assets/hero2_new.png" alt="Social Media Content">
+                <div class="hero-slideshow">
+                    <div class="hero-slide active">
+                        <div class="hero-gallery-left">
+                            <div class="gallery-badge top-left">Social Media Content</div>
+                            <img src="assets/gallery_2.png" alt="Social Media Content" class="hero-staggered-img">
+                        </div>
+                        <div class="hero-gallery-right offset-down">
+                            <img src="assets/gallery_3.png" alt="Ad Creatives" class="hero-staggered-img">
+                            <div class="gallery-badge bottom-left">Ad Creatives</div>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-gallery-left">
+                            <div class="gallery-badge top-left">Pitch Decks</div>
+                            <img src="assets/gallery_5.jpg" alt="Pitch Decks" class="hero-staggered-img">
+                        </div>
+                        <div class="hero-gallery-right offset-down">
+                            <img src="assets/gallery_1.png" alt="Email Design" class="hero-staggered-img">
+                            <div class="gallery-badge bottom-left">Email Design</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="hero-text-row">
@@ -250,19 +266,19 @@
         </footer>
     </div>
     <script>
-        // Slideshow Logic (Fade)
-        const track = document.querySelector('.landing-slideshow-track');
-        if(track) {
-            const slides = track.querySelectorAll('img');
-            let slideIndex = 0;
-            if(slides.length > 0) slides[0].classList.add('active');
+        // Hero Slideshow Logic (Fade)
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        if(heroSlides.length > 0) {
+            let heroSlideIndex = 0;
             setInterval(() => {
-                slides[slideIndex].classList.remove('active');
-                slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].classList.add('active');
-            }, 3000);
+                heroSlides[heroSlideIndex].classList.remove('active');
+                heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
+                heroSlides[heroSlideIndex].classList.add('active');
+            }, 3500);
         }
+
         // Fade-on-scroll Logic
+
         const faders = document.querySelectorAll('.fade-section');
         const appearOptions = {
             threshold: 0.1,
