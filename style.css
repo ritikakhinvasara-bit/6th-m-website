@@ -560,14 +560,15 @@ a.hover-effect:hover .view-more-label {
 
 /* Benefits */
 .benefits {
-    margin-top: 60px;
+    margin: 40px 50px 0 50px;
     background-color: var(--bg-green);
-    padding: 60px 0;
+    padding: 40px 50px;
+    border-radius: 30px;
 }
 .benefits-grid {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 0px;
     width: 100%;
 }
@@ -575,24 +576,28 @@ a.hover-effect:hover .view-more-label {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .benefits-list.left-col {
-    width: 50%;
-    padding-left: 50px;
+    width: 45%;
+    padding-left: 0;
 }
 .benefits-list.right-col {
-    width: 50%;
+    width: 55%;
+    padding-left: 0;
 }
 .benefits-list li {
-    font-size: 22.5px;
+    font-size: 20px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-brown);
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
 }
-.benefits-list .bullet {
-    margin-right: 25px;
-    font-size: 22.5px;
-    line-height: normal;
+.squiggly-bullet {
+    width: 16px;
+    height: auto;
+    margin-right: 15px;
 }
 
 /* Process Timeline */
