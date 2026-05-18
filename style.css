@@ -216,8 +216,8 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 80px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     pointer-events: none;
@@ -231,11 +231,14 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
 
 .hero-gallery-left, .hero-gallery-right {
     position: relative;
-    width: 45%;
+    width: 48%;
 }
 
 .hero-staggered-img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
     border-radius: 12px;
 }
 .pill-label {
