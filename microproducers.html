@@ -1,348 +1,239 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6TH~M - Design for Small-Batch Makers</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=79">
-    <style>
-        /* Artisan Color Scheme Overrides */
-        :root {
-            --text-blue: #bd4a28; /* Terracotta / Rust */
-        }
-        
-        .artisan-about-gradient .gradient-overlay {
-            background: radial-gradient(ellipse 70% 65% at 50% 50%, rgba(189, 74, 40, 0.15) 0%, rgba(189, 74, 40, 0) 100%);
-        }
-
-        /* Adjust specific layouts for text differences */
-        .benefits-grid .left-col li, .benefits-grid .right-col li {
-            align-items: flex-start;
-        }
-        
-        .benefits-grid .bullet {
-            margin-top: 2px;
-        }
-
-        .benefit-title {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 5px;
-            font-size: 24px;
-        }
-        
-        .benefit-desc {
-            font-size: 20px;
-            display: block;
-            max-width: 90%;
-            line-height: 1.4;
-        }
-
-        /* Pricing Card & Bullet Alignment Fixes */
-        .pricing-includes ul {
-            margin-left: 0;
-            padding-left: 0;
-        }
-        .pricing-includes li {
-            display: flex;
-            align-items: flex-start;
-            margin-left: -4px; /* Visually align bullet dot with the left edge */
-        }
-        .pricing-includes .bullet {
-            margin-right: 6px;
-        }
-        @media (max-width: 1024px) {
-            .pricing-card {
-                padding-left: 20px !important; /* Aligns text perfectly with the white service cards */
-            }
-        }
-
-        /* Benefits Gap Reduction */
-        .benefits .section-title {
-            margin-bottom: 10px;
-        }
-        .benefits .benefits-grid {
-            padding-top: 10px;
-        }
-    </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>6TH~M - For Small-Batch Makers</title>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Bebas+Neue&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=79" rel="stylesheet"/>
+<style>
+:root {
+    --bg-sand: #E4D3C5;
+    --text-brown: #A33B26;
+    --bg-green: #e9ddd3;
+    --bg-olive: #A33B26;
+}
+.hero-new h1, .hero-new .hero-link {
+    color: var(--text-brown);
+}
+</style></head>
 <body>
-    <div class="page-wrapper">
-        <!-- HEADER -->
-        <header class="header">
-            <div class="logo-group" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: -5px;">
-                <a href="index.html" class="header-logo-link" style="margin-left: 0;">
-                    <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
-                </a>
-                <div class="logo-subtext" style="font-family: var(--font-mono); font-size: 15.6px; text-transform: uppercase; margin-top: -30px; letter-spacing: 0.5px; margin-left: 18px;">Design for small-batch makers</div>
+<div class="page-wrapper">
+<!-- HEADER -->
+<header class="header">
+<a class="header-logo-link" href="index.html">
+<img alt="6TH~M" class="header-logo-img" src="assets/logo.png"/>
+</a>
+<div class="nav-container">
+<nav class="nav">
+<div class="nav-dropdown">
+<a href="#services">Services</a>
+<div class="dropdown-content">
+<a href="nonprofits.html">Non-Profits</a>
+<a href="microproducers.html">Small-Batch Makers</a>
+<a href="healthcare.html">Healthcare</a>
+</div>
+</div>
+<a href="work.html">WORK</a>
+<a href="#about">About</a>
+</nav>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank">BOOK A CALL</a>
+</div>
+</header>
+<!-- HERO -->
+<section class="fade-section hero-new">
+<div class="hero-visuals">
+<div class="hero-visual-left">
+<img alt="Editorial Reports" src="assets/hero1_new.png"/>
+</div>
+<div class="hero-visual-right">
+<img alt="Social Media Content" src="assets/hero2_new.png"/>
+</div>
+</div>
+<div class="hero-text-row">
+<div class="hero-text-left">
+<h1 class="blue">Your product is handcrafted.Your brand should look like it.</h1>
+</div>
+<div class="hero-text-right">
+<p>Monthly design support built for micro-producers.<span class="fw-semibold">Labels, packaging, markets, and beyond. One flat fee, no agency overhead.</span></p>
+<div class="mt-4">
+<a class="hero-text-link" href="work.html">VIEW WORK</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PAST CLIENTS -->
+<section class="fade-section past-clients">
+<h4 class="clients-title">PAST CLIENTS</h4>
+<div class="clients-logos-strip">
+<img alt="Past Clients Logos" src="assets/past_clients_strip.png"/>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="fade-section services" id="services">
+<div class="section-badge"><span class="badge-arrow">•</span> WHAT WE DESIGN FOR YOU
             </div>
-            <div class="nav-container">
-                <nav class="nav">
-                    <div class="nav-dropdown">
-                        <a href="#services">Services</a>
-                        <div class="dropdown-content">
-                            <a href="nonprofits.html">Non-Profits</a>
-                            <a href="microproducers.html">Small-Batch Makers</a>
-                            <a href="healthcare.html">Healthcare</a>
-                        </div>
-                    </div>
-                    <a href="work.html">WORK</a>
-                    <a href="#about">About</a>
-                </nav>
-                <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank" class="btn btn-primary">BOOK A CALL</a>
+<h2 class="section-title">Every touchpoint a buyer<br>sees before they taste.</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="card-num">01</div>
+<h3>Label design</h3>
+<p>Bottles, jars, pouches, and tins. Print-ready files for your printer.</p>
+</div>
+<div class="service-card">
+<div class="card-num">02</div>
+<h3>Packaging graphics</h3>
+<p>Boxes, sleeves, and wrapping that elevate unboxing and gifting.</p>
+</div>
+<div class="service-card">
+<div class="card-num">03</div>
+<h3>Market collateral</h3>
+<p>Banners, tent cards, menus, and price cards for pop-ups.</p>
+</div>
+<div class="service-card mt-card-row">
+<div class="card-num">04</div>
+<h3>Social content</h3>
+<p>Social posts, harvest announcements, and seasonal story formats.</p>
+</div>
+<div class="service-card mt-card-row">
+<div class="card-num">05</div>
+<h3>Wholesale assets</h3>
+<p>Line sheets, sell sheets, and one-pagers for pitching to retailers.</p>
+</div>
+<div class="service-card mt-card-row">
+<div class="card-num">06</div>
+<h3>Brand identity</h3>
+<p>Logo refinement, color palettes, and scalable typography systems.</p>
+</div>
+</div>
+</section>
+<!-- PRICING -->
+<section class="fade-section pricing-header">
+<div class="section-badge">
+<span class="badge-arrow">•</span> WHAT WE OFFER
             </div>
-        </header>
+</section>
+<section class="fade-section pricing" id="pricing">
+<div class="pricing-card">
+<div class="pricing-num">01</div>
+<div class="pricing-content">
+<h2>MONTHLY GRAPHIC<br>DESIGN SUBSCRIPTION</h2>
+<p>Ongoing design support for marketing and brand needs.</p>
+<div class="price">$1299/MONTH</div>
+</div>
+<div class="pricing-includes">
+<p class="includes-title">INCLUDES:</p>
+<ul><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li></ul>
+</div>
+</div>
+<div class="pricing-card">
+<div class="pricing-num">02</div>
+<div class="pricing-content">
+<h2>MONTHLY SOCIAL<br>MEDIA DESIGN</h2>
+<p>Consistent visual content for social platforms</p>
+<div class="price">$599/MONTH</div>
+</div>
+<div class="pricing-includes pl-example">
+<p class="includes-title">EXAMPLE PACKAGE</p>
+<ul><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li></ul>
+</div>
+</div>
+</section>
+<!-- BENEFITS -->
+<section class="fade-section benefits" id="benefits">
+<div class="section-badge">
+<span class="badge-arrow">•</span> WHY TEAMS LIKE THIS MODEL
+            </div>
+<div class="benefits-grid">
+<ul class="benefits-list left-col"><li>
 
-        <!-- HERO -->
-        <section class="fade-section hero-new">
-            <div class="hero-visuals">
-                <div class="hero-visual-left">
-                    <img src="assets/Group 219.jpg" alt="Work sample">
-                </div>
-                <div class="hero-visual-right">
-                    <img src="assets/Group 220.jpg" alt="Work sample">
-                </div>
-            </div>
-            <div class="hero-text-row">
-                <div class="hero-text-left">
-                    <h1 class="blue" style="font-size: 64px; line-height: 1.25; color: var(--text-blue);">Your product is handcrafted.<br>Your brand should look like it.</h1>
-                </div>
-                <div class="hero-text-right">
-                    <p>Monthly design support built for micro-producers.<br><span class="fw-semibold">Labels, packaging, markets, and beyond. One flat fee, no agency overhead.</span></p>
-                    <a href="work.html" class="hero-link" style="color: var(--text-blue);">VIEW MORE WORK</a>
-                </div>
-            </div>
-        </section>
 
-        <!-- PAST CLIENTS -->
-        <section class="fade-section past-clients">
-            <h4 class="clients-title">PAST CLIENTS</h4>
-            <div class="clients-logos">
-                <img src="assets/client1.png" alt="UNICEF" onerror="this.src='https://via.placeholder.com/150x50?text=UNICEF'">
-                <img src="assets/client2.png" alt="Client 2" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
-                <img src="assets/client3.png" alt="FidoCure" onerror="this.src='https://via.placeholder.com/150x50?text=FidoCure'">
-                <img src="assets/client4.png" alt="Client 4" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
+</li><li>
+
+
+</li></ul>
+<ul class="benefits-list right-col"><li>
+
+
+</li><li>
+
+
+</li></ul>
+</div>
+</section>
+<section class="fade-section process" id="process">
+<div class="section-badge badge-light">
+<span class="badge-arrow">•</span> HOW IT WORKS
             </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section class="fade-section services" id="services">
-            <div class="section-badge ml-50">
-                <span class="badge-arrow">→</span> WHAT WE DESIGN FOR YOU
-            </div>
-
-            <h2 class="section-title">Every touchpoint a buyer<br>sees before they taste.</h2>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-num">01</div>
-                    <h3>Label design</h3>
-                    <p>Bottles, jars, pouches, and tins. Print-ready files for your printer.</p>
+<div class="process-timeline">
+<div class="timeline-step step-1">
+<div class="timeline-circle">1</div>
+<div class="step-title">JOIN</div>
+<div class="step-desc">Pick the plan that matches your current pace. Simple onboarding, zero hiring overhead.</div>
+</div>
+<div class="timeline-step step-2">
+<div class="timeline-circle">2</div>
+<div class="step-title">ALIGN</div>
+<div class="step-desc">Drop your requests into your workspace. We don't just look at the brief, we look at the strategy and goals behind it.</div>
+</div>
+<div class="timeline-step step-3">
+<div class="timeline-circle">3</div>
+<div class="step-title">BUILD</div>
+<div class="step-desc">Get your high-fidelity assets in a few days. Every piece is designed to fit your broader visual ecosystem.</div>
+</div>
+<div class="timeline-step step-4">
+<div class="timeline-circle active">4</div>
+<div class="step-title">REFINE / APPROVE</div>
+<div class="step-desc">We iterate together until the storytelling and systems are exactly where they need to be.</div>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="fade-section about" id="about">
+<div class="about-content-wrapper">
+<div class="section-badge">
+<span class="badge-arrow">•</span> ABOUT
                 </div>
-                <div class="service-card">
-                    <div class="card-num">02</div>
-                    <h3>Packaging graphics</h3>
-                    <p>Boxes, sleeves, and wrapping that elevate unboxing and gifting.</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-num">03</div>
-                    <h3>Market collateral</h3>
-                    <p>Banners, tent cards, menus, and price cards for pop-ups.</p>
-                </div>
-                <div class="service-card mt-card-row">
-                    <div class="card-num">04</div>
-                    <h3>Social content</h3>
-                    <p>Social posts, harvest announcements, and seasonal story formats.</p>
-                </div>
-                <div class="service-card mt-card-row">
-                    <div class="card-num">05</div>
-                    <h3>Wholesale assets</h3>
-                    <p>Line sheets, sell sheets, and one-pagers for pitching to retailers.</p>
-                </div>
-                <div class="service-card mt-card-row">
-                    <div class="card-num">06</div>
-                    <h3>Brand identity</h3>
-                    <p>Logo refinement, color palettes, and scalable typography systems.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRICING -->
-        <section class="fade-section pricing-header">
-            <div class="section-badge ml-49">
-                <span class="badge-arrow">→</span> WHAT WE OFFER
-            </div>
-        </section>
-
-        <section class="fade-section pricing" id="pricing">
-            <div class="pricing-card">
-                <div class="pricing-num">01</div>
-                <div class="pricing-content">
-                    <h2>MONTHLY GRAPHIC<br>DESIGN SUBSCRIPTION</h2>
-                    <p>Ongoing design support for marketing and brand needs.</p>
-                    <div class="price">$1299/MONTH</div>
-                </div>
-                <div class="pricing-includes">
-                    <p class="includes-title">INCLUDES:</p>
-                    <ul>
-                        <li><span class="bullet">•</span> Unlimited design requests</li>
-                        <li><span class="bullet">•</span> One active task at a time</li>
-                        <li><span class="bullet">•</span> Fast turnaround</li>
-                        <li><span class="bullet">•</span> Upto 2-3 revisions</li>
-                        <li><span class="bullet">•</span> Source files included</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pricing-card">
-                <div class="pricing-num">02</div>
-                <div class="pricing-content">
-                    <h2>MONTHLY SOCIAL<br>MEDIA DESIGN</h2>
-                    <p>Consistent visual content for social platforms</p>
-                    <div class="price">$599/MONTH</div>
-                </div>
-                <div class="pricing-includes pl-example">
-                    <p class="includes-title">EXAMPLE PACKAGE</p>
-                    <ul>
-                        <li><span class="bullet">•</span> 4 Static Posts</li>
-                        <li><span class="bullet">•</span> 6 Stories</li>
-                        <li><span class="bullet">•</span> 2 Reels</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- BENEFITS -->
-        <section class="fade-section benefits" id="benefits">
-            <div class="section-badge ml-49">
-                <span class="badge-arrow">→</span> WHY THIS MODEL FITS MAKERS
-            </div>
-            
-            <h2 class="section-title">Built around how small-batch<br>production actually works.</h2>
-
-            <div class="benefits-grid">
-                <ul class="benefits-list left-col">
-                    <li>
-                        <span class="bullet">•</span>
-                        <div>
-                            <span class="benefit-title">Seasonal flexibility</span>
-                            <span class="benefit-desc">Ramp up before a harvest launch or holiday market season. Pause in the off-months. No retainer penalty.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="bullet">•</span>
-                        <div>
-                            <span class="benefit-title">Print-ready every time</span>
-                            <span class="benefit-desc">Files delivered in the formats your label printer, packaging supplier, or market sign shop needs. No back-and-forth.</span>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="benefits-list right-col">
-                    <li>
-                        <span class="bullet">•</span>
-                        <div>
-                            <span class="benefit-title">Brand that compounds</span>
-                            <span class="benefit-desc">Every new SKU, every market banner, every sell sheet builds toward a consistent visual identity that retailers recognize.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="bullet">•</span>
-                        <div>
-                            <span class="benefit-title">No agency overhead</span>
-                            <span class="benefit-desc">You're not subsidizing account managers and pitch decks. You're paying for a designer who ships work.</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="fade-section process" id="process">
-            <div class="section-badge badge-light ml-50">
-                <span class="badge-arrow">→</span> HOW IT WORKS
-            </div>
-
-            <div class="process-timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-step">
-                    <div class="timeline-circle">1</div>
-                    <div class="step-title">SUBSCRIBE</div>
-                    <div class="step-desc">Share your product line, existing brand assets, and first request. Choose the monthly design plan.</div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-circle">2</div>
-                    <div class="step-title">SUBMIT REQUESTS</div>
-                    <div class="step-desc">Send design requests through a shared workspace.</div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-circle">3</div>
-                    <div class="step-title">DESIGN & DELIVERY</div>
-                    <div class="step-desc">Most requests are completed within 1–3 business days. Labels and packaging may take slightly longer.</div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-circle active">4</div>
-                    <div class="step-title">REVISE OR APPROVE</div>
-                    <div class="step-desc">Revisions included. Approve and receive print-ready files immediately, ready for your printer.</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="fade-section about artisan-about-gradient" id="about">
-            <div class="gradient-overlay"></div>
-
-            <div class="about-content-wrapper">
-                <div class="section-badge ml-50">
-                    <span class="badge-arrow">→</span> ABOUT
-                </div>
-
-                <div class="about-content">
-                    <p>6th~M is a design practice focused on making brands feel consistent as they scale.</p>
-                    <p class="mt-gap">​</p>
-                    <p>Led by <a href="https://www.ritikakhinvasara.com/" target="_blank" style="text-decoration: underline; color: inherit;">Ritika Khinvasara</a>, a designer with experience across graphic and product design, the work goes beyond one-off assets, building visual systems that carry across social, decks, marketing, and web.</p>
-                    <p class="mt-gap">​</p>
-                    <p>Over the years, 6th M has worked with early-stage startups, nonprofits, and e-commerce brands, as well as global organisations like UNICEF and World Bank. </p>
-                    <p class="mt-gap">​</p>
-                    <p>6th~M also works with makers who need design that keeps pace with production, building the visual systems that carry a product from the first farmers market table to a regional distributor's catalogue.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="fade-section footer">
-            <div class="footer-bottom-left">
-                <h1 class="footer-huge-logo">6TH~M</h1>
-            </div>
-            <div class="footer-right-content">
-                <h2 class="cta-title">Ready to Elevate Your Brand?</h2>
-                <div class="footer-buttons">
-                    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank" class="btn-pill" style="color: #1383ff; font-family: var(--font-body); font-weight: 500; font-size: 23.57px;">BOOK A CALL</a>
-                    <a href="mailto:hello@6thm.com" class="btn-pill" style="color: #1383ff; font-family: var(--font-body); font-weight: 500; font-size: 23.57px;">WRITE TO US</a>
-                </div>
-                <div class="footer-links-grid">
-                    <div class="footer-col">
-                        <a href="#services">SERVICES</a>
-                        <a href="work.html">WORK</a>
-                        <a href="#about">ABOUT</a>
-                        <a href="mailto:hello@6thm.com">hello@6thm.com</a>
-                    </div>
-                    <div class="footer-col">
-                        <a href="nonprofits.html">Non-Profits</a>
-                        <a href="microproducers.html">Small-Batch Makers</a>
-                        <a href="healthcare.html">Healthcare</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script>
+<div class="about-content">
+<p>Led by <a href="https://www.ritikakhinvasara.com/" style="color: inherit; text-decoration: underline;" target="_blank">Ritika Khinvasara</a>, 6thM brings a mix of graphic and product design experience to the table. Having collaborated with everything from agile agencies to global organizations like UNICEF and the World Bank, I've learned that the best creative work comes from combining research, strategy and absolute adaptability.</p>
+<p>Whether we're building a social deck, animating a motion piece, or laying out a clean editorial report, the goal is always the same: build a visual system that connects with people and drives your business forward.</p>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="fade-section footer">
+<div class="footer-bottom-left">
+<img alt="6TH~M" class="footer-huge-logo" src="assets/footer_logo.png"/>
+</div>
+<div class="footer-right-content">
+<h2 class="cta-title">Ready to Elevate Your Brand?</h2>
+<div class="footer-buttons">
+<a class="btn-pill" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank">BOOK A CALL</a>
+<a class="btn-pill" href="mailto:hello@6thm.com">WRITE TO US</a>
+</div>
+<div class="footer-links-grid">
+<div class="footer-col">
+<a class="footer-link-header" href="#services">SERVICES</a>
+<div class="footer-sublinks">
+<a href="nonprofits.html">Non-Profit</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="microproducers.html">Micro-Producers</a>
+</div>
+</div>
+<div class="footer-col spaced-col">
+<a class="footer-link-header" href="work.html">WORK</a>
+<a class="footer-link-header" href="#about">ABOUT</a>
+<a class="footer-link-header" href="#how-it-works">HOW IT WORKS</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script>
         // Slideshow Logic (Fade)
         const track = document.querySelector('.landing-slideshow-track');
         if(track) {
@@ -377,5 +268,4 @@
         });
     </script>
 </body>
-
 </html>

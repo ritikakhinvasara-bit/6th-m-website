@@ -1,375 +1,234 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6TH~M - For Non-Profit Organizations</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=80">
-    <style>
-        .hero-label {
-            font-family: var(--font-mono);
-            font-size: 18.38px;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: var(--text-brown);
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        .hero-social-proof {
-            font-family: var(--font-sans);
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-brown);
-            margin-top: 50px;
-            text-transform: uppercase;
-            opacity: 0.8;
-            letter-spacing: 0.5px;
-        }
-        .problem-section {
-            margin-top: 130px;
-            padding: 0 50px;
-            max-width: 1055px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .problem-title {
-            font-size: 43.96px;
-            line-height: 54.4px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            color: var(--text-blue);
-        }
-        .problem-text {
-            font-size: 26.39px;
-            line-height: 1.5;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-        
-        @media (max-width: 1024px) {
-            .hero-buttons {
-                flex-direction: column;
-                padding: 0 20px;
-            }
-            .hero-social-proof {
-                margin-top: 40px;
-                padding: 0 20px;
-            }
-            .problem-section {
-                padding: 0 20px;
-                margin-top: 80px;
-            }
-            .problem-title {
-                font-size: 32px;
-                line-height: 40px;
-            }
-            .problem-text {
-                font-size: 20px;
-            }
-        }
-        
-        :root {
-            --text-blue: #3D4128;
-            --text-orange: #E1F07B;
-        }
-        
-        .page-wrapper {
-            background-image: none !important;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .about .gradient-overlay {
-            display: none !important;
-        }
-        
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin: 100px auto 0px !important;
-        }
-        
-        .gallery-section {
-            margin-top: 90px !important;
-        }
-        
-        .hero p {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-        
-        @media (min-width: 1025px) {
-            .pricing-card {
-                padding-right: 0 !important;
-            }
-            .pricing-includes {
-                width: calc((100% - 40px) / 3) !important;
-                max-width: none !important;
-                margin-left: 20px !important;
-                margin-right: 0 !important;
-                padding-left: 29px !important;
-                box-sizing: border-box;
-                flex-shrink: 0 !important;
-            }
-            .pl-example {
-                margin-left: 20px !important;
-            }
-            .pricing-content {
-                max-width: none !important;
-            }
-        }
-        
-        /* Process Section Overrides Removed */
-    </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>6TH~M - For Non-Profit Organizations</title>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Bebas+Neue&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=79" rel="stylesheet"/>
+<style>
+:root {
+    --text-brown: #3D4128;
+    --bg-green: #E1F07B;
+    --bg-olive: #3D4128;
+}
+.hero-new h1, .hero-new .hero-link {
+    color: var(--text-brown);
+}
+</style></head>
 <body>
-    <div class="page-wrapper">
-        <!-- HEADER -->
-        <header class="header">
-            <div class="logo-group" style="display: flex; flex-direction: column; align-items: flex-start; margin-left: -5px;">
-                <a href="index.html" class="header-logo-link" style="margin-left: 0;">
-                    <img src="assets/logo.png" alt="6TH~M" class="header-logo-img">
-                </a>
-                <div class="logo-subtext" style="font-family: var(--font-mono); font-size: 15.6px; text-transform: uppercase; margin-top: -30px; letter-spacing: 0.5px; margin-left: 18px;">For non-profit organizations</div>
+<div class="page-wrapper">
+<!-- HEADER -->
+<header class="header">
+<a class="header-logo-link" href="index.html">
+<img alt="6TH~M" class="header-logo-img" src="assets/logo.png"/>
+</a>
+<div class="nav-container">
+<nav class="nav">
+<div class="nav-dropdown">
+<a href="#services">Services</a>
+<div class="dropdown-content">
+<a href="nonprofits.html">Non-Profits</a>
+<a href="microproducers.html">Small-Batch Makers</a>
+<a href="healthcare.html">Healthcare</a>
+</div>
+</div>
+<a href="work.html">WORK</a>
+<a href="#about">About</a>
+</nav>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank">BOOK A CALL</a>
+</div>
+</header>
+<!-- HERO -->
+<section class="fade-section hero-new">
+<div class="hero-visuals">
+<div class="hero-visual-left">
+<img alt="Editorial Reports" src="assets/hero1_new.png"/>
+</div>
+<div class="hero-visual-right">
+<img alt="Social Media Content" src="assets/hero2_new.png"/>
+</div>
+</div>
+<div class="hero-text-row">
+<div class="hero-text-left">
+<h1 class="blue">Your mission moves fast,your design should too.</h1>
+</div>
+<div class="hero-text-right">
+<p>We provide the steady, high-quality design support required to tell your story clearly and professionally, month after month.</p>
+<div class="mt-4">
+<a class="hero-text-link" href="work.html">VIEW WORK</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PAST CLIENTS -->
+<section class="fade-section past-clients">
+<h4 class="clients-title">PAST CLIENTS</h4>
+<div class="clients-logos-strip">
+<img alt="Past Clients Logos" src="assets/past_clients_strip.png"/>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="fade-section services" id="services">
+<div class="section-badge"><span class="badge-arrow">•</span> WHAT CAN BE REQUESTED
             </div>
-            <div class="nav-container">
-                <nav class="nav">
-                    <div class="nav-dropdown">
-                        <a href="#services">Services</a>
-                        <div class="dropdown-content">
-                            <a href="nonprofits.html">Non-Profits</a>
-                            <a href="microproducers.html">Small-Batch Makers</a>
-                            <a href="healthcare.html">Healthcare</a>
-                        </div>
-                    </div>
-                    <a href="work.html">WORK</a>
-                    <a href="#about">About</a>
-                </nav>
-                <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank" class="btn btn-primary">BOOK A CALL</a>
+<h2 class="section-title">Everything your<br>organization needs.</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="card-num">01</div>
+<h3>Donor &amp; Impact Reports</h3>
+<p>Clear, credible donor-facing documents.</p>
+</div>
+<div class="service-card">
+<div class="card-num">02</div>
+<h3>Fundraising Decks</h3>
+<p>Polished pitch and grant presentations.</p>
+</div>
+<div class="service-card">
+<div class="card-num">03</div>
+<h3>Social Media Content</h3>
+<p>Consistent identity across all platforms.</p>
+</div>
+<div class="service-card mt-card-row">
+<div class="card-num">04</div>
+<h3>Campaign Collateral</h3>
+<p>One-pagers, flyers, and marketing materials.</p>
+</div>
+<div class="service-card mt-card-row">
+<div class="card-num">05</div>
+<h3>Ad Creatives</h3>
+<p>Optimized Meta and Google campaigns.</p>
+</div>
+<div class="service-card mt-card-row">
+<div class="card-num">06</div>
+<h3>Brand Consistency</h3>
+<p>Unified visual systems at scale.</p>
+</div>
+</div>
+</section>
+<!-- PRICING -->
+<section class="fade-section pricing-header">
+<div class="section-badge">
+<span class="badge-arrow">•</span> WHAT WE OFFER
             </div>
-        </header>
-
-        <!-- HERO -->
-        <section class="fade-section hero-new">
-            <div class="hero-visuals">
-                <div class="hero-visual-left">
-                    <img src="assets/Group 219.jpg" alt="Work sample">
-                </div>
-                <div class="hero-visual-right">
-                    <img src="assets/Group 220.jpg" alt="Work sample">
-                </div>
+</section>
+<section class="fade-section pricing" id="pricing">
+<div class="pricing-card">
+<div class="pricing-num">01</div>
+<div class="pricing-content">
+<h2>MONTHLY GRAPHIC<br>DESIGN SUBSCRIPTION</h2>
+<p>Ongoing design support for marketing and brand needs.</p>
+<div class="price">$1299/MONTH</div>
+</div>
+<div class="pricing-includes">
+<p class="includes-title">INCLUDES:</p>
+<ul><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li></ul>
+</div>
+</div>
+<div class="pricing-card">
+<div class="pricing-num">02</div>
+<div class="pricing-content">
+<h2>MONTHLY SOCIAL<br>MEDIA DESIGN</h2>
+<p>Consistent visual content for social platforms</p>
+<div class="price">$599/MONTH</div>
+</div>
+<div class="pricing-includes pl-example">
+<p class="includes-title">EXAMPLE PACKAGE</p>
+<ul><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li><li><span class="bullet">•</span></li></ul>
+</div>
+</div>
+</section>
+<!-- BENEFITS -->
+<section class="fade-section benefits" id="benefits">
+<div class="section-badge">
+<span class="badge-arrow">•</span> WHY TEAMS LIKE THIS MODEL
             </div>
-            <div class="hero-text-row">
-                <div class="hero-text-left">
-                    <h1 class="blue" style="font-size: 64px; line-height: 1.25; color: var(--text-blue);">Your mission moves fast,<br>your design should too.</h1>
-                </div>
-                <div class="hero-text-right">
-                    <p>We provide the steady, high-quality design support required to tell your story clearly and professionally, month after month.</p>
-                    <a href="work.html" class="hero-link" style="color: var(--text-blue);">VIEW OUR WORK</a>
-                </div>
+<div class="benefits-grid">
+<ul class="benefits-list left-col">
+<li><img alt="-" class="squiggly-bullet" src="assets/bullet_squiggly.png"/> Flat Monthly Cost</li>
+<li><img alt="-" class="squiggly-bullet" src="assets/bullet_squiggly.png"/> No per-project pricing surprises</li>
+<li><img alt="-" class="squiggly-bullet" src="assets/bullet_squiggly.png"/> Consistent Design Support</li>
+</ul>
+<ul class="benefits-list right-col">
+<li><img alt="-" class="squiggly-bullet" src="assets/bullet_squiggly.png"/> Most requests delivered within 24-72 hours</li>
+<li><img alt="-" class="squiggly-bullet" src="assets/bullet_squiggly.png"/> Flexible</li>
+<li><img alt="-" class="squiggly-bullet" src="assets/bullet_squiggly.png"/> Pause or restart the subscription anytime</li>
+</ul>
+</div>
+</section>
+<section class="fade-section process" id="process">
+<div class="section-badge badge-light">
+<span class="badge-arrow">•</span> HOW IT WORKS
             </div>
-        </section>
-
-        <!-- PAST CLIENTS -->
-        <section class="fade-section past-clients">
-            <h4 class="clients-title">PAST CLIENTS</h4>
-            <div class="clients-logos">
-                <img src="assets/client1.png" alt="UNICEF" onerror="this.src='https://via.placeholder.com/150x50?text=UNICEF'">
-                <img src="assets/client2.png" alt="Client 2" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
-                <img src="assets/client3.png" alt="FidoCure" onerror="this.src='https://via.placeholder.com/150x50?text=FidoCure'">
-                <img src="assets/client4.png" alt="Client 4" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
-            </div>
-        </section>
-
-
-        <!-- SERVICES -->
-        <section class="fade-section services" id="services" style="background-color: transparent;">
-            <div class="section-badge ml-50">
-                <span class="badge-arrow">→</span> WHAT CAN BE REQUESTED
-            </div>
-
-            <h2 class="section-title">Everything your<br>organization needs.</h2>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-num">01</div>
-                    <h3>Donor & Impact Reports</h3>
-                    <p>Clear, credible donor-facing documents.</p>
+<div class="process-timeline">
+<div class="timeline-step step-1">
+<div class="timeline-circle">1</div>
+<div class="step-title">JOIN</div>
+<div class="step-desc">Pick the plan that matches your current pace. Simple onboarding, zero hiring overhead.</div>
+</div>
+<div class="timeline-step step-2">
+<div class="timeline-circle">2</div>
+<div class="step-title">ALIGN</div>
+<div class="step-desc">Drop your requests into your workspace. We don't just look at the brief, we look at the strategy and goals behind it.</div>
+</div>
+<div class="timeline-step step-3">
+<div class="timeline-circle">3</div>
+<div class="step-title">BUILD</div>
+<div class="step-desc">Get your high-fidelity assets in a few days. Every piece is designed to fit your broader visual ecosystem.</div>
+</div>
+<div class="timeline-step step-4">
+<div class="timeline-circle active">4</div>
+<div class="step-title">REFINE / APPROVE</div>
+<div class="step-desc">We iterate together until the storytelling and systems are exactly where they need to be.</div>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="fade-section about" id="about">
+<div class="about-content-wrapper">
+<div class="section-badge">
+<span class="badge-arrow">•</span> ABOUT
                 </div>
-                <div class="service-card">
-                    <div class="card-num">02</div>
-                    <h3>Fundraising Decks</h3>
-                    <p>Polished pitch and grant presentations.</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-num">03</div>
-                    <h3>Social Media Content</h3>
-                    <p>Consistent identity across all platforms.</p>
-                </div>
-                <div class="service-card mt-card-row">
-                    <div class="card-num">04</div>
-                    <h3>Campaign Collateral</h3>
-                    <p>One-pagers, flyers, and marketing materials.</p>
-                </div>
-                <div class="service-card mt-card-row">
-                    <div class="card-num">05</div>
-                    <h3>Ad Creatives</h3>
-                    <p>Optimized Meta and Google campaigns.</p>
-                </div>
-                <div class="service-card mt-card-row">
-                    <div class="card-num">06</div>
-                    <h3>Brand Consistency</h3>
-                    <p>Unified visual systems at scale.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRICING -->
-        <section class="fade-section pricing-header">
-            <div class="section-badge ml-49">
-                <span class="badge-arrow">→</span> WHAT WE OFFER
-            </div>
-        </section>
-
-        <section class="fade-section pricing" id="pricing">
-            <div class="pricing-card">
-                <div class="pricing-num">01</div>
-                <div class="pricing-content">
-                    <h2>MONTHLY GRAPHIC<br>DESIGN SUBSCRIPTION</h2>
-                    <p>Ongoing design support for marketing and brand needs.</p>
-                    <div class="price">$1299/MONTH</div>
-                </div>
-                <div class="pricing-includes">
-                    <ul>
-                        <li><span class="bullet">•</span> Unlimited design requests</li>
-                        <li><span class="bullet">•</span> One active task at a time</li>
-                        <li><span class="bullet">•</span> Fast turnaround (1–3 business days)</li>
-                        <li><span class="bullet">•</span> Upto 2–3 revisions per request</li>
-                        <li><span class="bullet">•</span> Source files included</li>
-                        <li><span class="bullet">•</span> Pause or cancel anytime</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pricing-card">
-                <div class="pricing-num">02</div>
-                <div class="pricing-content">
-                    <h2>MONTHLY SOCIAL<br>MEDIA DESIGN</h2>
-                    <p>Consistent visual content for social platforms</p>
-                    <div class="price">$599/MONTH</div>
-                </div>
-                <div class="pricing-includes pl-example">
-                    <ul>
-                        <li><span class="bullet">•</span> 4 Static posts</li>
-                        <li><span class="bullet">•</span> 6 Stories</li>
-                        <li><span class="bullet">•</span> 2 Reels per month</li>
-                        <li><span class="bullet">•</span> On-brand assets</li>
-                        <li><span class="bullet">•</span> Pause or cancel anytime</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROCESS -->
-        <section class="fade-section process" id="process">
-            <div class="section-badge badge-light ml-50">
-                <span class="badge-arrow">→</span> HOW IT WORKS
-            </div>
-
-            <div class="process-timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-step">
-                    <div class="timeline-circle">1</div>
-                    <div class="step-title">SUBSCRIBE</div>
-                    <div class="step-desc">Choose the monthly plan that fits your organization's needs.</div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-circle">2</div>
-                    <div class="step-title">SUBMIT REQUESTS</div>
-                    <div class="step-desc">Send design requests through a shared workspace.</div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-circle">3</div>
-                    <div class="step-title">DESIGN & DELIVERY</div>
-                    <div class="step-desc">Most requests are completed within 1–3 business days depending on complexity.</div>
-                </div>
-                <div class="timeline-step">
-                    <div class="timeline-circle active">4</div>
-                    <div class="step-title">REVISE OR APPROVE</div>
-                    <div class="step-desc">Unlimited revisions until you're completely happy with the result.</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="fade-section about" id="about">
-            <div class="gradient-overlay"></div>
-
-            <div class="about-content-wrapper">
-                <div class="section-badge ml-50">
-                    <span class="badge-arrow">→</span> ABOUT
-                </div>
-
-                <div class="about-content">
-                    6th~M is a design practice focused on making brands feel consistent as they scale.
-                    <br><br>
-                    Led by <a href="https://www.ritikakhinvasara.com/" target="_blank" style="text-decoration: underline; text-underline-offset: 4px; color: inherit;">Ritika Khinvasara</a>, a designer with experience across graphic and product design, the work goes beyond one-off assets, building visual systems that carry across social, decks, marketing, and web.
-                    <br><br>
-                    Over the years, 6th M has worked with early-stage startups, nonprofits, and e-commerce brands, as well as global organisations like UNICEF and World Bank.
-                    <br><br>
-                    That range brings a balance of speed, adaptability, and an understanding of how design needs shift across different contexts.
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="fade-section footer">
-            <div class="footer-bottom-left">
-                <h1 class="footer-huge-logo">6TH~M</h1>
-            </div>
-            <div class="footer-right-content">
-                <h2 class="cta-title">Ready to Elevate Your Brand?</h2>
-                <div class="footer-buttons">
-                    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank" class="btn-pill" style="color: #1383ff; font-family: var(--font-body); font-weight: 500; font-size: 23.57px;">BOOK A CALL</a>
-                    <a href="mailto:hello@6thm.com" class="btn-pill" style="color: #1383ff; font-family: var(--font-body); font-weight: 500; font-size: 23.57px;">WRITE TO US</a>
-                </div>
-                <div class="footer-links-grid">
-                    <div class="footer-col">
-                        <a href="#services">SERVICES</a>
-                        <a href="work.html">WORK</a>
-                        <a href="#about">ABOUT</a>
-                        <a href="mailto:hello@6thm.com">hello@6thm.com</a>
-                    </div>
-                    <div class="footer-col">
-                        <a href="nonprofits.html">Non-Profits</a>
-                        <a href="microproducers.html">Small-Batch Makers</a>
-                        <a href="healthcare.html">Healthcare</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script>
+<div class="about-content">
+<p>Led by <a href="https://www.ritikakhinvasara.com/" style="color: inherit; text-decoration: underline;" target="_blank">Ritika Khinvasara</a>, 6thM brings a mix of graphic and product design experience to the table. Having collaborated with everything from agile agencies to global organizations like UNICEF and the World Bank, I've learned that the best creative work comes from combining research, strategy and absolute adaptability.</p>
+<p>Whether we're building a social deck, animating a motion piece, or laying out a clean editorial report, the goal is always the same: build a visual system that connects with people and drives your business forward.</p>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="fade-section footer">
+<div class="footer-bottom-left">
+<img alt="6TH~M" class="footer-huge-logo" src="assets/footer_logo.png"/>
+</div>
+<div class="footer-right-content">
+<h2 class="cta-title">Ready to Elevate Your Brand?</h2>
+<div class="footer-buttons">
+<a class="btn-pill" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank">BOOK A CALL</a>
+<a class="btn-pill" href="mailto:hello@6thm.com">WRITE TO US</a>
+</div>
+<div class="footer-links-grid">
+<div class="footer-col">
+<a class="footer-link-header" href="#services">SERVICES</a>
+<div class="footer-sublinks">
+<a href="nonprofits.html">Non-Profit</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="microproducers.html">Micro-Producers</a>
+</div>
+</div>
+<div class="footer-col spaced-col">
+<a class="footer-link-header" href="work.html">WORK</a>
+<a class="footer-link-header" href="#about">ABOUT</a>
+<a class="footer-link-header" href="#how-it-works">HOW IT WORKS</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script>
         // Slideshow Logic (Fade)
         const track = document.querySelector('.landing-slideshow-track');
         if(track) {
@@ -382,7 +241,6 @@
                 slides[slideIndex].classList.add('active');
             }, 3000);
         }
-
         // Fade-on-scroll Logic
         const faders = document.querySelectorAll('.fade-section');
         const appearOptions = {
@@ -405,5 +263,4 @@
         });
     </script>
 </body>
-
 </html>
