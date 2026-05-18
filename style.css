@@ -545,7 +545,7 @@ a.hover-effect:hover .view-more-label {
     color: var(--text-brown);
     margin-bottom: 12px;
     line-height: 1.4;
-    display: flex;
+    display: block;
 }
 .bullet {
     margin-right: 8px;
@@ -585,13 +585,13 @@ a.hover-effect:hover .view-more-label {
     font-family: var(--font-body);
     font-weight: 400;
     color: var(--text-brown);
-    display: flex;
-    align-items: center;
+    display: block;
 }
 .squiggly-bullet {
     width: 16px;
     height: auto;
     margin-right: 15px;
+    vertical-align: middle;
 }
 
 /* Process Timeline */
