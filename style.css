@@ -46,10 +46,6 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     margin: 0 auto;
     position: relative;
     background-color: var(--bg-sand);
-    background-image: url('assets/top-gradient.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% auto;
     overflow-x: clip;
 }
 
@@ -267,6 +263,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 35%;
 }
 .hero-new h1 {
+    font-family: var(--font-serif);
     font-size: 66.27px;
     font-weight: 400;
     line-height: 1.05;
@@ -317,7 +314,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .cta-title, .step-title {
     width: 100%;
 }
 .clients-logos-strip img {
-    max-width: 600px;
+    max-width: 780px;
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -392,8 +389,8 @@ a.hover-effect:hover .view-more-label {
     align-items: center;
     gap: 8px;
     font-family: var(--font-body);
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 400;
     text-transform: uppercase;
     color: var(--text-brown);
 }
@@ -422,12 +419,12 @@ a.hover-effect:hover .view-more-label {
 }
 .section-title {
     font-family: var(--font-body);
-    font-size: 44px;
+    font-size: 54px;
     line-height: 1.15;
     font-weight: 500;
     padding-left: 0;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    margin-top: 25px;
+    margin-bottom: 45px;
 }
 .services-grid {
     display: flex;
@@ -450,20 +447,21 @@ a.hover-effect:hover .view-more-label {
 .card-num {
     color: #1383ff;
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .service-card h3 {
     font-family: var(--font-body);
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: var(--text-brown);
 }
 .service-card p {
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--text-brown);
     line-height: 1.4;
