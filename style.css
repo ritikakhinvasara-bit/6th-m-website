@@ -1095,3 +1095,93 @@ a.hover-effect:hover .view-more-label {
 .btn-outline-white {
     border-radius: 100px !important;
 }
+
+/* Staggered Image Gallery */
+.staggered-gallery {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px; /* Space between rows */
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+}
+
+.gallery-item {
+    width: 48%; /* Almost half the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px; /* Optional, subtle border radius for images */
+}
+
+.gallery-item.offset-down {
+    margin-top: 100px; /* Stagger amount */
+}
+
+/* Float the badge inside the wrapper, over the image or above/below it */
+/* By default, we place it slightly overlapping or just near the edge */
+.gallery-badge {
+    background-color: var(--bg-white);
+    color: var(--text-brown);
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.05); /* Soft drop shadow */
+    z-index: 10;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.gallery-badge.top-left {
+    top: -25px;
+    left: 20px;
+}
+
+.gallery-badge.top-center {
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallery-badge.bottom-left {
+    bottom: -25px;
+    left: 20px;
+}
+
+.gallery-badge.bottom-center {
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1024px) {
+    .staggered-gallery {
+        padding: 40px 20px;
+        gap: 60px;
+    }
+    .gallery-row {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .gallery-item {
+        width: 100%;
+    }
+    .gallery-item.offset-down {
+        margin-top: 0; /* Remove stagger on mobile */
+    }
+}
