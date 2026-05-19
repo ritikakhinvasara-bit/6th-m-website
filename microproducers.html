@@ -245,6 +245,17 @@
 </footer>
 </div>
 <script>
+        // Hero Slideshow Logic (Fade)
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        if(heroSlides.length > 0) {
+            let heroSlideIndex = 0;
+            setInterval(() => {
+                heroSlides[heroSlideIndex].classList.remove('active');
+                heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
+                heroSlides[heroSlideIndex].classList.add('active');
+            }, 3500);
+        }
+
         // Slideshow Logic (Fade)
         const track = document.querySelector('.landing-slideshow-track');
         if(track) {
