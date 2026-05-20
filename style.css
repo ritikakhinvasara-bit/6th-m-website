@@ -1170,7 +1170,6 @@ a.hover-effect:hover .view-more-label {
 
 .work-carousel-container {
     width: 100%;
-    max-width: 1200px;
     position: relative;
     overflow: hidden;
     display: flex;
