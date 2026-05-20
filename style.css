@@ -1160,3 +1160,92 @@ a.hover-effect:hover .view-more-label {
         margin-top: 0; /* Remove stagger on mobile */
     }
 }
+
+/* Work Page Carousel */
+.work-carousel-section {
+    padding: 0 50px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.work-carousel-container {
+    background-color: #4f433a; /* Dark brown from screenshot */
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.work-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.work-carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; /* Slight rounding for inner image */
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+    color: #4f433a;
+}
+
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.carousel-arrow.prev {
+    left: 20px;
+}
+
+.carousel-arrow.next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .work-carousel-section {
+        padding: 0 20px 20px;
+    }
+    .work-carousel-container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+    .carousel-arrow.prev {
+        left: 10px;
+    }
+    .carousel-arrow.next {
+        right: 10px;
+    }
+}

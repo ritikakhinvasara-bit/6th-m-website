@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:wght@400;500&family=Bebas+Neue&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=88">
+    <link rel="stylesheet" href="style.css?v=89">
     <style>
         /* Artisan Color Scheme Overrides */
         :root {
@@ -51,6 +51,29 @@
             <section class="fade-section work-header">
                 <div class="section-badge ml-50">
                     <span class="badge-arrow">•</span> WORK
+                </div>
+            </section>
+
+            <!-- CAROUSEL SECTION -->
+            <section class="fade-section work-carousel-section">
+                <div class="work-carousel-container">
+                    <button class="carousel-arrow prev" aria-label="Previous image">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <div class="work-carousel-track">
+                        <div class="work-carousel-slide">
+                            <img src="assets/slide1.png" alt="Work Slide 1">
+                        </div>
+                        <div class="work-carousel-slide">
+                            <img src="assets/slide2.png" alt="Work Slide 2">
+                        </div>
+                        <div class="work-carousel-slide">
+                            <img src="assets/slide3.png" alt="Work Slide 3">
+                        </div>
+                    </div>
+                    <button class="carousel-arrow next" aria-label="Next image">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
                 </div>
             </section>
 
@@ -134,6 +157,29 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
+
+        // Carousel Logic
+        const track = document.querySelector('.work-carousel-track');
+        if(track) {
+            const slides = document.querySelectorAll('.work-carousel-slide');
+            const prevButton = document.querySelector('.carousel-arrow.prev');
+            const nextButton = document.querySelector('.carousel-arrow.next');
+            let currentSlideIndex = 0;
+
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentSlideIndex = (currentSlideIndex === 0) ? slides.length - 1 : currentSlideIndex - 1;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentSlideIndex = (currentSlideIndex === slides.length - 1) ? 0 : currentSlideIndex + 1;
+                updateCarousel();
+            });
+        }
     </script>
 </body>
 </html>
