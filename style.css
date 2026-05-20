@@ -1169,9 +1169,6 @@ a.hover-effect:hover .view-more-label {
 }
 
 .work-carousel-container {
-    background-color: #4f433a; /* Dark brown from screenshot */
-    border-radius: 20px;
-    padding: 40px;
     width: 100%;
     max-width: 1200px;
     position: relative;
@@ -1233,10 +1230,6 @@ a.hover-effect:hover .view-more-label {
 @media (max-width: 768px) {
     .work-carousel-section {
         padding: 0 20px 20px;
-    }
-    .work-carousel-container {
-        padding: 20px;
-        border-radius: 12px;
     }
     .carousel-arrow {
         width: 36px;
