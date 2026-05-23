@@ -442,7 +442,7 @@ a.hover-effect:hover .view-more-label {
     border-radius: 12px;
 }
 .card-num {
-    color: #1383ff;
+    color: var(--text-blue);
     font-family: var(--font-body);
     font-size: 24px;
     font-weight: 400;
