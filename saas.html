@@ -1,301 +1,1376 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>6TH~M - For SaaS Companies</title>
-<link href="assets/favicon.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Bebas+Neue&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=96" rel="stylesheet"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>6TH~M — For SaaS Companies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Rethink+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
+/* ---------------- TOKENS ---------------- */
 :root {
-    --text-brown: #312e81;
-    --text-blue: #8b5cf6;
-    --bg-green: #e0e7ff;
-    --bg-olive: #4f46e5;
-    --bg-sand: #f8fafc;
+  /* brand palette */
+  --bg:        #E3ECD9;
+  --bg-2:      #E3ECD9;
+  --ink:       #1c1815;
+  --ink-2:     #4b4138;
+  --ink-3:     #8a7e6e;
+  --rule:      rgba(28,24,21,0.16);
+  --rule-soft: rgba(28,24,21,0.10);
+
+  --blue:      #4B2E83;
+  --mint:      #cde2b3;
+  --taupe:     #cbc1ad;
+  --brown:     #3a241c;
+  --peach:     #e9c997;
+
+  --accent:    var(--blue);
+  --accent-2:  color-mix(in srgb, var(--blue) 12%, transparent);
+
+  --serif:     "Newsreader", "Times New Roman", serif;
+  --sans:      "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
+  --mono:      "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  --pad-x: clamp(5px, 1.125vw, 20px);
+  --pad-y: clamp(64px, 9vw, 140px);
+  --max:   1320px;
+  --r-card: 18px;
+  --r-pill: 999px;
 }
-.hero-new h1, .hero-new .hero-link {
-    color: var(--text-brown);
+
+[data-theme="light"] {
+  --bg: #f6f1e4;
+  --bg-2: #ece5d0;
+  --rule: rgba(28,24,21,0.10);
 }
-</style></head>
-<body>
-<div class="page-wrapper">
-<!-- HEADER -->
-<header class="header">
-<a class="header-logo-link" href="index.html">
-<img alt="6TH~M" class="header-logo-img" src="assets/logo.png"/>
-</a>
-<div class="nav-container">
-<nav class="nav">
-<div class="nav-dropdown">
-<a href="#services">Services</a>
-<div class="dropdown-content">
-<a href="nonprofits.html">Non-Profits</a>
-<a href="microproducers.html">Small-Batch Makers</a>
-<a href="healthcare.html">Healthcare</a>
-<a href="saas.html">SaaS Companies</a>
-<a href="cleantech.html">Clean-Tech</a>
-</div>
-</div>
-<a href="work.html">WORK</a>
-<a href="#about">About</a>
-</nav>
-<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank">BOOK A CALL</a>
-</div>
-</header>
-<!-- HERO -->
-<section class="fade-section hero-new">
-<div class="hero-visuals">
-    <div class="hero-slideshow">
-        <div class="hero-slide active">
-            <img src="assets/slide_1.png" alt="Gallery Slide 1" class="hero-full-slide-img">
+[data-theme="dark"] {
+  --bg: #1b1813;
+  --bg-2: #26211a;
+  --ink: #f1ead9;
+  --ink-2: #c7bda8;
+  --ink-3: #897e6c;
+  --rule: rgba(241,234,217,0.16);
+  --rule-soft: rgba(241,234,217,0.10);
+}
+[data-density="tight"] { --pad-y: clamp(48px, 7vw, 100px); }
+[data-density="airy"]  { --pad-y: clamp(80px, 11vw, 170px); }
+
+/* ---------------- BASE ---------------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+em, i { font-style: normal; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+/* ---------------- TYPE ---------------- */
+.display {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  font-size: clamp(46px, 7.6vw, 96px);
+  text-wrap: balance;
+  margin: 0;
+  color: var(--ink);
+}
+.display em, .display i {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  line-height: 1.05;
+  font-size: clamp(34px, 5.2vw, 68px);
+  text-wrap: balance;
+  margin: 0;
+  color: var(--ink);
+}
+.h2 em, .h2 i {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(14px, 1.2vw, 16px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 18px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+.kicker::before {
+  content: "";
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.lead {
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 58ch;
+  text-wrap: pretty;
+}
+
+.mono { font-family: var(--mono); }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+
+/* ---------------- LAYOUT ---------------- */
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+.section {
+  padding-top: var(--pad-y);
+  padding-bottom: var(--pad-y);
+  position: relative;
+}
+.section + .section { padding-top: 0; }
+.divider { height: 1px; background: var(--rule); width: 100%; }
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 45px;
+}
+@media (min-width: 880px) {
+  .section-head { grid-template-columns: 1fr 3fr; align-items: start; gap: 60px; }
+}
+
+/* ---------------- NAV ---------------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(1.2) blur(10px);
+  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 24px;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
+  line-height: 1;
+}
+.logo img { height: 28px; width: auto; display: block; }
+[data-theme="dark"] .logo img { filter: invert(0.92) sepia(0.18) saturate(2) hue-rotate(-15deg) brightness(1.05); }
+
+.nav-links {
+  display: none;
+  gap: 28px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.nav-links a {
+  position: relative;
+  padding: 8px 0;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links .has-menu { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.chev {
+  width: 7px; height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-2px,-2px);
+  display: inline-block;
+}
+@media (min-width: 920px) { .nav-links { display: inline-flex; } }
+
+.dropdown { position: relative; }
+.dropdown-panel {
+  position: absolute;
+  top: 100%; left: -16px;
+  margin-top: 8px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 220px;
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+.dropdown:hover .dropdown-panel,
+.dropdown:focus-within .dropdown-panel {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.dropdown-panel a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.dropdown-panel a:hover { background: var(--bg-2); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease, opacity .2s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+}
+.btn-primary:hover { transform: translateY(-1px); filter: brightness(1.05); }
+.btn-primary .arrow { display: none; }
+.btn-primary .arrow::before { display: none; }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--bg); }
+
+.menu-toggle {
+  display: inline-flex;
+  width: 40px; height: 40px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+}
+.menu-toggle span { width: 14px; height: 1.5px; background: var(--ink); position: relative; }
+.menu-toggle span::before, .menu-toggle span::after {
+  content:""; position: absolute; left: 0; width: 14px; height: 1.5px; background: var(--ink);
+}
+.menu-toggle span::before { top: -5px; }
+.menu-toggle span::after  { top:  5px; }
+@media (min-width: 920px) { .menu-toggle { display: none; } }
+
+.nav-actions { display: inline-flex; gap: 10px; align-items: center; }
+.nav-actions .btn { height: 38px; padding: 0 18px; font-size: 11px; }
+@media (max-width: 600px) {
+  .nav-actions .btn-primary { display: none; }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 68px 0 0 0;
+  background: var(--bg);
+  border-top: 1px solid var(--rule-soft);
+  padding: 24px var(--pad-x) 40px;
+  display: none;
+  z-index: 49;
+  overflow-y: auto;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu .group { padding: 14px 0; border-bottom: 1px solid var(--rule-soft); }
+.mobile-menu .group:last-child { border-bottom: 0; }
+.mobile-menu .group h4 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.mobile-menu .group a {
+  display: block;
+  padding: 8px 0;
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: -0.015em;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  padding-top: clamp(52px, 8vw, 120px);
+  padding-bottom: clamp(56px, 8vw, 110px);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(36px, 5vw, 64px);
+}
+.hero-headline-row { display: flex; flex-direction: column; gap: 40px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.hero-actions .meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-actions .meta .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #2a9b5d; box-shadow: 0 0 0 4px rgba(42,155,93,0.18);
+}
+
+/* gallery strip */
+.gallery {
+  margin-top: clamp(40px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  align-items: start;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.tile {
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: block;
+  aspect-ratio: 7 / 5;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 720px) {
+  .gallery { grid-template-columns: 1fr; }
+}
+
+/* ---------------- LOGO STRIP ---------------- */
+.clients {
+  padding-top: clamp(36px, 5vw, 56px);
+  padding-bottom: clamp(36px, 5vw, 56px);
+}
+.clients-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+.clients-head h4 {
+  font-family: var(--mono);
+  font-size: 18px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin: 0;
+  font-weight: 500;
+}
+.clients-head .count {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink-3);
+}
+.clients-strip {
+  width: 100%;
+  padding: 8px 0;
+}
+.clients-strip img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* keep the artwork ink-coloured, not pure black */
+  filter: brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(540%) hue-rotate(2deg) brightness(96%) contrast(91%);
+  opacity: 0.88;
+}
+[data-theme="dark"] .clients-strip img {
+  filter: brightness(0) invert(0.9);
+  opacity: 0.85;
+}
+
+
+/* ---------------- DELIVERABLES GRID ---------------- */
+.deliverables {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.deliverable {
+  display: grid;
+  grid-template-columns: 60px 1.2fr 2fr;
+  gap: 24px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background .25s ease, padding .25s ease;
+}
+.deliverable:hover { background: var(--bg-2); padding-left: 12px; padding-right: 12px; }
+.deliverable:last-child { border-bottom: 0; }
+#services .deliverable:hover { background: rgba(255,255,255,0.35); }
+.deliverable .num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+.deliverable h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+}
+.deliverable p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 15px;
+  max-width: 50ch;
+}
+.deliverable .arrow {
+  display: none;
+}
+.deliverable:hover .arrow { display: none; }
+@media (max-width: 760px) {
+  .deliverable { grid-template-columns: 40px 1fr; gap: 16px; padding: 22px 0; }
+  .deliverable p { grid-column: 2 / -1; }
+  .deliverable .arrow { display: none; }
+}
+
+/* ---------------- PRICING ---------------- */
+.pricing-section { background: var(--bg-2); }
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 2vw, 28px);
+}
+@media (min-width: 880px) {
+  .pricing { grid-template-columns: 1fr 1fr; }
+}
+.plan {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  padding: clamp(28px, 3vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+}
+.plan.featured {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.plan.featured h3 { color: #fff; }
+.plan.featured h3 em, .plan.featured h3 i { color: var(--peach); }
+.plan.featured .eyebrow { color: rgba(255,255,255,0.65); }
+.plan.featured .desc  { color: rgba(255,255,255,0.85); }
+.plan.featured .price { color: #fff; }
+.plan.featured .price small { color: rgba(255,255,255,0.65); }
+.plan.featured .rule  { background: rgba(255,255,255,0.18); }
+.plan.featured h4 { color: rgba(255,255,255,0.65); }
+.plan.featured li::before { background: var(--peach); }
+.plan.featured .pill { background: var(--peach); color: var(--brown); }
+.plan-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.plan .pill { display: none; }
+.plan .cta { display: none; }
+.plan .pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--accent-2);
+  color: var(--blue);
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  font-weight: 500;
+}
+.plan h3 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(31px, 3.4vw, 47px);
+  line-height: 1.1;
+  letter-spacing: -0.018em;
+  margin: 0;
+  text-wrap: balance;
+  color: var(--ink);
+}
+.plan h3 em, .plan h3 i {
+  font-style: normal;
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--accent);
+}
+.plan .desc { color: var(--ink-2); font-size: 16px; max-width: 42ch; margin: 0; }
+.plan .price {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1;
+  color: var(--blue);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.plan .price small {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.plan .rule { display: none; }
+.plan h4 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+.plan ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.plan li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 15px;
+}
+.plan li::before {
+  content: "";
+  width: 6px; height: 6px;
+  background: var(--blue);
+  border-radius: 50%;
+  display: block;
+  transform: translateY(2px);
+}
+.plan .cta { margin-top: auto; }
+.plan.featured .btn-primary { background: #fff; color: var(--blue); }
+
+/* ---------------- WHY GRID ---------------- */
+.why {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media (min-width: 760px) {
+  .why { grid-template-columns: 1fr 1fr 1fr; }
+}
+.why-item {
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.why-item:nth-child(-n+3) { border-top: 0; }
+@media (min-width: 760px) {
+  .why-item { padding: 28px 28px 28px 0; border-right: 1px solid var(--rule); }
+  .why-item:nth-child(3n) { border-right: 0; padding-right: 0; }
+}
+.why-item .ico {
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--accent-2);
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+}
+.why-item h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(20px, 2vw, 26px);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+  color: var(--ink);
+}
+.why-item p { color: var(--ink-2); font-size: 14.5px; margin: 0; max-width: 28ch; }
+
+/* ---------------- HOW IT WORKS ---------------- */
+.how-section { background: #3D4128; color: #fff; border-radius: 0; margin: 0; padding: 56px 32px; }
+.how-section .kicker { color: #fff; }
+.how-section .kicker::before { background: #fff; }
+.how-section .section-head { margin-bottom: 45px; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  align-items: start;
+  margin-top: 36px;
+}
+.step {
+  position: relative;
+  padding: 0;
+  border: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-right: 24px;
+}
+.step .marker {
+  position: relative;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 22px;
+  color: #4d8cff;
+  background: transparent;
+  margin-bottom: 36px;
+  box-sizing: border-box;
+}
+.step[data-state="dotted"] .marker { border: 2px dotted #4d8cff; }
+.step[data-state="dashed"] .marker { border: 2px dashed #4d8cff; }
+.step[data-state="solid"]  .marker { border: 2px solid  #4d8cff; }
+.step[data-state="filled"] .marker { background: #4d8cff; color: #fff; border: 2px solid #4d8cff; }
+
+/* Connector line extending from the marker to the next step's marker */
+.step .marker::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  height: 0;
+  width: calc((100% / 56 * 100vw) ); /* placeholder, overridden below */
+  border-top: 2px solid #4d8cff;
+  transform: translateY(-1px);
+}
+/* Compute width: each step occupies 1/4 of the steps container's width.
+   The connector should reach the next marker's left edge = step width - marker width. */
+.step .marker::after {
+  /* The step itself is the containing positioning context. Width of step minus 56px (marker) minus 0 gap. */
+  width: calc((100cqi / 4) - 56px);
+}
+.steps { container-type: inline-size; }
+
+.step[data-state="dotted"] .marker::after,
+.step[data-state="dashed"] .marker::after { border-top-style: dashed; }
+.step[data-state="solid"]  .marker::after { border-top-style: solid; }
+.step:last-child .marker::after { display: none; }
+
+.step h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(18px, 1.6vw, 22px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0 0 14px;
+  color: #fff;
+}
+.step p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #fff;
+  max-width: 30ch;
+}
+
+@media (max-width: 760px) {
+  .steps { grid-template-columns: 1fr; gap: 24px; }
+  .step { padding-right: 0; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.18) !important; }
+  .step:last-child { border-bottom: 0 !important; }
+  .step .marker { margin-bottom: 20px; }
+  .step .marker::after { display: none; }
+}
+
+/* ---------------- ABOUT ---------------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+@media (min-width: 880px) {
+  .about { grid-template-columns: 1.1fr 1.3fr; }
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 80px);
+  align-items: start;
+}
+@media (min-width: 880px) {
+  .about { grid-template-columns: 1fr 2fr; }
+}
+.about-kicker {
+  font-family: var(--sans);
+  font-size: 18px;
+  letter-spacing: 0;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+.about-kicker::before {
+  content: "";
+  width: 6px; height: 6px;
+  background: var(--ink);
+  border-radius: 50%;
+  display: inline-block;
+}
+.about-body p {
+  font-family: var(--sans);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin: 0 0 26px;
+  font-weight: 400;
+}
+.about-body p:last-child { margin-bottom: 0; }
+.about-body p em { font-style: normal; color: inherit; font-weight: 400; }
+
+/* ---------------- CTA FOOTER ---------------- */
+.cta-section {
+  background: var(--blue);
+  color: #fff;
+}
+.cta-section .h2 { color: #fff; }
+.cta-section .h2 em { color: var(--peach); }
+.cta-section .kicker { color: rgba(255,255,255,0.7); }
+.cta-section .kicker::before { background: var(--peach); }
+.cta-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: end;
+}
+@media (min-width: 880px) {
+  .cta-inner { grid-template-columns: 1.4fr 1fr; }
+}
+.cta-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.cta-section .btn-primary { background: #fff; color: var(--blue); }
+.cta-section .btn-ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
+.cta-section .btn-ghost:hover { background: #fff; color: var(--blue); border-color: #fff; }
+
+/* footer */
+.foot {
+  background: var(--blue);
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.foot-inner {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 40px;
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(28px, 3vw, 40px);
+}
+@media (max-width: 880px) { .foot-inner { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .foot-inner { grid-template-columns: 1fr; gap: 28px; } }
+.foot h5 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+.foot ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.foot a { color: rgba(255,255,255,0.92); font-size: 14px; }
+.foot a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--peach); text-underline-offset: 4px; }
+.foot .brand {
+  margin-bottom: 24px;
+  line-height: 0;
+}
+.foot .brand img {
+  width: clamp(200px, 28vw, 340px);
+  height: auto;
+  display: block;
+  /* recolour the brown source artwork into the brand peach for the blue footer */
+  filter: brightness(0) saturate(100%) invert(82%) sepia(33%) saturate(414%) hue-rotate(351deg) brightness(96%) contrast(88%);
+}
+.foot p { margin: 0; max-width: 32ch; font-size: 14px; color: rgba(255,255,255,0.78); }
+.foot .colophon {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 22px 0;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.62);
+}
+
+/* ---------------- TWEAKS PANEL ---------------- */
+.tweaks {
+  position: fixed;
+  right: 18px; bottom: 18px;
+  width: 290px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 18px 50px -16px rgba(0,0,0,0.25);
+  z-index: 100;
+  display: none;
+  font-family: var(--sans);
+}
+.tweaks.open { display: block; }
+.tweaks-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 12px;
+}
+.tweaks-head h6 {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  margin: 0; color: var(--ink);
+}
+.tweaks-close {
+  width: 22px; height: 22px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--ink);
+}
+.tweaks-close:hover { background: var(--bg-2); }
+.tweak-row { margin-bottom: 12px; }
+.tweak-row > label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-2); margin-bottom: 6px;
+}
+.seg { display: flex; border: 1px solid var(--ink); border-radius: 6px; overflow: hidden; }
+.seg button {
+  flex: 1; padding: 8px 6px;
+  font-size: 11px; color: var(--ink);
+  font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase;
+  border-right: 1px solid var(--ink);
+}
+.seg button:last-child { border-right: 0; }
+.seg button.active { background: var(--ink); color: var(--bg); }
+.swatches { display: flex; gap: 8px; }
+.swatch {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid var(--rule);
+  cursor: pointer;
+}
+.swatch.active { border-color: var(--ink); transform: scale(1.06); }
+
+@media (max-width: 520px) { .tweaks { right: 10px; left: 10px; width: auto; bottom: 10px; } }
+
+</style>
+</head>
+<body data-theme="cream" data-density="normal">
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo" aria-label="6thM — home"><img src="assets/6thm-logo.png" alt="6TH~M" style="height: 41px" /></a>
+
+    <nav class="nav-links" aria-label="Primary" style="font-size: 15px">
+      <a href="#services" style="letter-spacing: 0px">Services</a>
+      <div class="dropdown">
+        <a href="#" class="has-menu" style="letter-spacing: 0px">Industries <span class="chev" aria-hidden="true"></span></a>
+        <div class="dropdown-panel" role="menu">
+          <a href="nonprofits.html" style="letter-spacing: 0px">Non-Profits</a>
+          <a href="microproducers.html" style="letter-spacing: 0px">Small-Batch Makers</a>
+          <a href="healthcare.html" style="letter-spacing: 0px">Healthcare</a>
+          <a href="saas.html" style="letter-spacing: 0px">SaaS Companies</a>
+          <a href="cleantech.html" style="letter-spacing: 0px">Clean-Tech</a>
         </div>
-        <div class="hero-slide">
-            <img src="assets/slide_2.png" alt="Gallery Slide 2" class="hero-full-slide-img">
-        </div>
-        <div class="hero-slide">
-            <img src="assets/slide_3.png" alt="Gallery Slide 3" class="hero-full-slide-img">
-        </div>
+      </div>
+      <a href="work.html" style="letter-spacing: 0px">Work</a>
+      <a href="#about" style="letter-spacing: 0px">About</a>
+      <a href="#how" style="letter-spacing: 0px">How it works</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px">Write to us</a>
+      <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-size: 15px; letter-spacing: 0px">
+        Book a call <span class="arrow" aria-hidden="true"></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
     </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="group">
+    <h4>Explore</h4>
+    <a href="#services">Services</a>
+    <a href="work.html">Work</a>
+    <a href="#about">About</a>
+    <a href="#how">How it works</a>
+  </div>
+  <div class="group">
+    <h4>Industries</h4>
+    <a href="nonprofits.html">Non-Profits</a>
+    <a href="microproducers.html">Small-Batch Makers</a>
+    <a href="healthcare.html">Healthcare</a>
+    <a href="saas.html">SaaS Companies</a>
+    <a href="cleantech.html">Clean-Tech</a>
+  </div>
+  <div class="group">
+    <h4>Get in touch</h4>
+    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
+    <a href="mailto:hello@6thm.com">hello@6thm.com</a>
+  </div>
 </div>
-<div class="hero-text-row">
-<div class="hero-text-left">
-<h1>Monthly design that moves<br>with your sprint.</h1>
-</div>
-<div class="hero-text-right">
-<p>Ongoing design support for SaaS startups and growth-stage companies: investor decks, product marketing, ad creatives, landing pages, and launch assets. Strategy-backed, sprint-compatible, flat monthly fee.</p>
-<div class="mt-4">
-<a class="hero-text-link" href="work.html">VIEW WORK</a>
-</div>
-</div>
-</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-headline-row">
+      <span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">DESIGN SUBSCRIPTION </span>
+      <h1 class="display">
+        Monthly design that<br/><em style="font-weight: 300">moves</em> with your sprint.
+      </h1>
+      <p class="lead" style="font-family: &quot;Rethink Sans&quot;">Ongoing design support for SaaS startups and growth-stage companies: investor decks, product marketing, ad creatives, landing pages, and launch assets. Strategy-backed, sprint-compatible, flat monthly fee.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">
+          Book a call <span class="arrow" aria-hidden="true"></span>
+        </a>
+        <a class="btn btn-ghost" href="work.html" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">View work</a>
+        <span class="meta"></span>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="tile"><img src="assets/wrc-report.png" alt="WRC report layout" loading="lazy" /></div>
+      <div class="tile"><img src="assets/rs-pitch-deck.png" alt="Roots & Shoots pitch deck" loading="lazy" /></div>
+      <div class="tile"><img src="assets/whereto-email.png" alt="Where To email thumbnail" loading="lazy" /></div>
+    </div>
+  </div>
 </section>
-<!-- PAST CLIENTS -->
-<section class="fade-section past-clients">
-<h4 class="clients-title">PAST CLIENTS</h4>
-<div class="clients-logos-strip">
-<img alt="Past Clients Logos" src="assets/past_clients_strip.png"/>
-</div>
+
+<!-- ============ PAST CLIENTS ============ -->
+<section class="clients">
+  <div class="wrap">
+    <div class="clients-head">
+      <h4 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">PAST CLIENTS &amp; COLLABORATORS</h4>
+      <span class="count"><em></em></span>
+    </div>
+    <div class="clients-strip" aria-label="Past clients: UNICEF, Women's Refugee Commission, FidoCure, organicgirl">
+      <img src="assets/past-clients.png" alt="Past clients: UNICEF, Women's Refugee Commission, FidoCure, organicgirl" style="opacity: 0.91; height: 227px; object-fit: cover; width: 1108px" />
+    </div>
+  </div>
 </section>
-<!-- SERVICES -->
-<section class="fade-section services" id="services">
-<div class="section-badge"><span class="badge-arrow">•</span> WHAT WE DESIGN FOR YOU
-            </div>
-<h2 class="section-title">Every asset your go-to-market<br>motion actually needs.</h2>
-<div class="services-grid">
-<div class="service-card">
-<div class="card-num">01</div>
-<h3>Investor decks</h3>
-<p>Seed through Series B, slides that translate traction and vision into fundable narratives.</p>
-</div>
-<div class="service-card">
-<div class="card-num">02</div>
-<h3>Landing pages</h3>
-<p>Hero sections, feature grids, pricing layouts, and social proof, designed for conversion.</p>
-</div>
-<div class="service-card">
-<div class="card-num">03</div>
-<h3>Ad creatives</h3>
-<p>Meta and LinkedIn ad formats built for SaaS acquisition funnels and retargeting campaigns.</p>
-</div>
-<div class="service-card mt-card-row">
-<div class="card-num">04</div>
-<h3>Product marketing</h3>
-<p>Feature launch one-pagers, comparison sheets, and sales enablement collateral.</p>
-</div>
-<div class="service-card mt-card-row">
-<div class="card-num">05</div>
-<h3>Social & thought leadership</h3>
-<p>LinkedIn carousels, announcement posts, and founder content for building in public.</p>
-</div>
-<div class="service-card mt-card-row">
-<div class="card-num">06</div>
-<h3>Customer comms</h3>
-<p>Email headers, onboarding visuals, and release announcement assets.</p>
-</div>
-</div>
+
+<!-- ============ DELIVERABLES ============ -->
+<section class="section" id="services" style="background: #D9F5B7; border-radius: 0; margin: 0; padding: 64px 24px 24px">
+  <div class="wrap">
+    <div class="section-head" style="display: flex; flex-direction: column; gap: 16px; align-items: stretch; margin-bottom: 45px;">
+      <span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">What we design for you</span>
+      <h2 class="h2">Every asset your go-to-
+market motion needs.</h2>
+    </div>
+
+    <div class="deliverables">
+      <a class="deliverable" href="#">
+        <div class="num" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">01 </div>
+        <h3>Investor decks</h3>
+        <p>Seed through Series B, slides that translate traction and vision into fundable narratives.</p>
+      </a>
+      <a class="deliverable" href="#">
+        <div class="num" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">02 </div>
+        <h3>Landing pages</h3>
+        <p>Hero sections, feature grids, pricing layouts, and social proof, designed for conversion.</p>
+      </a>
+      <a class="deliverable" href="#">
+        <div class="num" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">03 </div>
+        <h3>Ad creatives</h3>
+        <p>Meta and LinkedIn ad formats built for SaaS acquisition funnels and retargeting campaigns.</p>
+      </a>
+      <a class="deliverable" href="#">
+        <div class="num" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">04 </div>
+        <h3>Product marketing</h3>
+        <p>Feature launch one-pagers, comparison sheets, and sales enablement collateral.</p>
+      </a>
+      <a class="deliverable" href="#">
+        <div class="num" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">05 </div>
+        <h3>Social & thought leadership</h3>
+        <p>LinkedIn carousels, announcement posts, and founder content for building in public.</p>
+      </a>
+      <a class="deliverable" href="#">
+        <div class="num" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">06 </div>
+        <h3>Customer comms</h3>
+        <p>Email headers, onboarding visuals, and release announcement assets.</p>
+      </a>
+    </div>
+  </div>
 </section>
-<!-- PRICING -->
-<section class="fade-section pricing-header">
-<div class="section-badge">
-<span class="badge-arrow">•</span> WHAT WE OFFER
-            </div>
+
+<!-- ============ PRICING ============ -->
+<section class="section pricing-section" id="pricing" style="padding: 0px 0px 94px">
+  <div class="wrap" style="padding-top: 71px; margin: 0px; padding: 40px 33px 0px 84px">
+    <div class="section-head">
+      <div><span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; padding: 0px">What we offer</span></div>
+    </div>
+
+    <div class="pricing">
+
+      <article class="plan featured">
+        <div class="plan-top">
+          <div>
+            <div class="eyebrow" style="font-family: &quot;Rethink Sans&quot;; font-size: 14px; letter-spacing: 0px">Plan 01</div>
+            <h3 style="margin-top:8px">Monthly Graphic<br/><em>Design</em> Subscription</h3>
+          </div>
+          <span class="pill" style="width: 86px">Most popular</span>
+        </div>
+        <p class="desc">Whether you're closing a round, shipping a feature, or trying to win your next big customer, we handle the design so you don't have to.</p>
+        <div class="price" style="letter-spacing: 0px; font-family: &quot;Rethink Sans&quot;">$1,299 <small style="letter-spacing: 0px">/ month</small></div>
+        <div class="rule"></div>
+        <div>
+          <h4 style="letter-spacing: 0px; font-family: &quot;Rethink Sans&quot;; font-size: 18px">Includes</h4>
+          <ul>
+            <li>Unlimited design requests</li>
+            <li>One active task at a time</li>
+            <li>Fast turnaround: 24-72h</li>
+            <li>Up to 2-3 revisions</li>
+            <li>Source files included</li>
+          </ul>
+        </div>
+        <a class="btn btn-primary cta" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 14px">
+          Start subscription <span class="arrow" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <article class="plan" style="letter-spacing: 0px">
+        <div class="plan-top">
+          <div>
+            <div class="eyebrow" style="font-family: &quot;Rethink Sans&quot;; font-size: 13px; letter-spacing: 0px">Plan 02</div>
+            <h3 style="margin-top:8px">Monthly Social<br/><em>Media</em> Design</h3>
+          </div>
+          <span class="pill">For marketers</span>
+        </div>
+        <p class="desc">You're building in public. We'll make sure the design keeps up.</p>
+        <div class="price" style="font-family: &quot;Rethink Sans&quot;">$599 <small style="letter-spacing: 0px">/ month</small></div>
+        <div class="rule"></div>
+        <div>
+          <h4 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 18px">Example package</h4>
+          <ul>
+            <li>4 Static posts</li>
+            <li>6 Stories</li>
+            <li>2 Reels</li>
+            <li>Channel-aware formats</li>
+            <li>Source files included</li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost cta" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 14px">
+          Start subscription
+        </a>
+      </article>
+
+    </div>
+  </div>
 </section>
-<section class="fade-section pricing" id="pricing">
-<div class="pricing-card">
-<div class="pricing-num">01</div>
-<div class="pricing-content">
-<h2>Monthly Graphic<br>Design Subscription</h2>
-<p>Whether you're closing a round, shipping a feature, or trying to win your next big customer, we handle the design so you don't have to.</p>
-<div class="price">$1,299/MONTH</div>
-</div>
-<div class="pricing-includes">
-<p class="includes-title">INCLUDES:</p>
-<ul>
-                        <li><span class="bullet">•</span> Unlimited design requests</li>
-                        <li><span class="bullet">•</span> One active task at a time</li>
-                        <li><span class="bullet">•</span> 24–72 hour turnaround</li>
-                        <li><span class="bullet">•</span> Up to 2–3 revisions per asset</li>
-                        <li><span class="bullet">•</span> Source files (Figma + PDF) included</li>
-                        <li><span class="bullet">•</span> Shared Notion or Slack workspace</li>
-                        <li><span class="bullet">•</span> Strategy alignment on every request</li>
-                    </ul>
-</div>
-</div>
-<div class="pricing-card">
-<div class="pricing-num">02</div>
-<div class="pricing-content">
-<h2>Monthly Social<br>Media Design</h2>
-<p>You're building in public. We'll make sure the design keeps up.</p>
-<div class="price">$599/MONTH</div>
-</div>
-<div class="pricing-includes pl-example">
-<p class="includes-title">EXAMPLE PACKAGE</p>
-<ul>
-                        <li><span class="bullet">•</span> 4 static posts per month</li>
-                        <li><span class="bullet">•</span> 6 story formats</li>
-                        <li><span class="bullet">•</span> 2 reels or video graphics</li>
-                        <li><span class="bullet">•</span> On-brand templates included</li>
-                    </ul>
-</div>
-</div>
+
+<!-- ============ WHY ============ -->
+<section class="section" id="why" style="letter-spacing: 0px; padding: 100px 0px 51px">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">Why teams like this model</span></div>
+    </div>
+
+    <div class="why">
+      <div class="why-item"><div class="ico">01</div><h4>Flat monthly cost</h4><p>One predictable invoice. Plan your budget around outcomes, not hourly rates.</p></div>
+      <div class="why-item" style="padding: 28px"><div class="ico">02</div><h4>No per-project surprises</h4><p style="padding: 0px">No estimates, no scope creep, no last-minute change-order fees.</p></div>
+      <div class="why-item" style="padding: 28px 0px 28px 28px"><div class="ico">03</div><h4>Consistent support</h4><p>The same eye on your brand, week after week, so the system stays coherent.</p></div>
+      <div class="why-item"><div class="ico">04</div><h4>24-72h turnaround</h4><p>Most requests are back in your inbox within three working days.</p></div>
+      <div class="why-item" style="padding: 28px"><div class="ico">05</div><h4>Flexible</h4><p>Bring three asks one week, ten the next. Move with your roadmap.</p></div>
+      <div class="why-item" style="padding: 28px 0px 28px 28px"><div class="ico">06</div><h4>Pause anytime</h4><p>Quiet quarter? Pause the subscription and pick it back up when you need it.</p></div>
+    </div>
+  </div>
 </section>
-<!-- BENEFITS -->
-<section class="fade-section benefits" id="benefits">
-<div class="section-badge">
-<span class="badge-arrow">•</span> WHY TEAMS LIKE THIS MODEL
-            </div>
-<div class="benefits-grid">
-<ul class="benefits-list left-col">
-                    <li><img src="assets/bullet_squiggly.png" class="squiggly-bullet" alt="-"> Flat Monthly Cost</li>
-                    <li><img src="assets/bullet_squiggly.png" class="squiggly-bullet" alt="-"> No per-project pricing surprises</li>
-                    <li><img src="assets/bullet_squiggly.png" class="squiggly-bullet" alt="-"> Consistent Design Support</li>
-                </ul>
-                <ul class="benefits-list right-col">
-                    <li><img src="assets/bullet_squiggly.png" class="squiggly-bullet" alt="-"> Most requests delivered within 24-72 hours</li>
-                    <li><img src="assets/bullet_squiggly.png" class="squiggly-bullet" alt="-"> Flexible</li>
-                    <li><img src="assets/bullet_squiggly.png" class="squiggly-bullet" alt="-"> Pause or restart the subscription anytime</li>
-                </ul>
-</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section how-section" id="how" style="padding: 25px 32px 76px">
+  <div class="wrap" style="padding: 35px 14px 0px">
+    <div class="section-head">
+      <div><span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px">How it works</span></div>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-state="dotted">
+        <div class="marker">1</div>
+        <h3>Join</h3>
+        <p>Pick the plan that matches your current pace. Simple onboarding, zero hiring overhead.</p>
+      </div>
+      <div class="step" data-state="dashed">
+        <div class="marker">2</div>
+        <h3>Align</h3>
+        <p>Drop your requests into your workspace. We don't just look at the brief, we look at the strategy and goals behind it.</p>
+      </div>
+      <div class="step" data-state="solid">
+        <div class="marker">3</div>
+        <h3>Build</h3>
+        <p>Get your high-fidelity assets in a few days. Every piece is designed to fit your broader visual ecosystem.</p>
+      </div>
+      <div class="step" data-state="filled">
+        <div class="marker">4</div>
+        <h3>Refine / Approve</h3>
+        <p>We iterate together until the storytelling and systems are exactly where they need to be.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="fade-section process" id="process">
-<div class="section-badge badge-light">
-<span class="badge-arrow">•</span> HOW IT WORKS
-            </div>
-<div class="process-timeline">
-<div class="timeline-step step-1">
-<div class="timeline-circle">1</div>
-<div class="step-title">JOIN</div>
-<div class="step-desc">Pick the plan that matches your current pace. Simple onboarding, zero hiring overhead.</div>
-</div>
-<div class="timeline-step step-2">
-<div class="timeline-circle">2</div>
-<div class="step-title">ALIGN</div>
-<div class="step-desc">Drop your requests into your workspace. We don't just look at the brief, we look at the strategy and goals behind it.</div>
-</div>
-<div class="timeline-step step-3">
-<div class="timeline-circle">3</div>
-<div class="step-title">BUILD</div>
-<div class="step-desc">Get your high-fidelity assets in a few days. Every piece is designed to fit your broader visual ecosystem.</div>
-</div>
-<div class="timeline-step step-4">
-<div class="timeline-circle active">4</div>
-<div class="step-title">REFINE / APPROVE</div>
-<div class="step-desc">We iterate together until the storytelling and systems are exactly where they need to be.</div>
-</div>
-</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about" style="padding: 100px 0px 0px">
+      <div>
+        <span class="about-kicker">About</span>
+      </div>
+      <div class="about-body">
+        <p>Led by Ritika Khinvasara, 6TH M brings a mix of graphic and product design experience to the table. Having collaborated with everything from agile agencies to global organizations like UNICEF and the World Bank, I've learned that the best creative work comes from combining research, strategy and absolute adaptability.</p>
+        <p>Whether we're building a social deck, animating a motion piece, or laying out a clean editorial report, the goal is always the same: build a visual system that connects with people and drives your business forward.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- ABOUT -->
-<section class="fade-section about" id="about">
-<div class="about-content-wrapper">
-<div class="section-badge">
-<span class="badge-arrow">•</span> ABOUT
-                </div>
-<div class="about-content">
-<p>Led by <a href="https://www.ritikakhinvasara.com/" style="color: inherit; text-decoration: underline;" target="_blank">Ritika Khinvasara</a>, 6thM brings a mix of graphic and product design experience to the table. Having collaborated with everything from agile agencies to global organizations like UNICEF and the World Bank, I've learned that the best creative work comes from combining research, strategy and absolute adaptability.</p>
-<p>Whether we're building a social deck, animating a motion piece, or laying out a clean editorial report, the goal is always the same: build a visual system that connects with people and drives your business forward.</p>
-</div>
-</div>
+
+<!-- ============ CTA ============ -->
+<section class="section cta-section" id="contact">
+  <div class="wrap cta-inner">
+    <div>
+      <span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; ">Let's work</span>
+      <h2 class="h2" style="margin-top: 18px">Ready to <em>elevate</em><br/>your brand?</h2>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 14px">
+        Book a call <span class="arrow" aria-hidden="true"></span>
+      </a>
+      <a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 14px; letter-spacing: 0px">hello@6thm.com</a>
+    </div>
+  </div>
 </section>
-<!-- FOOTER -->
-<footer class="fade-section footer">
-<div class="footer-bottom-left">
-<img alt="6TH~M" class="footer-huge-logo" src="assets/footer_logo.png"/>
-</div>
-<div class="footer-right-content">
-<h2 class="cta-title">Ready to Elevate Your Brand?</h2>
-<div class="footer-buttons">
-<a class="btn-pill" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" target="_blank">BOOK A CALL</a>
-<a class="btn-pill" href="mailto:hello@6thm.com">WRITE TO US</a>
-</div>
-<div class="footer-links-grid">
-<div class="footer-col">
-<a class="footer-link-header" href="#services">SERVICES</a>
-<div class="footer-sublinks">
-<a href="nonprofits.html">Non-Profits</a>
-<a href="healthcare.html">Healthcare</a>
-<a href="saas.html">SaaS Companies</a>
-<a href="cleantech.html">Clean-Tech</a>
-<a href="microproducers.html">Small-Batch Makers</a>
-</div>
-</div>
-<div class="footer-col spaced-col">
-<a class="footer-link-header" href="work.html">WORK</a>
-<a class="footer-link-header" href="#about">ABOUT</a>
-<a class="footer-link-header" href="#how-it-works">HOW IT WORKS</a>
-</div>
-</div>
-</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div>
+      <div class="brand"><img src="assets/6thm-logo.png" alt="6TH~M" /></div>
+      <p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
+    </div>
+    <div>
+      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Services</h5>
+      <ul>
+        <li><a href="#services">Deliverables</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="work.html">Work</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Industries</h5>
+      <ul>
+        <li><a href="nonprofits.html">Non-Profit</a></li>
+        <li><a href="healthcare.html">Healthcare</a></li>
+        <li><a href="saas.html">SaaS</a></li>
+        <li><a href="cleantech.html">Clean-Tech</a></li>
+        <li><a href="microproducers.html">Small-Batch Makers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@6thm.com">hello@6thm.com</a></li>
+        <li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
+
+<!-- ============ TWEAKS PANEL ============ -->
+<div class="tweaks" id="tweaksPanel" aria-label="Tweaks">
+  <div class="tweaks-head">
+    <h6>Tweaks</h6>
+    <button class="tweaks-close" id="tweaksClose" aria-label="Close tweaks">✕</button>
+  </div>
+
+  <div class="tweak-row">
+    <label>Theme</label>
+    <div class="seg" data-tweak="theme">
+      <button data-val="cream" class="active">Cream</button>
+      <button data-val="light">Light</button>
+      <button data-val="dark">Dark</button>
+    </div>
+  </div>
+
+  <div class="tweak-row">
+    <label>Density</label>
+    <div class="seg" data-tweak="density">
+      <button data-val="tight">Tight</button>
+      <button data-val="normal" class="active">Normal</button>
+      <button data-val="airy">Airy</button>
+    </div>
+  </div>
+
+  <div class="tweak-row">
+    <label>Accent</label>
+    <div class="swatches" data-tweak="accent">
+      <button class="swatch active" data-val="blue"  style="background:#4B2E83" aria-label="Blue"></button>
+      <button class="swatch" data-val="brown" style="background:#3a241c" aria-label="Brown"></button>
+      <button class="swatch" data-val="rust"  style="background:#c5471f" aria-label="Rust"></button>
+      <button class="swatch" data-val="ink"   style="background:#1c1815" aria-label="Ink"></button>
+    </div>
+  </div>
 </div>
+
 <script>
-        // Hero Slideshow Logic (Fade)
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        if(heroSlides.length > 0) {
-            let heroSlideIndex = 0;
-            setInterval(() => {
-                heroSlides[heroSlideIndex].classList.remove('active');
-                heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
-                heroSlides[heroSlideIndex].classList.add('active');
-            }, 3500);
-        }
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "cream",
+  "density": "normal",
+  "accent": "blue"
+}/*EDITMODE-END*/;
 
-        // Slideshow Logic (Fade)
-        const track = document.querySelector('.landing-slideshow-track');
-        if(track) {
-            const slides = track.querySelectorAll('img');
-            let slideIndex = 0;
-            if(slides.length > 0) slides[0].classList.add('active');
-            setInterval(() => {
-                slides[slideIndex].classList.remove('active');
-                slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].classList.add('active');
-            }, 3000);
-        }
-        // Fade-on-scroll Logic
-        const faders = document.querySelectorAll('.fade-section');
-        const appearOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px 0px 0px"
-        };
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('fade-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
+const ACCENTS = {
+  blue:  "#4B2E83",
+  brown: "#3a241c",
+  rust:  "#c5471f",
+  ink:   "#1c1815"
+};
 
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    </script>
+const state = { ...TWEAK_DEFAULTS };
+
+function apply() {
+  document.body.setAttribute("data-theme", state.theme);
+  document.body.setAttribute("data-density", state.density);
+  const accent = ACCENTS[state.accent] || ACCENTS.blue;
+  document.documentElement.style.setProperty("--blue", accent);
+  document.documentElement.style.setProperty("--accent", accent);
+  document.documentElement.style.setProperty("--accent-2",
+    `color-mix(in srgb, ${accent} 12%, transparent)`);
+}
+apply();
+
+function setTweak(key, val) {
+  state[key] = val;
+  apply();
+  document.querySelectorAll(`[data-tweak="${key}"] button`).forEach(b => {
+    b.classList.toggle("active", b.dataset.val === val);
+  });
+  try {
+    window.parent.postMessage({ type: "__edit_mode_set_keys", edits: { [key]: val } }, "*");
+  } catch (e) {}
+}
+
+document.querySelectorAll(".seg, .swatches").forEach(group => {
+  group.addEventListener("click", e => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
+    setTweak(group.dataset.tweak, btn.dataset.val);
+  });
+});
+
+Object.entries(state).forEach(([k,v]) => {
+  document.querySelectorAll(`[data-tweak="${k}"] button`).forEach(b => {
+    b.classList.toggle("active", b.dataset.val === v);
+  });
+});
+
+window.addEventListener("message", (e) => {
+  const d = e.data || {};
+  if (d.type === "__activate_edit_mode") {
+    document.getElementById("tweaksPanel").classList.add("open");
+  } else if (d.type === "__deactivate_edit_mode") {
+    document.getElementById("tweaksPanel").classList.remove("open");
+  }
+});
+document.getElementById("tweaksClose").addEventListener("click", () => {
+  document.getElementById("tweaksPanel").classList.remove("open");
+  try { window.parent.postMessage({ type: "__edit_mode_dismissed" }, "*"); } catch(e) {}
+});
+try { window.parent.postMessage({ type: "__edit_mode_available" }, "*"); } catch(e) {}
+
+const mt = document.getElementById("menuToggle");
+const mm = document.getElementById("mobileMenu");
+mt.addEventListener("click", () => {
+  const open = mm.classList.toggle("open");
+  mt.setAttribute("aria-expanded", String(open));
+});
+mm.addEventListener("click", e => {
+  if (e.target.tagName === "A") mm.classList.remove("open");
+});
+</script>
 </body>
 </html>
