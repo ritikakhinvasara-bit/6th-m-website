@@ -628,14 +628,14 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 }
 .why-item {
   padding: 28px 0;
-  border-top: 1px solid var(--rule);
+  border-top: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .why-item:nth-child(-n+3) { border-top: 0; padding-top: 0; }
 @media (min-width: 760px) {
-  .why-item { padding: 28px 28px 28px 0; border-right: 1px solid var(--rule); }
+  .why-item { padding: 28px 28px 28px 0; border-right: 0; }
   .why-item:nth-child(3n) { border-right: 0; padding-right: 0; }
 }
 .why-item .ico {
@@ -1429,6 +1429,23 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 @media (max-width: 760px) {
   .why-item:first-child { border-top: 0; padding-top: 0; }
   .deliverable:first-child { padding-top: 0; }
+}
+
+#services {
+  padding-top: calc(var(--pad-y) * 0.7);
+  padding-bottom: calc(var(--pad-y) * 0.7);
+}
+
+.how-section {
+  padding-top: calc(var(--pad-y) * 1.4);
+}
+
+#about {
+  padding-top: var(--pad-y);
+}
+
+#contact {
+  padding-top: calc(var(--pad-y) * 1.3);
 }
 </style>
 </head>
