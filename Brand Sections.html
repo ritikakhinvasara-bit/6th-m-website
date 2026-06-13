@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>6TH~M — Your Design Department</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Rethink+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Rethink+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 /* ============ TOKENS ============ */
 :root {
@@ -655,7 +655,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .foot-inner {
   display: grid;
   grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: 24px;
+  gap: 40px;
   padding-top: clamp(40px, 5vw, 64px);
   padding-bottom: clamp(20px, 2.5vw, 32px);
 }
@@ -731,390 +731,369 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .swatch.active { border-color: var(--ink); transform: scale(1.06); }
 @media (max-width: 520px) { .tweaks { right: 10px; left: 10px; width: auto; bottom: 10px; } }
 
+
+.deliverable:first-child { padding-top: 0; }
+@media (max-width: 760px) {
+  .why-item:first-child { border-top: 0; padding-top: 0; }
+  .deliverable:first-child { padding-top: 0; }
+}
 </style>
 </head>
 <body data-theme="cream">
-
 <!-- ============ NAV ============ -->
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="logo" aria-label="6thM — home">
+<div class="wrap nav-inner">
+<a aria-label="6thM — home" class="logo" href="#top">
       6<span class="t">TH</span><span class="t">~</span><span class="t">M</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#how">How it works</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="btn btn-ghost" href="mailto:hello@6thm.com">Write</a>
-      <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="group">
-    <h4>Explore</h4>
-    <a href="index.html#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#how">How it works</a>
-  </div>
-  <div class="group">
-    <h4>Industries</h4>
-    <a href="#">Non-Profits</a>
-    <a href="#">Small-Batch Makers</a>
-    <a href="#">Healthcare</a>
-    <a href="#">SaaS Companies</a>
-    <a href="#">Clean-Tech</a>
-  </div>
-  <div class="group">
-    <h4>Get in touch</h4>
-    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
-    <a href="mailto:hello@6thm.com">hello@6thm.com</a>
-  </div>
+</a>
+<nav aria-label="Primary" class="nav-links">
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#how">How it works</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="mailto:hello@6thm.com">Write</a>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle" id="menuToggle">
+<span></span>
+</button>
 </div>
-
+</div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+<div class="group">
+<h4>Explore</h4>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#how">How it works</a>
+</div>
+<div class="group">
+<h4>Industries</h4>
+<a href="#">Non-Profits</a>
+<a href="#">Small-Batch Makers</a>
+<a href="#">Healthcare</a>
+<a href="#">SaaS Companies</a>
+<a href="#">Clean-Tech</a>
+</div>
+<div class="group">
+<h4>Get in touch</h4>
+<a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
+<a href="mailto:hello@6thm.com">hello@6thm.com</a>
+</div>
+</div>
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="hero-headline">
-      <h1 class="display">
+<div class="wrap hero-grid">
+<div class="hero-headline">
+<h1 class="display">
         Your Design<br/>
         Department.<br/>
-        <em>One Flat Monthly Fee.</em>
-      </h1>
-    </div>
-    <div class="hero-sub">
-      <p class="lead">
+<em>One Flat Monthly Fee.</em>
+</h1>
+</div>
+<div class="hero-sub">
+<p class="lead">
         Get reliable, on-brand design support rooted in <em style="font-style:italic; color:var(--blue);">strategy</em>, storytelling, and your unique business goals.
       </p>
-      <p class="lead" style="font-weight: 600;">
+<p class="lead" style="font-weight: 600;">
         For founders, marketers, and creative teams who need high-quality visuals.
       </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call</a>
-        <a class="btn btn-ghost" href="#work">View work</a>
-        <span class="meta"><span class="dot"></span>Booking June '26</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="gallery" aria-hidden="true">
-      <div class="tile"><span>Slide 01 · Editorial</span></div>
-      <div class="tile"><span>Slide 02 · Brand</span></div>
-      <div class="tile"><span>Slide 03 · Motion</span></div>
-    </div>
-  </div>
+<div class="hero-actions">
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call</a>
+<a class="btn btn-ghost" href="#work">View work</a>
+<span class="meta"><span class="dot"></span>Booking June '26</span>
+</div>
+</div>
+</div>
+<div class="wrap">
+<div aria-hidden="true" class="gallery">
+<div class="tile"><span>Slide 01 · Editorial</span></div>
+<div class="tile"><span>Slide 02 · Brand</span></div>
+<div class="tile"><span>Slide 03 · Motion</span></div>
+</div>
+</div>
 </section>
-
 <!-- ============ PAST CLIENTS ============ -->
 <section class="clients">
-  <div class="wrap">
-    <div class="clients-head">
-      <span class="kicker">Past clients</span>
-      <span class="mono" style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-2);">Across 14 industries →</span>
-    </div>
-    <div class="logo-strip" aria-label="Past clients (placeholders)">
-      <div class="lg it">UNICEF</div>
-      <div class="lg sans">World Bank</div>
-      <div class="lg">Maven&amp;Co</div>
-      <div class="lg mono">PALM/STUDIO</div>
-      <div class="lg it">Heron</div>
-      <div class="lg sans">Northwind</div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="clients-head">
+<span class="kicker">Past clients</span>
+<span class="mono" style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-2);">Across 14 industries →</span>
+</div>
+<div aria-label="Past clients (placeholders)" class="logo-strip">
+<div class="lg it">UNICEF</div>
+<div class="lg sans">World Bank</div>
+<div class="lg">Maven&amp;Co</div>
+<div class="lg mono">PALM/STUDIO</div>
+<div class="lg it">Heron</div>
+<div class="lg sans">Northwind</div>
+</div>
+</div>
 </section>
-
 <!-- ============ DELIVERABLES (mint) ============ -->
-<section class="section mint" id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">What can be requested</span>
-    </div>
-    <div class="section-rule"></div>
-
-    <h2 class="h2 blue" style="margin-bottom: 56px;">
+<section class="section mint" id="services" style="background: #D9F5B7;">
+<div class="wrap">
+<div class="section-head">
+<span class="kicker">What can be requested</span>
+</div>
+<div class="section-rule"></div>
+<h2 class="h2 blue" style="margin-bottom: 56px;">
       If it can be designed<br/>
       digitally, it can usually<br/>
       be requested.
     </h2>
-
-    <div class="deliverables">
-      <a class="del-card" href="#">
-        <div class="num">01</div>
-        <h3>One-pagers</h3>
-        <p>Sales one-pagers, brochures, and marketing collateral.</p>
-        <span class="arrow"><svg viewBox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </a>
-      <a class="del-card" href="#">
-        <div class="num">02</div>
-        <h3>Social Media Posts</h3>
-        <p>Instagram and LinkedIn posts, Stories, Reels.</p>
-        <span class="arrow"><svg viewBox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </a>
-      <a class="del-card" href="#">
-        <div class="num">03</div>
-        <h3>YouTube Assets</h3>
-        <p>Thumbnails and channel banners.</p>
-        <span class="arrow"><svg viewBox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </a>
-      <a class="del-card" href="#">
-        <div class="num">04</div>
-        <h3>Email Graphics</h3>
-        <p>Email headers and banners.</p>
-        <span class="arrow"><svg viewBox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </a>
-      <a class="del-card" href="#">
-        <div class="num">05</div>
-        <h3>Pitch Decks</h3>
-        <p>Polished presentation decks.</p>
-        <span class="arrow"><svg viewBox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </a>
-      <a class="del-card" href="#">
-        <div class="num">06</div>
-        <h3>Ad Creatives</h3>
-        <p>Meta and Google ad creatives.</p>
-        <span class="arrow"><svg viewBox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-      </a>
-    </div>
-  </div>
+<div class="deliverables">
+<a class="del-card" href="#">
+<div class="num">01</div>
+<h3>One-pagers</h3>
+<p>Sales one-pagers, brochures, and marketing collateral.</p>
+<span class="arrow"><svg viewbox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+</a>
+<a class="del-card" href="#">
+<div class="num">02</div>
+<h3>Social Media Posts</h3>
+<p>Instagram and LinkedIn posts, Stories, Reels.</p>
+<span class="arrow"><svg viewbox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+</a>
+<a class="del-card" href="#">
+<div class="num">03</div>
+<h3>YouTube Assets</h3>
+<p>Thumbnails and channel banners.</p>
+<span class="arrow"><svg viewbox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+</a>
+<a class="del-card" href="#">
+<div class="num">04</div>
+<h3>Email Graphics</h3>
+<p>Email headers and banners.</p>
+<span class="arrow"><svg viewbox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+</a>
+<a class="del-card" href="#">
+<div class="num">05</div>
+<h3>Pitch Decks</h3>
+<p>Polished presentation decks.</p>
+<span class="arrow"><svg viewbox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+</a>
+<a class="del-card" href="#">
+<div class="num">06</div>
+<h3>Ad Creatives</h3>
+<p>Meta and Google ad creatives.</p>
+<span class="arrow"><svg viewbox="0 0 14 14"><path d="M2 12L12 2M12 2H4M12 2V10" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+</a>
+</div>
+</div>
 </section>
-
 <!-- ============ PRICING (taupe) ============ -->
 <section class="section taupe" id="pricing">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">What we offer</span>
-    </div>
-    <div class="section-rule"></div>
-
-    <div class="pricing">
-
-      <article class="plan-row">
-        <div class="pn">01</div>
-        <div>
-          <h3>Monthly Graphic <em>Design</em> Subscription</h3>
-          <p class="desc">We handle the visual design for your brand and product needs, backed by strategy into your goals.</p>
-          <div class="price">$1,299 <small>/ month</small></div>
-          <div class="cta-line">
-            <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Start subscription</a>
-          </div>
-        </div>
-        <div class="right">
-          <h4>Includes</h4>
-          <ul>
-            <li>Unlimited design requests</li>
-            <li>One active task at a time</li>
-            <li>Fast turnaround</li>
-            <li>Up to 2-3 revisions</li>
-            <li>Source files included</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="plan-row">
-        <div class="pn">02</div>
-        <div>
-          <h3>Monthly Social <em>Media</em> Design</h3>
-          <p class="desc">We design social assets tailored for your marketing channels, keeping your look consistent.</p>
-          <div class="price">$599 <small>/ month</small></div>
-          <div class="cta-line">
-            <a class="btn btn-ghost" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Start subscription</a>
-          </div>
-        </div>
-        <div class="right">
-          <h4>Example package</h4>
-          <ul>
-            <li>4 Static posts</li>
-            <li>6 Stories</li>
-            <li>2 Reels</li>
-            <li>Channel-aware formats</li>
-            <li>Source files included</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<span class="kicker">What we offer</span>
+</div>
+<div class="section-rule"></div>
+<div class="pricing">
+<article class="plan-row">
+<div class="pn">01</div>
+<div>
+<h3>Monthly Graphic <em>Design</em> Subscription</h3>
+<p class="desc">We handle the visual design for your brand and product needs, backed by strategy into your goals.</p>
+<div class="price">$1,299 <small>/ month</small></div>
+<div class="cta-line">
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Start subscription</a>
+</div>
+</div>
+<div class="right">
+<h4>Includes</h4>
+<ul>
+<li>Unlimited design requests</li>
+<li>One active task at a time</li>
+<li>Fast turnaround</li>
+<li>Up to 2-3 revisions</li>
+<li>Source files included</li>
+</ul>
+</div>
+</article>
+<article class="plan-row">
+<div class="pn">02</div>
+<div>
+<h3>Monthly Social <em>Media</em> Design</h3>
+<p class="desc">We design social assets tailored for your marketing channels, keeping your look consistent.</p>
+<div class="price">$599 <small>/ month</small></div>
+<div class="cta-line">
+<a class="btn btn-ghost" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Start subscription</a>
+</div>
+</div>
+<div class="right">
+<h4>Example package</h4>
+<ul>
+<li>4 Static posts</li>
+<li>6 Stories</li>
+<li>2 Reels</li>
+<li>Channel-aware formats</li>
+<li>Source files included</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <!-- ============ WHY ============ -->
 <section class="section" id="why">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">Why teams like this model</span>
-    </div>
-    <div class="section-rule"></div>
-
-    <ul class="why">
-      <li>Flat Monthly Cost</li>
-      <li>Fast Turnarounds</li>
-      <li>No per-project pricing surprises</li>
-      <li>Most requests delivered within 24-72 hours</li>
-      <li>Consistent Design Support</li>
-      <li>Flexible</li>
-      <li>Get ongoing help without hiring</li>
-      <li>Pause or restart the subscription anytime</li>
-    </ul>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<span class="kicker">Why teams like this model</span>
+</div>
+<div class="section-rule"></div>
+<ul class="why">
+<li>Flat Monthly Cost</li>
+<li>Fast Turnarounds</li>
+<li>No per-project pricing surprises</li>
+<li>Most requests delivered within 24-72 hours</li>
+<li>Consistent Design Support</li>
+<li>Flexible</li>
+<li>Get ongoing help without hiring</li>
+<li>Pause or restart the subscription anytime</li>
+</ul>
+</div>
 </section>
-
 <!-- ============ HOW IT WORKS (brown) ============ -->
 <section class="section brown" id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker on-dark">How it works</span>
-    </div>
-    <div class="section-rule"></div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-n">01</div>
-        <h3>Subscribe</h3>
-        <p>Pick the plan that matches your current pace. Simple onboarding, zero hiring overhead.</p>
-      </div>
-      <div class="step">
-        <div class="step-n">02</div>
-        <h3>Submit requests</h3>
-        <p>Drop your requests into your workspace. We don't just look at the brief — we look at the strategy and goals behind it.</p>
-      </div>
-      <div class="step">
-        <div class="step-n">03</div>
-        <h3>Design &amp; delivery</h3>
-        <p>Get your high-fidelity assets in a few days. Every piece is designed to fit your broader visual ecosystem.</p>
-      </div>
-      <div class="step">
-        <div class="step-n">04</div>
-        <h3>Revise / approve</h3>
-        <p>We iterate together until the storytelling and systems are exactly where they need to be.</p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<span class="kicker on-dark">How it works</span>
+</div>
+<div class="section-rule"></div>
+<div class="steps">
+<div class="step">
+<div class="step-n">01</div>
+<h3>Subscribe</h3>
+<p>Pick the plan that matches your current pace. Simple onboarding, zero hiring overhead.</p>
+</div>
+<div class="step">
+<div class="step-n">02</div>
+<h3>Submit requests</h3>
+<p>Drop your requests into your workspace. We don't just look at the brief — we look at the strategy and goals behind it.</p>
+</div>
+<div class="step">
+<div class="step-n">03</div>
+<h3>Design &amp; delivery</h3>
+<p>Get your high-fidelity assets in a few days. Every piece is designed to fit your broader visual ecosystem.</p>
+</div>
+<div class="step">
+<div class="step-n">04</div>
+<h3>Revise / approve</h3>
+<p>We iterate together until the storytelling and systems are exactly where they need to be.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============ ABOUT ============ -->
 <section class="section" id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">About</span>
-    </div>
-    <div class="section-rule"></div>
-
-    <div class="about">
-      <div class="portrait" aria-hidden="true"></div>
-      <div class="about-body">
-        <p>
+<div class="wrap">
+<div class="section-head">
+<span class="kicker">About</span>
+</div>
+<div class="section-rule"></div>
+<div class="about">
+<div aria-hidden="true" class="portrait"></div>
+<div class="about-body">
+<p>
           6th~M is a design practice focused on making brands feel <em>consistent</em> as they scale.
         </p>
-        <p>
+<p>
           Led by <em>Ritika Khinvasara</em>, a designer with experience across graphic and product design, the work goes beyond one-off assets — building visual systems that carry across social, decks, marketing, and web.
         </p>
-        <p>
+<p>
           Over the years, 6th~M has worked with early-stage startups, nonprofits, and e-commerce brands, as well as global organisations like <em>UNICEF</em> and the <em>World Bank</em>.
         </p>
-        <p>
+<p>
           That range brings a balance of speed, adaptability, and an understanding of how design needs shift across different contexts.
         </p>
-        <div class="signature">
-          <span class="line"></span>
-          <span>Ritika · Founder, 6th~M</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="signature">
+<span class="line"></span>
+<span>Ritika · Founder, 6th~M</span>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ============ FOOTER CTA (blue) ============ -->
 <section class="footer-cta" id="contact">
-  <div class="wrap footer-cta-inner">
-    <div class="footer-cta-text">
-      <span class="kicker on-dark" style="color: rgba(255,255,255,0.8);">Let's work</span>
-      <h2 style="margin-top:24px">Ready to <em>elevate</em><br/>your brand?</h2>
-    </div>
-    <div class="footer-cta-actions">
-      <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call</a>
-      <a href="mailto:hello@6thm.com">Write to us</a>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="big-mark" aria-hidden="true">6TH<span class="tilde">~</span>M</div>
-  </div>
+<div class="wrap footer-cta-inner">
+<div class="footer-cta-text">
+<span class="kicker on-dark" style="color: rgba(255,255,255,0.8);">Let's work</span>
+<h2 style="margin-top:18px">Ready to <em>elevate</em><br/>your brand?</h2>
+</div>
+<div class="footer-cta-actions">
+<a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call</a>
+<a href="mailto:hello@6thm.com">Write to us</a>
+</div>
+</div>
+<div class="wrap">
+<div aria-hidden="true" class="big-mark">6TH<span class="tilde">~</span>M</div>
+</div>
 </section>
-
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
-  <div class="wrap foot-inner">
-    <div>
-      <h5>6th~M</h5>
-      <p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
-    </div>
-    <div>
-      <h5>Services</h5>
-      <ul>
-        <li><a href="index.html#services">Deliverables</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="#work">Work</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>Industries</h5>
-      <ul>
-        <li><a href="#">Non-Profit</a></li>
-        <li><a href="#">Healthcare</a></li>
-        <li><a href="#">SaaS</a></li>
-        <li><a href="#">Clean-Tech</a></li>
-        <li><a href="#">Small-Batch Makers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>Contact</h5>
-      <ul>
-        <li><a href="mailto:hello@6thm.com">hello@6thm.com</a></li>
-        <li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<!-- ============ TWEAKS PANEL ============ -->
-<div class="tweaks" id="tweaksPanel" aria-label="Tweaks">
-  <div class="tweaks-head">
-    <h6>Tweaks</h6>
-    <button class="tweaks-close" id="tweaksClose" aria-label="Close tweaks">✕</button>
-  </div>
-
-  <div class="tweak-row">
-    <label>Theme</label>
-    <div class="seg" data-tweak="theme">
-      <button data-val="cream" class="active">Cream</button>
-      <button data-val="light">Light</button>
-      <button data-val="dark">Dark</button>
-    </div>
-  </div>
-
-  <div class="tweak-row">
-    <label>Headline color</label>
-    <div class="swatches" data-tweak="accent">
-      <button class="swatch active" data-val="blue"  style="background:#2a6cff" aria-label="Blue"></button>
-      <button class="swatch" data-val="brown" style="background:#3a241c" aria-label="Brown"></button>
-      <button class="swatch" data-val="rust"  style="background:#c5471f" aria-label="Rust"></button>
-      <button class="swatch" data-val="ink"   style="background:#1c1815" aria-label="Ink"></button>
-    </div>
-  </div>
+<div class="wrap foot-inner">
+<div>
+<h5>6th~M</h5>
+<p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
 </div>
-
+<div>
+<h5>Services</h5>
+<ul>
+<li><a href="#services">Deliverables</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#how">How it works</a></li>
+<li><a href="#work">Work</a></li>
+</ul>
+</div>
+<div>
+<h5>Industries</h5>
+<ul>
+<li><a href="#">Non-Profit</a></li>
+<li><a href="#">Healthcare</a></li>
+<li><a href="#">SaaS</a></li>
+<li><a href="#">Clean-Tech</a></li>
+<li><a href="#">Small-Batch Makers</a></li>
+</ul>
+</div>
+<div>
+<h5>Contact</h5>
+<ul>
+<li><a href="mailto:hello@6thm.com">hello@6thm.com</a></li>
+<li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a></li>
+<li><a href="#">Instagram</a></li>
+<li><a href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- ============ TWEAKS PANEL ============ -->
+<div aria-label="Tweaks" class="tweaks" id="tweaksPanel">
+<div class="tweaks-head">
+<h6>Tweaks</h6>
+<button aria-label="Close tweaks" class="tweaks-close" id="tweaksClose">✕</button>
+</div>
+<div class="tweak-row">
+<label>Theme</label>
+<div class="seg" data-tweak="theme">
+<button class="active" data-val="cream">Cream</button>
+<button data-val="light">Light</button>
+<button data-val="dark">Dark</button>
+</div>
+</div>
+<div class="tweak-row">
+<label>Headline color</label>
+<div class="swatches" data-tweak="accent">
+<button aria-label="Blue" class="swatch active" data-val="blue" style="background:#2a6cff"></button>
+<button aria-label="Brown" class="swatch" data-val="brown" style="background:#3a241c"></button>
+<button aria-label="Rust" class="swatch" data-val="rust" style="background:#c5471f"></button>
+<button aria-label="Ink" class="swatch" data-val="ink" style="background:#1c1815"></button>
+</div>
+</div>
+</div>
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "cream",

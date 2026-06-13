@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Work — 6TH~M</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Rethink+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Rethink+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 /* ---------------- TOKENS ---------------- */
 :root {
@@ -177,7 +177,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 @media (min-width: 880px) {
   .section-head { grid-template-columns: 1fr 3fr; align-items: start; gap: 60px; }
@@ -355,7 +355,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   grid-template-columns: 1fr;
   gap: clamp(36px, 5vw, 64px);
 }
-.hero-headline-row { display: flex; flex-direction: column; gap: 24px; }
+.hero-headline-row { display: flex; flex-direction: column; gap: 40px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .hero-actions .meta {
   font-family: var(--mono);
@@ -414,7 +414,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   align-items: baseline;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 17px;
+  margin-bottom: 24px;
 }
 .clients-head h4 {
   font-family: var(--mono);
@@ -634,7 +634,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   flex-direction: column;
   gap: 10px;
 }
-.why-item:nth-child(-n+3) { border-top: 0; }
+.why-item:nth-child(-n+3) { border-top: 0; padding-top: 0; }
 @media (min-width: 760px) {
   .why-item { padding: 28px 28px 28px 0; border-right: 1px solid var(--rule); }
   .why-item:nth-child(3n) { border-right: 0; padding-right: 0; }
@@ -665,7 +665,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .how-section { background: #3D4128; color: #fff; border-radius: 0; margin: 0; padding: 56px 32px; }
 .how-section .kicker { color: #fff; }
 .how-section .kicker::before { background: #fff; }
-.how-section .section-head { margin-bottom: 36px; }
+.how-section .section-head { margin-bottom: 32px; }
 
 .steps {
   display: grid;
@@ -814,7 +814,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .cta-inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 40px;
   align-items: end;
 }
 @media (min-width: 880px) {
@@ -834,7 +834,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .foot-inner {
   display: grid;
   grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: 24px;
+  gap: 40px;
   padding-top: clamp(56px, 7vw, 96px);
   padding-bottom: clamp(28px, 3vw, 40px);
 }
@@ -1032,239 +1032,228 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   .work-reveal-tag { font-size: 11px; padding: 7px 16px; }
 }
 
+
+.deliverable:first-child { padding-top: 0; }
+@media (max-width: 760px) {
+  .why-item:first-child { border-top: 0; padding-top: 0; }
+  .deliverable:first-child { padding-top: 0; }
+}
 </style>
 </head>
-<body data-theme="cream" data-density="normal">
-
+<body data-density="normal" data-theme="cream">
 <!-- ============ NAV ============ -->
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="logo" aria-label="6thM — home"><img src="assets/6thm-logo.png" alt="6TH~M" style="height: 41px" /></a>
-
-    <nav class="nav-links" aria-label="Primary" style="font-size: 15px">
-      <a href="index.html#services" style="letter-spacing: 0px">Services</a>
-      <div class="dropdown">
-        <a href="#" class="has-menu" style="letter-spacing: 0px">Industries <span class="chev" aria-hidden="true"></span></a>
-        <div class="dropdown-panel" role="menu">
-          <a href="nonprofits.html">Non-Profits</a>
-          <a href="microproducers.html">Small-Batch Makers</a>
-          <a href="healthcare.html">Healthcare</a>
-          <a href="saas.html">SaaS Companies</a>
-          <a href="cleantech.html">Clean-Tech</a>
-        </div>
-      </div>
-      <a href="work.html" style="letter-spacing: 0px">Work</a>
-      <a href="index.html#about" style="letter-spacing: 0px">About</a>
-      <a href="index.html#how" style="letter-spacing: 0px">How it works</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">Write to us</a>
-      <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-size: 15px; letter-spacing: 0px; height: 52px; width: 134px">
-        Book a call <span class="arrow" aria-hidden="true"></span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="group">
-    <h4>Explore</h4>
-    <a href="index.html#services">Services</a>
-    <a href="work.html">Work</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#how">How it works</a>
-  </div>
-  <div class="group">
-    <h4>Industries</h4>
-    <a href="nonprofits.html">Non-Profits</a>
-    <a href="microproducers.html">Small-Batch Makers</a>
-    <a href="healthcare.html">Healthcare</a>
-    <a href="saas.html">SaaS Companies</a>
-    <a href="cleantech.html">Clean-Tech</a>
-  </div>
-  <div class="group">
-    <h4>Get in touch</h4>
-    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
-    <a href="mailto:hello@6thm.com">hello@6thm.com</a>
-  </div>
+<div class="wrap nav-inner">
+<a aria-label="6thM — home" class="logo" href="index.html"><img alt="6TH~M" src="assets/6thm-logo.png" style="height: 41px"/></a>
+<nav aria-label="Primary" class="nav-links" style="font-size: 15px">
+<a href="#services" style="letter-spacing: 0px">Services</a>
+<div class="dropdown">
+<a class="has-menu" href="#" style="letter-spacing: 0px">Industries <span aria-hidden="true" class="chev"></span></a>
+<div class="dropdown-panel" role="menu">
+<a href="nonprofits.html">Non-Profits</a>
+<a href="microproducers.html">Small-Batch Makers</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="saas.html">SaaS Companies</a>
+<a href="cleantech.html">Clean-Tech</a>
 </div>
-
+</div>
+<a href="work.html" style="letter-spacing: 0px">Work</a>
+<a href="#about" style="letter-spacing: 0px">About</a>
+<a href="#how" style="letter-spacing: 0px">How it works</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">Write to us</a>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-size: 15px; letter-spacing: 0px; height: 52px; width: 134px">
+        Book a call <span aria-hidden="true" class="arrow"></span>
+</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle" id="menuToggle">
+<span></span>
+</button>
+</div>
+</div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+<div class="group">
+<h4>Explore</h4>
+<a href="#services">Services</a>
+<a href="work.html">Work</a>
+<a href="#about">About</a>
+<a href="#how">How it works</a>
+</div>
+<div class="group">
+<h4>Industries</h4>
+<a href="nonprofits.html">Non-Profits</a>
+<a href="microproducers.html">Small-Batch Makers</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="saas.html">SaaS Companies</a>
+<a href="cleantech.html">Clean-Tech</a>
+</div>
+<div class="group">
+<h4>Get in touch</h4>
+<a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
+<a href="mailto:hello@6thm.com">hello@6thm.com</a>
+</div>
+</div>
 <!-- ============ WORK INTRO ============ -->
 <section class="section" id="work-intro" style="padding: clamp(48px, 6vw, 96px) 0 clamp(28px, 3vw, 40px);">
-  <div class="wrap">
-    <div class="work-head">
-      <span class="kicker" style="font-family: 'Rethink Sans'; letter-spacing: 0px">Work</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="work-head">
+<span class="kicker" style="font-family: 'Rethink Sans'; letter-spacing: 0px">Work</span>
+</div>
+</div>
 </section>
-
 <!-- ============ WORK GRID ============ -->
 <section class="section work-section" id="work" style="padding: 0 0 clamp(56px, 6vw, 96px); margin: 0;">
-  <div class="wrap">
-    <div class="work-grid">
-      <a class="work-card" href="roots-shoots.html" aria-label="Roots And Shoots — Brand identity">
-        <div class="work-thumb">
-          <img class="work-img" src="assets/work-roots-shoots.gif" alt="Roots & Shoots brand identity on kraft" loading="lazy" />
-          <div class="work-reveal">
-            <div class="work-reveal-text">
-              <div class="work-reveal-tags"><span class="work-reveal-tag">Non-Profit</span></div>
-              <h3 class="work-reveal-title">Roots And Shoots</h3>
-              <p class="work-reveal-meta">Branding, Stationery, Social Posts,<br/>Pitch Deck, Email Design</p>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="americas-edge.html" aria-label="America's Edge — Identity system">
-        <div class="work-thumb">
-          <img class="work-img" src="assets/work-americas-edge.jpg" alt="America's Edge pixel mark in red on navy" loading="lazy" />
-          <div class="work-reveal">
-            <div class="work-reveal-text">
-              <div class="work-reveal-tags"><span class="work-reveal-tag">Event</span></div>
-              <h3 class="work-reveal-title">America's Edge</h3>
-              <p class="work-reveal-meta">Branding, Stationery, Social Posts,<br/>Event Stationery Design, Landing Page</p>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="where-to.html" aria-label="Where To — Product design">
-        <div class="work-thumb">
-          <img class="work-img" src="assets/work-whereto.jpg" alt="Where To travel app product UI" loading="lazy" />
-          <div class="work-reveal">
-            <div class="work-reveal-text">
-              <div class="work-reveal-tags"><span class="work-reveal-tag">Startup</span></div>
-              <h3 class="work-reveal-title">Where To</h3>
-              <p class="work-reveal-meta">App Design, Social Posts,<br/>Email Design</p>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card" href="editorial-reports.html" aria-label="Editorial Reports — Magazine spreads">
-        <div class="work-thumb">
-          <img class="work-img" src="assets/work-wrc-report.png" alt="Editorial report layout on red background" loading="lazy" />
-          <div class="work-reveal">
-            <div class="work-reveal-text">
-              <div class="work-reveal-tags"><span class="work-reveal-tag">Non-Profit</span><span class="work-reveal-tag">Lifestyle</span></div>
-              <h3 class="work-reveal-title">Editorial Reports</h3>
-              <p class="work-reveal-meta">Editorial Report,<br/>Magazine Spreads</p>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a class="work-card work-card--wide" href="social-posts.html" aria-label="Social campaigns — CPG &amp; marketing">
-        <div class="work-thumb">
-          <img class="work-img" src="assets/work-social-posts.jpg" alt="Three-up social media post layouts: Protein & Superfoods, Let's Talk Vocab, ad-spend terms" loading="lazy" />
-          <div class="work-reveal">
-            <div class="work-reveal-text">
-              <div class="work-reveal-tags"><span class="work-reveal-tag">Marketing</span><span class="work-reveal-tag">Non-Profit</span><span class="work-reveal-tag">Startup</span></div>
-              <h3 class="work-reveal-title">Social Posts</h3>
-              <p class="work-reveal-meta">Social Media Design,<br/>Marketing Collateral</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="work-grid">
+<a aria-label="Roots And Shoots — Brand identity" class="work-card" href="roots-shoots.html">
+<div class="work-thumb">
+<img alt="Roots &amp; Shoots brand identity on kraft" class="work-img" loading="lazy" src="assets/work-roots-shoots.gif"/>
+<div class="work-reveal">
+<div class="work-reveal-text">
+<div class="work-reveal-tags"><span class="work-reveal-tag">Non-Profit</span></div>
+<h3 class="work-reveal-title">Roots And Shoots</h3>
+<p class="work-reveal-meta">Branding, Stationery, Social Posts,<br/>Pitch Deck, Email Design</p>
+</div>
+</div>
+</div>
+</a>
+<a aria-label="America's Edge — Identity system" class="work-card" href="americas-edge.html">
+<div class="work-thumb">
+<img alt="America's Edge pixel mark in red on navy" class="work-img" loading="lazy" src="assets/work-americas-edge.jpg"/>
+<div class="work-reveal">
+<div class="work-reveal-text">
+<div class="work-reveal-tags"><span class="work-reveal-tag">Event</span></div>
+<h3 class="work-reveal-title">America's Edge</h3>
+<p class="work-reveal-meta">Branding, Stationery, Social Posts,<br/>Event Stationery Design, Landing Page</p>
+</div>
+</div>
+</div>
+</a>
+<a aria-label="Where To — Product design" class="work-card" href="where-to.html">
+<div class="work-thumb">
+<img alt="Where To travel app product UI" class="work-img" loading="lazy" src="assets/work-whereto.jpg"/>
+<div class="work-reveal">
+<div class="work-reveal-text">
+<div class="work-reveal-tags"><span class="work-reveal-tag">Startup</span></div>
+<h3 class="work-reveal-title">Where To</h3>
+<p class="work-reveal-meta">App Design, Social Posts,<br/>Email Design</p>
+</div>
+</div>
+</div>
+</a>
+<a aria-label="Editorial Reports — Magazine spreads" class="work-card" href="editorial-reports.html">
+<div class="work-thumb">
+<img alt="Editorial report layout on red background" class="work-img" loading="lazy" src="assets/work-wrc-report.png"/>
+<div class="work-reveal">
+<div class="work-reveal-text">
+<div class="work-reveal-tags"><span class="work-reveal-tag">Non-Profit</span><span class="work-reveal-tag">Lifestyle</span></div>
+<h3 class="work-reveal-title">Editorial Reports</h3>
+<p class="work-reveal-meta">Editorial Report,<br/>Magazine Spreads</p>
+</div>
+</div>
+</div>
+</a>
+<a aria-label="Social campaigns — CPG &amp; marketing" class="work-card work-card--wide" href="social-posts.html">
+<div class="work-thumb">
+<img alt="Three-up social media post layouts: Protein &amp; Superfoods, Let's Talk Vocab, ad-spend terms" class="work-img" loading="lazy" src="assets/work-social-posts.jpg"/>
+<div class="work-reveal">
+<div class="work-reveal-text">
+<div class="work-reveal-tags"><span class="work-reveal-tag">Marketing</span><span class="work-reveal-tag">Non-Profit</span><span class="work-reveal-tag">Startup</span></div>
+<h3 class="work-reveal-title">Social Posts</h3>
+<p class="work-reveal-meta">Social Media Design,<br/>Marketing Collateral</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
 </section>
-
 <!-- ============ CTA ============ -->
 <section class="section cta-section" id="contact">
-  <div class="wrap cta-inner" style="padding: 52px 14px 0px">
-    <div>
-      <span class="kicker" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; ">Let's work</span>
-      <h2 class="h2" style="margin-top: 24px">Ready to <em>elevate</em><br/>your brand?</h2>
-    </div>
-    <div class="cta-actions">
-      <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 15px; height: 52px">
-        Book a call <span class="arrow" aria-hidden="true"></span>
-      </a>
-      <a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">WRITE TO US</a>
-    </div>
-  </div>
+<div class="wrap cta-inner">
+<div>
+<span class="kicker" style='font-family: "Rethink Sans"; letter-spacing: 0px; '>Let's work</span>
+<h2 class="h2" style="margin-top: 18px">Ready to <em>elevate</em><br/>your brand?</h2>
+</div>
+<div class="cta-actions">
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 15px; height: 52px">
+        Book a call <span aria-hidden="true" class="arrow"></span>
+</a>
+<a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">WRITE TO US</a>
+</div>
+</div>
 </section>
-
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
-  <div class="wrap foot-inner">
-    <div>
-      <div class="brand"><img src="assets/6thm-logo.png" alt="6TH~M" /></div>
-      <p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
-    </div>
-    <div style="padding: 0px">
-      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Services</h5>
-      <ul>
-        <li><a href="index.html#services">Deliverables</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="work.html">Work</a></li>
-      </ul>
-    </div>
-    <div style="padding: 0px">
-      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Industries</h5>
-      <ul>
-        <li><a href="nonprofits.html">Non-Profit</a></li>
-        <li><a href="healthcare.html">Healthcare</a></li>
-        <li><a href="saas.html">SaaS</a></li>
-        <li><a href="cleantech.html">Clean-Tech</a></li>
-        <li><a href="microproducers.html">Small-Batch Makers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">
-</h5>
-      <ul>
-        <li><a href="mailto:hello@6thm.com"></a></li>
-        <li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<!-- ============ TWEAKS PANEL ============ -->
-<div class="tweaks" id="tweaksPanel" aria-label="Tweaks">
-  <div class="tweaks-head">
-    <h6>Tweaks</h6>
-    <button class="tweaks-close" id="tweaksClose" aria-label="Close tweaks">✕</button>
-  </div>
-
-  <div class="tweak-row">
-    <label>Theme</label>
-    <div class="seg" data-tweak="theme">
-      <button data-val="cream" class="active">Cream</button>
-      <button data-val="light">Light</button>
-      <button data-val="dark">Dark</button>
-    </div>
-  </div>
-
-  <div class="tweak-row">
-    <label>Density</label>
-    <div class="seg" data-tweak="density">
-      <button data-val="tight">Tight</button>
-      <button data-val="normal" class="active">Normal</button>
-      <button data-val="airy">Airy</button>
-    </div>
-  </div>
-
-  <div class="tweak-row">
-    <label>Accent</label>
-    <div class="swatches" data-tweak="accent">
-      <button class="swatch active" data-val="blue"  style="background:#2a6cff" aria-label="Blue"></button>
-      <button class="swatch" data-val="brown" style="background:#3a241c" aria-label="Brown"></button>
-      <button class="swatch" data-val="rust"  style="background:#c5471f" aria-label="Rust"></button>
-      <button class="swatch" data-val="ink"   style="background:#1c1815" aria-label="Ink"></button>
-    </div>
-  </div>
+<div class="wrap foot-inner">
+<div>
+<div class="brand"><img alt="6TH~M" src="assets/6thm-logo.png"/></div>
+<p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
 </div>
-
+<div style="padding: 0px">
+<h5 style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 14px'>Services</h5>
+<ul>
+<li><a href="#services">Deliverables</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#how">How it works</a></li>
+<li><a href="work.html">Work</a></li>
+</ul>
+</div>
+<div style="padding: 0px">
+<h5 style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 14px'>Industries</h5>
+<ul>
+<li><a href="nonprofits.html">Non-Profit</a></li>
+<li><a href="healthcare.html">Healthcare</a></li>
+<li><a href="saas.html">SaaS</a></li>
+<li><a href="cleantech.html">Clean-Tech</a></li>
+<li><a href="microproducers.html">Small-Batch Makers</a></li>
+</ul>
+</div>
+<div>
+<h5 style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 14px'>
+</h5>
+<ul>
+<li><a href="mailto:hello@6thm.com"></a></li>
+<li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- ============ TWEAKS PANEL ============ -->
+<div aria-label="Tweaks" class="tweaks" id="tweaksPanel">
+<div class="tweaks-head">
+<h6>Tweaks</h6>
+<button aria-label="Close tweaks" class="tweaks-close" id="tweaksClose">✕</button>
+</div>
+<div class="tweak-row">
+<label>Theme</label>
+<div class="seg" data-tweak="theme">
+<button class="active" data-val="cream">Cream</button>
+<button data-val="light">Light</button>
+<button data-val="dark">Dark</button>
+</div>
+</div>
+<div class="tweak-row">
+<label>Density</label>
+<div class="seg" data-tweak="density">
+<button data-val="tight">Tight</button>
+<button class="active" data-val="normal">Normal</button>
+<button data-val="airy">Airy</button>
+</div>
+</div>
+<div class="tweak-row">
+<label>Accent</label>
+<div class="swatches" data-tweak="accent">
+<button aria-label="Blue" class="swatch active" data-val="blue" style="background:#2a6cff"></button>
+<button aria-label="Brown" class="swatch" data-val="brown" style="background:#3a241c"></button>
+<button aria-label="Rust" class="swatch" data-val="rust" style="background:#c5471f"></button>
+<button aria-label="Ink" class="swatch" data-val="ink" style="background:#1c1815"></button>
+</div>
+</div>
+</div>
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "cream",

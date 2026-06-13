@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Roots & Shoots — 6TH~M</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Rethink+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Roots &amp; Shoots — 6TH~M</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Rethink+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <style>
 /* ---------------- TOKENS ---------------- */
 :root {
@@ -177,7 +177,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 @media (min-width: 880px) {
   .section-head { grid-template-columns: 1fr 3fr; align-items: start; gap: 60px; }
@@ -355,7 +355,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   grid-template-columns: 1fr;
   gap: clamp(36px, 5vw, 64px);
 }
-.hero-headline-row { display: flex; flex-direction: column; gap: 24px; }
+.hero-headline-row { display: flex; flex-direction: column; gap: 40px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .hero-actions .meta {
   font-family: var(--mono);
@@ -414,7 +414,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   align-items: baseline;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 17px;
+  margin-bottom: 24px;
 }
 .clients-head h4 {
   font-family: var(--mono);
@@ -634,7 +634,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   flex-direction: column;
   gap: 10px;
 }
-.why-item:nth-child(-n+3) { border-top: 0; }
+.why-item:nth-child(-n+3) { border-top: 0; padding-top: 0; }
 @media (min-width: 760px) {
   .why-item { padding: 28px 28px 28px 0; border-right: 1px solid var(--rule); }
   .why-item:nth-child(3n) { border-right: 0; padding-right: 0; }
@@ -665,7 +665,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .how-section { background: #3D4128; color: #fff; border-radius: 0; margin: 0; padding: 56px 32px; }
 .how-section .kicker { color: #fff; }
 .how-section .kicker::before { background: #fff; }
-.how-section .section-head { margin-bottom: 36px; }
+.how-section .section-head { margin-bottom: 32px; }
 
 .steps {
   display: grid;
@@ -814,7 +814,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .cta-inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 40px;
   align-items: end;
 }
 @media (min-width: 880px) {
@@ -834,7 +834,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .foot-inner {
   display: grid;
   grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: 24px;
+  gap: 40px;
   padding-top: clamp(56px, 7vw, 96px);
   padding-bottom: clamp(28px, 3vw, 40px);
 }
@@ -1390,192 +1390,180 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 }
 .cs-back a:hover { color: var(--rs-orange); }
 
+
+.deliverable:first-child { padding-top: 0; }
+@media (max-width: 760px) {
+  .why-item:first-child { border-top: 0; padding-top: 0; }
+  .deliverable:first-child { padding-top: 0; }
+}
 </style>
 </head>
-<body data-theme="cream" data-density="normal">
-
+<body data-density="normal" data-theme="cream">
 <!-- ============ NAV ============ -->
 <header class="nav">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="logo" aria-label="6thM — home"><img src="assets/6thm-logo.png" alt="6TH~M" style="height: 41px" /></a>
-
-    <nav class="nav-links" aria-label="Primary" style="font-size: 15px">
-      <a href="index.html#services" style="letter-spacing: 0px">Services</a>
-      <div class="dropdown">
-        <a href="#" class="has-menu" style="letter-spacing: 0px">Industries <span class="chev" aria-hidden="true"></span></a>
-        <div class="dropdown-panel" role="menu">
-          <a href="nonprofits.html">Non-Profits</a>
-          <a href="microproducers.html">Small-Batch Makers</a>
-          <a href="healthcare.html">Healthcare</a>
-          <a href="saas.html">SaaS Companies</a>
-          <a href="cleantech.html">Clean-Tech</a>
-        </div>
-      </div>
-      <a href="work.html" style="letter-spacing: 0px">Work</a>
-      <a href="index.html#about" style="letter-spacing: 0px">About</a>
-      <a href="index.html#how" style="letter-spacing: 0px">How it works</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">Write to us</a>
-      <a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-size: 15px; letter-spacing: 0px; height: 52px; width: 134px">
-        Book a call <span class="arrow" aria-hidden="true"></span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="group">
-    <h4>Explore</h4>
-    <a href="index.html#services">Services</a>
-    <a href="work.html">Work</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#how">How it works</a>
-  </div>
-  <div class="group">
-    <h4>Industries</h4>
-    <a href="nonprofits.html">Non-Profits</a>
-    <a href="microproducers.html">Small-Batch Makers</a>
-    <a href="healthcare.html">Healthcare</a>
-    <a href="saas.html">SaaS Companies</a>
-    <a href="cleantech.html">Clean-Tech</a>
-  </div>
-  <div class="group">
-    <h4>Get in touch</h4>
-    <a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
-    <a href="mailto:hello@6thm.com">hello@6thm.com</a>
-  </div>
+<div class="wrap nav-inner">
+<a aria-label="6thM — home" class="logo" href="index.html"><img alt="6TH~M" src="assets/6thm-logo.png" style="height: 41px"/></a>
+<nav aria-label="Primary" class="nav-links" style="font-size: 15px">
+<a href="#services" style="letter-spacing: 0px">Services</a>
+<div class="dropdown">
+<a class="has-menu" href="#" style="letter-spacing: 0px">Industries <span aria-hidden="true" class="chev"></span></a>
+<div class="dropdown-panel" role="menu">
+<a href="nonprofits.html">Non-Profits</a>
+<a href="microproducers.html">Small-Batch Makers</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="saas.html">SaaS Companies</a>
+<a href="cleantech.html">Clean-Tech</a>
 </div>
-
+</div>
+<a href="work.html" style="letter-spacing: 0px">Work</a>
+<a href="#about" style="letter-spacing: 0px">About</a>
+<a href="#how" style="letter-spacing: 0px">How it works</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">Write to us</a>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-size: 15px; letter-spacing: 0px; height: 52px; width: 134px">
+        Book a call <span aria-hidden="true" class="arrow"></span>
+</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle" id="menuToggle">
+<span></span>
+</button>
+</div>
+</div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+<div class="group">
+<h4>Explore</h4>
+<a href="#services">Services</a>
+<a href="work.html">Work</a>
+<a href="#about">About</a>
+<a href="#how">How it works</a>
+</div>
+<div class="group">
+<h4>Industries</h4>
+<a href="nonprofits.html">Non-Profits</a>
+<a href="microproducers.html">Small-Batch Makers</a>
+<a href="healthcare.html">Healthcare</a>
+<a href="saas.html">SaaS Companies</a>
+<a href="cleantech.html">Clean-Tech</a>
+</div>
+<div class="group">
+<h4>Get in touch</h4>
+<a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">Book a call →</a>
+<a href="mailto:hello@6thm.com">hello@6thm.com</a>
+</div>
+</div>
 <!-- ============ CASE STUDY: ROOTS & SHOOTS ============ -->
-<section class="section" id="cs" data-screen-label="Roots & Shoots case study" style="padding: 0;">
-  <div class="wrap">
-    <div class="cs-crumb"><a href="work.html" style="color: inherit; text-decoration: none; font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 18px">Work</a></div>
-
-    <div class="cs-intro">
-      <div>
-        <h1>Roots And Shoots</h1>
-        <p class="cs-subtitle">Branding, Stationery, Social Posts,<br/>Pitch Deck, Email Design</p>
-      </div>
-      <div class="cs-body">
-        <p>Roots and Shoots is a non-profit organization by Jane Goodall that empowers young people to work on environmental and humanitarian issues. They provide the support, resources, tools and training to empower the youth.</p>
-        <p>The identity design emphasizes Roots and Shoots' hands-on, activity driven approach by utilizing visuals that are hand drawn, paper cut and DIY-inspired.</p>
-      </div>
-    </div>
-
-    <!-- Hero -->
-    <div class="cs-section cs-hero">
-      <div class="cs-frame"><img src="assets/rs-hero.jpg" alt="Hands of an adult and a child planting a young tree, with the roots & shoots wordmark overlaid" /></div>
-    </div>
-
-    <!-- Business cards -->
-    <div class="cs-section cs-cards">
-      <div class="cs-frame"><img src="assets/rs-cards.jpg" alt="Scattered Roots & Shoots business cards in green, kraft, orange and cream" /></div>
-    </div>
-
-    <!-- Letterhead + Badges -->
-    <div class="cs-pair">
-      <div class="cs-frame" style="aspect-ratio: 4/3"><img src="assets/rs-letterhead.jpg" alt="Roots & Shoots letterhead on lined paper with a kraft business card and a cream Sarah Cano card on dark green" /></div>
-      <div class="cs-frame" style="aspect-ratio: 4/3; background: var(--rs-cream)"><img src="assets/rs-badges.jpg" alt="Two volunteer lanyards: Emily Lin on dark green, Sarah Cano on kraft" /></div>
-    </div>
-
-    <!-- Social grid + Instagram post -->
-    <!-- Social grid -->
-    <div class="cs-section cs-social">
-      <div class="cs-frame" style="aspect-ratio: 16/9"><img src="assets/rs-social-grid.jpg" alt="3x3 Roots & Shoots social media grid: roots & shoots wordmark, Get Inspired, You have the [muscle] to build a better world, Observe, Global campaigns with local impact, Take Action, Get Planting, Celebrate, A message from Jane Goodall" /></div>
-    </div>
-  </div>
-
-  <!-- Email design -->
-  <div class="wrap" style="padding: 0 var(--pad-x); margin: 14px auto 0">
-    <img src="assets/rs-emails.png" alt="Two Roots & Shoots email designs side by side: 'The Data Behind the Hope' with Empowering the next generation and Protecting our wild neighbors stats, and 20 TONS with a Dr. Jane Goodall quote and Read the Full Impact Report CTA" style="display: block; width: 100%; height: auto; margin: 0" />
-  </div>
-
-  <!-- Back to top -->
-  <div class="cs-back">
-    <a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 16px">BACK TO TOP</a>
-  </div>
+<section class="section" data-screen-label="Roots &amp; Shoots case study" id="cs" style="padding: 0;">
+<div class="wrap">
+<div class="cs-crumb"><a href="work.html" style='color: inherit; text-decoration: none; font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 18px'>Work</a></div>
+<div class="cs-intro">
+<div>
+<h1>Roots And Shoots</h1>
+<p class="cs-subtitle">Branding, Stationery, Social Posts,<br/>Pitch Deck, Email Design</p>
+</div>
+<div class="cs-body">
+<p>Roots and Shoots is a non-profit organization by Jane Goodall that empowers young people to work on environmental and humanitarian issues. They provide the support, resources, tools and training to empower the youth.</p>
+<p>The identity design emphasizes Roots and Shoots' hands-on, activity driven approach by utilizing visuals that are hand drawn, paper cut and DIY-inspired.</p>
+</div>
+</div>
+<!-- Hero -->
+<div class="cs-section cs-hero">
+<div class="cs-frame"><img alt="Hands of an adult and a child planting a young tree, with the roots &amp; shoots wordmark overlaid" src="assets/rs-hero.jpg"/></div>
+</div>
+<!-- Business cards -->
+<div class="cs-section cs-cards">
+<div class="cs-frame"><img alt="Scattered Roots &amp; Shoots business cards in green, kraft, orange and cream" src="assets/rs-cards.jpg"/></div>
+</div>
+<!-- Letterhead + Badges -->
+<div class="cs-pair">
+<div class="cs-frame" style="aspect-ratio: 4/3"><img alt="Roots &amp; Shoots letterhead on lined paper with a kraft business card and a cream Sarah Cano card on dark green" src="assets/rs-letterhead.jpg"/></div>
+<div class="cs-frame" style="aspect-ratio: 4/3; background: var(--rs-cream)"><img alt="Two volunteer lanyards: Emily Lin on dark green, Sarah Cano on kraft" src="assets/rs-badges.jpg"/></div>
+</div>
+<!-- Social grid + Instagram post -->
+<!-- Social grid -->
+<div class="cs-section cs-social">
+<div class="cs-frame" style="aspect-ratio: 16/9"><img alt="3x3 Roots &amp; Shoots social media grid: roots &amp; shoots wordmark, Get Inspired, You have the [muscle] to build a better world, Observe, Global campaigns with local impact, Take Action, Get Planting, Celebrate, A message from Jane Goodall" src="assets/rs-social-grid.jpg"/></div>
+</div>
+</div>
+<!-- Email design -->
+<div class="wrap" style="padding: 0 var(--pad-x); margin: 14px auto 0">
+<img alt="Two Roots &amp; Shoots email designs side by side: 'The Data Behind the Hope' with Empowering the next generation and Protecting our wild neighbors stats, and 20 TONS with a Dr. Jane Goodall quote and Read the Full Impact Report CTA" src="assets/rs-emails.png" style="display: block; width: 100%; height: auto; margin: 0"/>
+</div>
+<!-- Back to top -->
+<div class="cs-back">
+<a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 16px'>BACK TO TOP</a>
+</div>
 </section>
-
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
-  <div class="wrap foot-inner">
-    <div>
-      <div class="brand"><img src="assets/6thm-logo.png" alt="6TH~M" /></div>
-      <p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
-    </div>
-    <div style="padding: 0px">
-      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Services</h5>
-      <ul>
-        <li><a href="index.html#services">Deliverables</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="work.html">Work</a></li>
-      </ul>
-    </div>
-    <div style="padding: 0px">
-      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">Industries</h5>
-      <ul>
-        <li><a href="nonprofits.html">Non-Profit</a></li>
-        <li><a href="healthcare.html">Healthcare</a></li>
-        <li><a href="saas.html">SaaS</a></li>
-        <li><a href="cleantech.html">Clean-Tech</a></li>
-        <li><a href="microproducers.html">Small-Batch Makers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5 style="font-family: &quot;Rethink Sans&quot;; letter-spacing: 0px; font-size: 14px">
-</h5>
-      <ul>
-        <li><a href="mailto:hello@6thm.com"></a></li>
-        <li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<!-- ============ TWEAKS PANEL ============ -->
-<div class="tweaks" id="tweaksPanel" aria-label="Tweaks">
-  <div class="tweaks-head">
-    <h6>Tweaks</h6>
-    <button class="tweaks-close" id="tweaksClose" aria-label="Close tweaks">✕</button>
-  </div>
-
-  <div class="tweak-row">
-    <label>Theme</label>
-    <div class="seg" data-tweak="theme">
-      <button data-val="cream" class="active">Cream</button>
-      <button data-val="light">Light</button>
-      <button data-val="dark">Dark</button>
-    </div>
-  </div>
-
-  <div class="tweak-row">
-    <label>Density</label>
-    <div class="seg" data-tweak="density">
-      <button data-val="tight">Tight</button>
-      <button data-val="normal" class="active">Normal</button>
-      <button data-val="airy">Airy</button>
-    </div>
-  </div>
-
-  <div class="tweak-row">
-    <label>Accent</label>
-    <div class="swatches" data-tweak="accent">
-      <button class="swatch active" data-val="blue"  style="background:#2a6cff" aria-label="Blue"></button>
-      <button class="swatch" data-val="brown" style="background:#3a241c" aria-label="Brown"></button>
-      <button class="swatch" data-val="rust"  style="background:#c5471f" aria-label="Rust"></button>
-      <button class="swatch" data-val="ink"   style="background:#1c1815" aria-label="Ink"></button>
-    </div>
-  </div>
+<div class="wrap foot-inner">
+<div>
+<div class="brand"><img alt="6TH~M" src="assets/6thm-logo.png"/></div>
+<p>Your design department, on subscription. Built for founders, marketers, and creative teams.</p>
 </div>
-
+<div style="padding: 0px">
+<h5 style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 14px'>Services</h5>
+<ul>
+<li><a href="#services">Deliverables</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#how">How it works</a></li>
+<li><a href="work.html">Work</a></li>
+</ul>
+</div>
+<div style="padding: 0px">
+<h5 style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 14px'>Industries</h5>
+<ul>
+<li><a href="nonprofits.html">Non-Profit</a></li>
+<li><a href="healthcare.html">Healthcare</a></li>
+<li><a href="saas.html">SaaS</a></li>
+<li><a href="cleantech.html">Clean-Tech</a></li>
+<li><a href="microproducers.html">Small-Batch Makers</a></li>
+</ul>
+</div>
+<div>
+<h5 style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 14px'>
+</h5>
+<ul>
+<li><a href="mailto:hello@6thm.com"></a></li>
+<li><a href="https://calendar.app.google/cvZ34NSGWkdY3tLM6"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- ============ TWEAKS PANEL ============ -->
+<div aria-label="Tweaks" class="tweaks" id="tweaksPanel">
+<div class="tweaks-head">
+<h6>Tweaks</h6>
+<button aria-label="Close tweaks" class="tweaks-close" id="tweaksClose">✕</button>
+</div>
+<div class="tweak-row">
+<label>Theme</label>
+<div class="seg" data-tweak="theme">
+<button class="active" data-val="cream">Cream</button>
+<button data-val="light">Light</button>
+<button data-val="dark">Dark</button>
+</div>
+</div>
+<div class="tweak-row">
+<label>Density</label>
+<div class="seg" data-tweak="density">
+<button data-val="tight">Tight</button>
+<button class="active" data-val="normal">Normal</button>
+<button data-val="airy">Airy</button>
+</div>
+</div>
+<div class="tweak-row">
+<label>Accent</label>
+<div class="swatches" data-tweak="accent">
+<button aria-label="Blue" class="swatch active" data-val="blue" style="background:#2a6cff"></button>
+<button aria-label="Brown" class="swatch" data-val="brown" style="background:#3a241c"></button>
+<button aria-label="Rust" class="swatch" data-val="rust" style="background:#c5471f"></button>
+<button aria-label="Ink" class="swatch" data-val="ink" style="background:#1c1815"></button>
+</div>
+</div>
+</div>
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "cream",
