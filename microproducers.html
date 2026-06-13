@@ -174,14 +174,13 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .divider { height: 1px; background: var(--rule); width: 100%; }
 
 .section-head {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 32px;
 }
-@media (min-width: 880px) {
-  .section-head { grid-template-columns: 1fr 3fr; align-items: start; gap: 60px; }
-}
+
 
 /* ---------------- NAV ---------------- */
 .nav {
