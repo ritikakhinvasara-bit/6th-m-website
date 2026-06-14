@@ -629,14 +629,14 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 }
 .why-item {
   padding: 28px 0;
-  border-top: 0;
+  border-top: 1px solid var(--rule);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .why-item:nth-child(-n+3) { border-top: 0; padding-top: 0; }
 @media (min-width: 760px) {
-  .why-item { padding: 28px 28px 28px 0; border-right: 0; }
+  .why-item { padding: 28px 28px 28px 0; border-right: 1px solid var(--rule); }
   .why-item:nth-child(3n) { border-right: 0; padding-right: 0; }
 }
 .why-item .ico {
@@ -971,6 +971,18 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 #services {
   padding-top: calc(var(--pad-y) * 0.5);
   padding-bottom: calc(var(--pad-y) * 0.5);
@@ -981,22 +993,22 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 }
 
 #why {
-  padding-bottom: calc(var(--pad-y) * 0.3);
+  padding-bottom: calc(var(--pad-y) * 0.62);
 }
 
 .how-section {
-  padding-top: calc(var(--pad-y) * 0.7);
-  padding-bottom: calc(var(--pad-y) * 0.7);
+  padding-top: calc(var(--pad-y) * 0.38);
+  padding-bottom: calc(var(--pad-y) * 0.48);
 }
 
 #about {
-  padding-top: calc(var(--pad-y) * 0.3);
-  padding-bottom: calc(var(--pad-y) * 0.3);
+  padding-top: calc(var(--pad-y) * 0.52);
+  padding-bottom: calc(var(--pad-y) * 0.35);
 }
 
 #contact {
-  padding-top: calc(var(--pad-y) * 0.7);
-  padding-bottom: calc(var(--pad-y) * 0.3);
+  padding-top: calc(var(--pad-y) * 0.65);
+  padding-bottom: calc(var(--pad-y) * 0.35);
 }
 </style>
 </head>
