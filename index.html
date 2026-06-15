@@ -266,12 +266,13 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  height: 44px;
-  padding: 0 24px;
+  height: 56px;
+  padding: 0 32px;
   border-radius: 999px;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -993,6 +994,18 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 #services {
   padding-top: calc(var(--pad-y) * 0.5);
   padding-bottom: calc(var(--pad-y) * 0.5);
@@ -1003,6 +1016,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 }
 
 #why {
+  background: var(--bg);
   padding-bottom: calc(var(--pad-y) * 0.62);
 }
 
@@ -1033,7 +1047,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <a class="has-menu" href="#" style="letter-spacing: 0px">Industries <span aria-hidden="true" class="chev"></span></a>
 <div class="dropdown-panel" role="menu">
 <a href="nonprofits.html" style="letter-spacing: 0px">Non-Profits</a>
-<a href="microproducers.html" style="letter-spacing: 0px">Small-Batch Makers</a>
+
 <a href="healthcare.html" style="letter-spacing: 0px">Healthcare</a>
 <a href="saas.html" style="letter-spacing: 0px">SaaS Companies</a>
 <a href="cleantech.html" style="letter-spacing: 0px">Clean-Tech</a>
@@ -1044,8 +1058,8 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <a href="#how" style="letter-spacing: 0px">How it works</a>
 </nav>
 <div class="nav-actions">
-<a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">Write to us</a>
-<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="font-size: 15px; letter-spacing: 0px; height: 52px; width: 134px">
+<a class="btn btn-ghost" href="mailto:hello@6thm.com">Write to us</a>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">
         Book a call <span aria-hidden="true" class="arrow"></span>
 </a>
 <button aria-expanded="false" aria-label="Open menu" class="menu-toggle" id="menuToggle">
@@ -1065,7 +1079,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <div class="group">
 <h4>Industries</h4>
 <a href="nonprofits.html">Non-Profits</a>
-<a href="microproducers.html">Small-Batch Makers</a>
+
 <a href="healthcare.html">Healthcare</a>
 <a href="saas.html">SaaS Companies</a>
 <a href="cleantech.html">Clean-Tech</a>
@@ -1086,10 +1100,10 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
       </h1>
 <p class="lead" style='font-family: "Rethink Sans"; margin: -19px 0px 18px'>Get reliable, on-brand design support rooted in strategy, storytelling, and your unique business goals for founders, marketers, and creative teams who need high-quality visuals.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 15px; height: 52px'>
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">
           Book a call <span aria-hidden="true" class="arrow"></span>
 </a>
-<a class="btn btn-ghost" href="work.html" style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 15px; height: 52px'>View work</a>
+<a class="btn btn-ghost" href="work.html">View work</a>
 <span class="meta"></span>
 </div>
 </div>
@@ -1201,7 +1215,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <li>Source files included</li>
 </ul>
 </div>
-<a class="btn btn-primary cta" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 14px">
+<a class="btn btn-primary cta" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">
           Start subscription <span aria-hidden="true" class="arrow"></span>
 </a>
 </article>
@@ -1226,7 +1240,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <li>Source files included</li>
 </ul>
 </div>
-<a class="btn btn-ghost cta" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 14px">
+<a class="btn btn-ghost cta" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">
           Start subscription
         </a>
 </article>
@@ -1287,7 +1301,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <span class="about-kicker">About</span>
 </div>
 <div class="about-body">
-<p>Led by Ritika Khinvasara, 6TH M brings a mix of graphic and product design experience to the table. Having collaborated with everything from agile agencies to global organizations like UNICEF and the World Bank, I've learned that the best creative work comes from combining research, strategy and absolute adaptability.</p>
+<p>Led by <a href="https://www.ritikakhinvasara.com/" style="color: inherit; text-decoration: underline;" target="_blank">Ritika Khinvasara</a>, 6TH M brings a mix of graphic and product design experience to the table. Having collaborated with everything from agile agencies to global organizations like UNICEF and the World Bank, I've learned that the best creative work comes from combining research, strategy and absolute adaptability.</p>
 <p>Whether we're building a social deck, animating a motion piece, or laying out a clean editorial report, the goal is always the same: build a visual system that connects with people and drives your business forward.</p>
 </div>
 </div>
@@ -1301,10 +1315,10 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <h2 class="h2" style="margin-top: 18px">Ready to <em>elevate</em><br/>your brand?</h2>
 </div>
 <div class="cta-actions">
-<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6" style="letter-spacing: 0px; font-size: 15px; height: 52px">
+<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">
         Book a call <span aria-hidden="true" class="arrow"></span>
 </a>
-<a class="btn btn-ghost" href="mailto:hello@6thm.com" style="font-size: 15px; letter-spacing: 0px; height: 52px">WRITE TO US</a>
+<a class="btn btn-ghost" href="mailto:hello@6thm.com">WRITE TO US</a>
 </div>
 </div>
 </section>
@@ -1331,7 +1345,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <li><a href="healthcare.html">Healthcare</a></li>
 <li><a href="saas.html">SaaS</a></li>
 <li><a href="cleantech.html">Clean-Tech</a></li>
-<li><a href="microproducers.html">Small-Batch Makers</a></li>
+
 </ul>
 </div>
 <div>
