@@ -1415,7 +1415,13 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   margin-bottom: 26px;
 }
 .ub-band:last-child { margin-bottom: 0; }
-.ub-band img { display: block; width: 100%; height: auto; }
+.ub-band img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+}
 
 .ub-grid {
   display: grid;
@@ -1692,11 +1698,8 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <!-- 1. Cyan welcome back dashboard -->
 <div class="ub-band"><img alt="Uable student dashboard screen - Welcome back, Ritika!" src="assets/uable-welcome.png"/></div>
 
-<!-- 2. Character grid (placeholder) -->
-<div class="ub-placeholder ub-placeholder--blue-grid">
-<div class="ub-placeholder-title">Character Grid Illustration</div>
-<p class="ub-placeholder-desc">A grid of illustrative animal character cards (fox, owl, rabbit, beaver, etc.) on a blue grid background. Image to be attached in the next prompt.</p>
-</div>
+<!-- 2. Character grid -->
+<div class="ub-band"><img alt="Uable character illustration grid card assets" src="assets/uable-characters-grid.jpg"/></div>
 
 <!-- 3. Circular category/subject icons -->
 <div class="ub-band"><img alt="Uable subject category circular icons: Reading &amp; Writing, Sports, Gaming, Performing Arts, Art &amp; Craft, Science, Languages, Math, Social Studies, Computers" src="assets/uable-subjects.png"/></div>
