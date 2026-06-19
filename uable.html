@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Work — 6TH~M</title>
+<title>Uable — 6TH~M</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Rethink+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -950,76 +950,38 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   overflow: hidden;
   background: var(--bg-2);
   aspect-ratio: 4 / 3;
-  position: relative;
 }
-.work-card .work-thumb .work-img {
-  position: absolute;
-  inset: 0;
+.work-card .work-thumb img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: opacity .5s ease, transform .6s ease;
+  transition: transform .6s ease;
 }
-.work-card:hover .work-thumb .work-img { opacity: 0; }
-
-/* Hover reveal: paper panel, tags + title + details centered, no image */
-.work-reveal {
-  position: absolute;
-  inset: 0;
-  background: var(--bg);
-  opacity: 0;
-  transition: opacity .45s ease;
-}
-.work-card:hover .work-reveal { opacity: 1; }
-.work-reveal-text {
-  position: absolute;
-  inset: 0;
+.work-card:hover .work-thumb img { transform: scale(1.02); }
+.work-meta {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 clamp(20px, 4vw, 56px);
-  transform: translateY(10px);
-  opacity: 0;
-  transition: transform .55s cubic-bezier(.4,0,.1,1) .05s, opacity .45s ease .05s;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 4px 0;
+  border-top: 0;
 }
-.work-card:hover .work-reveal-text { transform: translateY(0); opacity: 1; }
-.work-reveal-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 0 0 22px;
-}
-.work-reveal-tag {
-  font-family: var(--sans);
-  font-size: clamp(12px, 1.05vw, 16px);
-  letter-spacing: 0.06em;
+.work-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink);
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  padding: 9px 22px;
-  line-height: 1;
-  white-space: nowrap;
+  color: var(--ink-3);
 }
-.work-reveal-title {
+.work-title {
   font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(22px, 2.5vw, 40px);
-  line-height: 1.04;
+  font-weight: 400;
+  font-size: clamp(20px, 1.9vw, 26px);
   letter-spacing: -0.01em;
-  color: var(--ink);
-  margin: 0 0 16px;
-}
-.work-reveal-meta {
-  font-family: var(--sans);
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--ink-2);
+  line-height: 1.1;
   margin: 0;
+  color: var(--ink);
 }
 .work-card--wide {
   grid-column: 1 / -1;
@@ -1030,8 +992,515 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
   .work-grid { grid-template-columns: 1fr; gap: 14px; }
   .work-card .work-thumb { aspect-ratio: 4 / 3; }
   .work-card--wide .work-thumb { aspect-ratio: 5 / 2; }
-  .work-reveal-title { font-size: clamp(20px, 5vw, 30px); }
-  .work-reveal-tag { font-size: 11px; padding: 7px 16px; }
+}
+
+/* ---------------- CASE STUDY ---------------- */
+:root {
+  --rs-green: #1f4d1d;
+  --rs-orange: #dc5520;
+  --rs-kraft: #8c6a44;
+  --rs-cream: #efe8d6;
+  --rs-brown: #3d3225;
+  --rs-paper: #ece4cd;
+}
+.cs-crumb {
+  font-family: var(--mono);
+  font-size: 18px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 0 0;
+}
+.cs-crumb::before {
+  content: "";
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ink);
+  display: inline-block;
+}
+.cs-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  padding: 36px 0 56px;
+}
+@media (min-width: 880px) {
+  .cs-intro { grid-template-columns: 1fr 1.25fr; gap: 80px; align-items: start; }
+}
+.cs-intro h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(40px, 4.4vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 22px;
+  color: var(--ink);
+}
+.cs-intro .cs-subtitle {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 0;
+}
+.cs-intro .cs-body {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+.cs-intro .cs-body p { margin: 0 0 18px; }
+.cs-intro .cs-body p:last-child { margin: 0; }
+
+.cs-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cs-section {
+  padding: 0 0 14px;
+}
+.cs-section .cs-frame {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+.cs-section .cs-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.cs-hero .cs-frame { aspect-ratio: 16 / 8.2; }
+.cs-cards .cs-frame { aspect-ratio: 16 / 9.6; }
+
+.cs-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 0 0 14px;
+  align-items: start;
+}
+@media (min-width: 880px) {
+  .cs-pair { grid-template-columns: 1fr 1fr; }
+}
+.cs-pair .cs-frame { aspect-ratio: auto; }
+.cs-pair .cs-frame img { height: auto; }
+.cs-pair--equal { align-items: stretch; }
+.cs-pair--equal .cs-fill img { height: 100%; object-fit: contain; }
+
+/* Logo lockup band */
+.cs-logo-band {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(44px, 7vw, 110px);
+}
+.cs-logo-band img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+  transform: scale(1.69);
+}
+
+/* Pitch deck strip */
+.cs-deck-wrap {
+  background: var(--rs-brown);
+  padding: clamp(28px, 4vw, 64px) clamp(20px, 3vw, 48px);
+  margin: 14px 0;
+}
+.cs-deck-wrap img { display: block; width: 100%; height: auto; }
+
+/* Email design — constructed mock */
+.cs-emails {
+  background: var(--rs-brown);
+  padding: clamp(36px, 5vw, 72px) clamp(20px, 4vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 3vw, 48px);
+  margin: 0 0 24px;
+}
+@media (min-width: 880px) {
+  .cs-emails { grid-template-columns: 1fr 1fr; }
+}
+.email-card {
+  background: var(--rs-paper);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--sans);
+}
+.email-card.left {
+  padding: 22px 22px 26px;
+}
+.email-card.right {
+  padding: 0;
+}
+
+/* LEFT email */
+.email-head {
+  background: var(--rs-kraft);
+  padding: 22px 22px 26px;
+  text-align: center;
+  position: relative;
+}
+.email-head .rs-wordmark {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: #6b9e3d;
+  letter-spacing: -0.01em;
+}
+.email-head .rs-wordmark em { color: var(--rs-orange); font-style: normal; }
+.email-head .title-pill {
+  display: inline-block;
+  background: var(--rs-green);
+  color: #fff;
+  padding: 10px 16px 12px;
+  margin-top: 16px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(22px, 2.3vw, 28px);
+  letter-spacing: -0.01em;
+  clip-path: polygon(0 8%, 96% 0, 100% 92%, 4% 100%);
+}
+.email-head .blurb {
+  margin: 18px auto 0;
+  max-width: 36ch;
+  color: #efe8d6;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+.email-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: var(--rs-green);
+  color: #fff;
+  margin-top: 6px;
+  align-items: stretch;
+}
+.email-row.flip { grid-template-columns: 1fr 1.1fr; }
+.email-row .ph {
+  background: linear-gradient(135deg, #5a7430, #9c6a2e);
+  min-height: 130px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); color: rgba(255,255,255,.55); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+}
+.email-row .txt { padding: 14px 16px; }
+.email-row .hl {
+  background: #fff;
+  color: var(--rs-brown);
+  display: inline-block;
+  padding: 2px 8px 4px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 2px 6px 0;
+  transform: rotate(-1deg);
+}
+.email-row .stat {
+  font-family: var(--serif);
+  color: var(--rs-orange);
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+.email-row .body {
+  font-size: 10px;
+  line-height: 1.45;
+  color: #efe8d6;
+}
+
+/* RIGHT email */
+.email-r-top {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: stretch;
+}
+.email-r-top .ph {
+  background: linear-gradient(135deg, #6a93a7, #355a73);
+  min-height: 140px;
+}
+.email-r-top .stat-block {
+  background: var(--rs-green);
+  color: #fff;
+  padding: 18px 18px 20px;
+}
+.email-r-top .stat-block .stat {
+  font-family: var(--serif);
+  color: var(--rs-orange);
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+.email-r-top .stat-block .body { font-size: 10px; line-height: 1.45; color: #efe8d6; }
+
+.email-r-quote {
+  background: var(--rs-brown);
+  color: #efe8d6;
+  padding: 16px 22px 18px;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.email-r-quote u { text-decoration: underline; text-decoration-color: var(--rs-orange); text-underline-offset: 3px; }
+
+.email-r-paper {
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 17px, rgba(60,90,170,0.18) 17px 18px),
+    var(--rs-paper);
+  position: relative;
+  padding: 24px 22px 22px;
+  min-height: 240px;
+}
+.email-r-paper::before {
+  content: "";
+  position: absolute;
+  left: 38px; top: 0; bottom: 0;
+  width: 1px;
+  background: rgba(200,40,40,0.4);
+}
+.email-r-paper .jg-portrait {
+  width: 92px; height: 116px;
+  margin: 0 auto 12px;
+  background: linear-gradient(160deg, #8aa1ad, #4a6473);
+  position: relative;
+  display: block;
+}
+.email-r-paper .jg-portrait::before {
+  content: "";
+  position: absolute;
+  inset: -4px -6px auto auto;
+  width: 36px; height: 22px;
+  background: var(--rs-orange);
+  clip-path: polygon(0 100%, 14% 30%, 28% 80%, 50% 0, 72% 80%, 86% 30%, 100% 100%);
+  transform: rotate(8deg);
+}
+.email-r-paper .quote-card {
+  background: var(--rs-brown);
+  color: #efe8d6;
+  text-align: center;
+  padding: 14px 18px 16px;
+  margin: 8px 0 14px;
+  font-family: var(--serif);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.email-r-paper .quote-card::before { content: open-quote; color: var(--rs-orange); font-size: 22px; line-height: 0; vertical-align: -6px; }
+.email-r-paper .author {
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--rs-green);
+  font-size: 16px;
+  margin: 4px 0 14px;
+}
+.email-r-paper .cta-bar {
+  display: block;
+  background: var(--rs-orange);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  padding: 12px 0 13px;
+  position: relative;
+}
+.email-r-paper .cta-bar::before {
+  content: "";
+  position: absolute;
+  inset: -6px 12px auto -8px;
+  height: 6px;
+  background: var(--rs-paper);
+  clip-path: polygon(0 0, 8% 100%, 16% 0, 24% 100%, 32% 0, 40% 100%, 48% 0, 56% 100%, 64% 0, 72% 100%, 80% 0, 88% 100%, 96% 0, 100% 100%);
+}
+
+/* Instagram mock */
+.cs-social-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 0 0 14px;
+}
+@media (min-width: 880px) {
+  .cs-social-pair { grid-template-columns: 1.05fr 1fr; align-items: start; }
+}
+.ig-card {
+  background: var(--rs-cream);
+  padding: 16px 16px 8px;
+  font-family: var(--sans);
+}
+.ig-head { display: flex; align-items: center; gap: 10px; padding: 4px 4px 12px; }
+.ig-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--rs-orange);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 14px;
+}
+.ig-user { font-size: 13px; font-weight: 600; color: var(--ink); letter-spacing: -0.005em; }
+.ig-photo {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(160deg, #8aa1ad 0%, #4a6473 60%, #2c3d4a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.ig-photo::after {
+  content: "";
+  position: absolute;
+  left: 38%; top: 8%;
+  width: 24%; height: 16%;
+  background: #fff;
+  clip-path: polygon(0 100%, 14% 30%, 28% 80%, 50% 0, 72% 80%, 86% 30%, 100% 100%);
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.1));
+}
+.ig-caption {
+  background: var(--rs-brown);
+  color: #efe8d6;
+  text-align: center;
+  padding: 18px 0 22px;
+  font-family: var(--sans);
+  font-size: 12px;
+}
+.ig-caption strong {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--rs-orange);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+.ig-caption .arrow { margin-left: 6px; color: var(--rs-orange); }
+.ig-actions {
+  display: flex;
+  gap: 14px;
+  padding: 10px 4px 6px;
+  font-size: 18px;
+  color: var(--ink);
+}
+.ig-actions .grow { flex: 1; }
+
+/* Back to top */
+.cs-back {
+  text-align: center;
+  padding: 56px 0 72px;
+}
+.cs-back a {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+.cs-back a:hover { color: var(--rs-orange); }
+
+/* ---------------- UABLE ---------------- */
+/* Composed bands and responsive grids stacked in reference order. */
+.ub-bands { margin: 10px 0 0; }
+.ub-band {
+  display: block;
+  width: 100%;
+  margin-bottom: 26px;
+}
+.ub-band:last-child { margin-bottom: 0; }
+.ub-band img { display: block; width: 100%; height: auto; }
+
+.ub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+.ub-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 760px) {
+  .ub-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Placeholders for yet-to-be-attached assets */
+.ub-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--sans);
+}
+.ub-placeholder:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.ub-placeholder-title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 32px);
+  margin: 0 0 10px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.ub-placeholder-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 48ch;
+  margin: 0;
+}
+.ub-placeholder--blue-grid {
+  background: linear-gradient(135deg, #1A4ED8 0%, #0F33A0 100%);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.ub-placeholder--blue-grid .ub-placeholder-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+.ub-placeholder--yellow {
+  background: #E8C14E;
+  color: #1c1815;
+  border: 1px solid rgba(28,24,21,0.06);
+}
+.ub-placeholder--yellow .ub-placeholder-desc {
+  color: #4b4138;
+}
+.ub-placeholder--blue {
+  background: #3B66F5;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.ub-placeholder--blue .ub-placeholder-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+.ub-placeholder--cyan-grid {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.ub-placeholder--cyan-grid .ub-placeholder-desc {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 
@@ -1204,106 +1673,63 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 <a href="mailto:hello@6thm.com">hello@6thm.com</a>
 </div>
 </div>
-<!-- ============ WORK INTRO ============ -->
-<section class="section" id="work-intro" style="padding: clamp(48px, 6vw, 96px) 0 clamp(28px, 3vw, 40px);">
+<!-- ============ EDITORIAL REPORTS ============ -->
+<section class="section" data-screen-label="Uable case study" id="cs" style="padding: 0;">
 <div class="wrap">
-<div class="work-head">
-<span class="kicker" style="font-family: 'Rethink Sans'; letter-spacing: 0px">Work</span>
-</div>
-</div>
-</section>
-<!-- ============ WORK GRID ============ -->
-<section class="section work-section" id="work" style="padding: 0 0 clamp(56px, 6vw, 96px); margin: 0;">
-<div class="wrap">
-<div class="work-grid">
-<a aria-label="Uable — Career discovery platform for kids" class="work-card" href="uable.html">
-<div class="work-thumb">
-<img alt="Uable app design and dashboard" class="work-img" loading="lazy" src="assets/uable-welcome.png"/>
-<div class="work-reveal">
-<div class="work-reveal-text">
-<div class="work-reveal-tags"><span class="work-reveal-tag">Startup</span><span class="work-reveal-tag">App Design</span></div>
-<h3 class="work-reveal-title">Uable</h3>
-<p class="work-reveal-meta">App Design, Branding,<br/>Illustration, Social Posts</p>
-</div>
-</div>
-</div>
-</a>
-<a aria-label="Roots And Shoots — Brand identity" class="work-card" href="roots-shoots.html">
-<div class="work-thumb">
-<img alt="Roots &amp; Shoots brand identity on kraft" class="work-img" loading="lazy" src="assets/work-roots-shoots.gif"/>
-<div class="work-reveal">
-<div class="work-reveal-text">
-<div class="work-reveal-tags"><span class="work-reveal-tag">Non-Profit</span></div>
-<h3 class="work-reveal-title">Roots And Shoots</h3>
-<p class="work-reveal-meta">Branding, Stationery, Social Posts,<br/>Pitch Deck, Email Design</p>
-</div>
-</div>
-</div>
-</a>
-<a aria-label="America's Edge — Identity system" class="work-card" href="americas-edge.html">
-<div class="work-thumb">
-<img alt="America's Edge pixel mark in red on navy" class="work-img" loading="lazy" src="assets/work-americas-edge.jpg"/>
-<div class="work-reveal">
-<div class="work-reveal-text">
-<div class="work-reveal-tags"><span class="work-reveal-tag">Event</span></div>
-<h3 class="work-reveal-title">America's Edge</h3>
-<p class="work-reveal-meta">Branding, Stationery, Social Posts,<br/>Event Stationery Design, Landing Page</p>
-</div>
-</div>
-</div>
-</a>
-<a aria-label="Where To — Product design" class="work-card" href="where-to.html">
-<div class="work-thumb">
-<img alt="Where To travel app product UI" class="work-img" loading="lazy" src="assets/work-whereto.jpg"/>
-<div class="work-reveal">
-<div class="work-reveal-text">
-<div class="work-reveal-tags"><span class="work-reveal-tag">Startup</span></div>
-<h3 class="work-reveal-title">Where To</h3>
-<p class="work-reveal-meta">App Design, Social Posts,<br/>Email Design</p>
-</div>
-</div>
-</div>
-</a>
-<a aria-label="Editorial Reports — Magazine spreads" class="work-card" href="editorial-reports.html">
-<div class="work-thumb">
-<img alt="Editorial report layout on red background" class="work-img" loading="lazy" src="assets/work-wrc-report.png"/>
-<div class="work-reveal">
-<div class="work-reveal-text">
-<div class="work-reveal-tags"><span class="work-reveal-tag">Non-Profit</span><span class="work-reveal-tag">Lifestyle</span></div>
-<h3 class="work-reveal-title">Editorial Reports</h3>
-<p class="work-reveal-meta">Editorial Report,<br/>Magazine Spreads</p>
-</div>
-</div>
-</div>
-</a>
-<a aria-label="Social campaigns — CPG &amp; marketing" class="work-card work-card--wide" href="social-posts.html">
-<div class="work-thumb">
-<img alt="Three-up social media post layouts: Protein &amp; Superfoods, Let's Talk Vocab, ad-spend terms" class="work-img" loading="lazy" src="assets/work-social-posts.jpg"/>
-<div class="work-reveal">
-<div class="work-reveal-text">
-<div class="work-reveal-tags"><span class="work-reveal-tag">Marketing</span><span class="work-reveal-tag">Non-Profit</span><span class="work-reveal-tag">Startup</span></div>
-<h3 class="work-reveal-title">Social Posts</h3>
-<p class="work-reveal-meta">Social Media Design,<br/>Marketing Collateral</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-</section>
-<!-- ============ CTA ============ -->
-<section class="section cta-section" id="contact">
-<div class="wrap cta-inner">
+<div class="cs-crumb"><a href="work.html" style='color: inherit; text-decoration: none; font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 18px'>Work</a></div>
+<div class="cs-intro">
 <div>
-<span class="kicker" style='font-family: "Rethink Sans"; letter-spacing: 0px; '>Let's work</span>
-<h2 class="h2" style="margin-top: 18px">Ready to <em>elevate</em><br/>your brand?</h2>
+<h1>Uable</h1>
+<p class="cs-subtitle">App Design, Branding, Illustration, Social Posts</p>
 </div>
-<div class="cta-actions">
-<a class="btn btn-primary" href="https://calendar.app.google/cvZ34NSGWkdY3tLM6">
-        Book a call <span aria-hidden="true" class="arrow"></span>
-</a>
-<a class="btn btn-ghost" href="mailto:hello@6thm.com">WRITE TO US</a>
+<div class="cs-body">
+<p>Uable is an initiative that helps children discover, learn and hone their talent through roleplays of various professions. Uable’s aim is to create purposeful, playful and mindful live, online learning experiences for children between the ages of 6 to 12. Uable presents itself as an alternative to extra curricular activities and not as an extension of academics.</p>
+<p>The digital platform that helps the user to enroll for Uable roleplay sessions. This digital platform will also act as a documentation site for students and parents to track their journey through various roleplay sessions.</p>
 </div>
+</div>
+<!-- Full-bleed bands and responsive grids in reference order -->
+<div class="ub-bands">
+<!-- 1. Cyan welcome back dashboard -->
+<div class="ub-band"><img alt="Uable student dashboard screen - Welcome back, Ritika!" src="assets/uable-welcome.png"/></div>
+
+<!-- 2. Character grid (placeholder) -->
+<div class="ub-placeholder ub-placeholder--blue-grid">
+<div class="ub-placeholder-title">Character Grid Illustration</div>
+<p class="ub-placeholder-desc">A grid of illustrative animal character cards (fox, owl, rabbit, beaver, etc.) on a blue grid background. Image to be attached in the next prompt.</p>
+</div>
+
+<!-- 3. Circular category/subject icons -->
+<div class="ub-band"><img alt="Uable subject category circular icons: Reading &amp; Writing, Sports, Gaming, Performing Arts, Art &amp; Craft, Science, Languages, Math, Social Studies, Computers" src="assets/uable-subjects.png"/></div>
+
+<!-- 4. Treehouse banner -->
+<div class="ub-band"><img alt="Every child is a Creator - treehouse banner" src="assets/uable-treehouse.png"/></div>
+
+<!-- 5. Onboarding collage -->
+<div class="ub-band"><img alt="Uable onboarding flow screens collage: Sign In, Create an Account, Choose a Character" src="assets/uable-onboarding-collage.jpg"/></div>
+
+<!-- 6. Detective sessions progress -->
+<div class="ub-band"><img alt="Detective session progress screen showing fingerprints and petri dish" src="assets/uable-detective.png"/></div>
+
+<!-- 7. Journey timeline & explore collage -->
+<div class="ub-band"><img alt="Uable student journey timeline and explorer class cards collage" src="assets/uable-journey-collage.jpg"/></div>
+
+<!-- 8. Interactive mobile screens grid -->
+<div class="ub-band"><img alt="Interactive mobile mockups: Create Account, Choose hobbies, Welcome dashboard, My Journey" src="assets/uable-four-screens.png"/></div>
+
+<!-- 9. Three mobile stories (Uable stories) -->
+<div class="ub-band"><img alt="Three Uable mobile stories: Peek into a live learning session, parent testimonial, and Choose children's program card" src="assets/uable-stories-collage.png"/></div>
+
+<!-- 10. Three learning posts (social posts) -->
+<div class="ub-grid">
+<img alt="Uable post: 'A Day in the Life of a Scientist' with a falcon mascot holding a test tube" src="assets/sp-02-learning-a.jpg"/>
+<img alt="Uable post: 'Learning by Making — Enroll Today', a child using a tablet" src="assets/sp-02-learning-b.jpg"/>
+<img alt="Uable post: 'Here are some tips to help your child learn and grow outside of the classroom'" src="assets/sp-02-learning-c.jpg"/>
+</div>
+</div>
+</div>
+<!-- Back to top -->
+<div class="cs-back">
+<a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" style='font-family: "Rethink Sans"; letter-spacing: 0px; font-size: 16px'>BACK TO TOP</a>
 </div>
 </section>
 <!-- ============ FOOTER ============ -->
