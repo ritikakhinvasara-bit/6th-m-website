@@ -1408,7 +1408,11 @@ button { font: inherit; cursor: pointer; border: 0; background: none; color: inh
 
 /* ---------------- UABLE ---------------- */
 /* Composed bands and responsive grids stacked in reference order. */
-.ub-bands { margin: 10px 0 0; }
+.ub-bands {
+  margin: 10px auto 0;
+  max-width: 1024px;
+  width: 100%;
+}
 .ub-band {
   display: block;
   width: 100%;
